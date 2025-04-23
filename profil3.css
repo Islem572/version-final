@@ -85,7 +85,7 @@ body {
     border: 1px solid #ddd;
 }
 
-.option-select {
+/*.option-select {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -94,7 +94,7 @@ body {
     border-radius: 50%;
     border: 1px solid #ccc;
     background-color: #f9f9f9;
-}
+}*/
 
 .option-image {
     width: 80px;
@@ -117,13 +117,16 @@ body {
 }
 
 .footer {
-    background-color: #b69d8a;
-    padding: 15px 20px;
+    background-color: #b49175;
+    padding: 5px 8px;
     display: flex;
     justify-content: space-between;
-    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
-
 .nav-button {
     padding: 12px 40px;
     border-radius: 5px;

@@ -3,242 +3,166 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f7f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #EFEBE0;
+
+    background-color:  #B19079;
     box-sizing: border-box;
 }
 
 .container {
     display: flex;
-    width: 100%;
-    height: 100vh;
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Left Section */
 .left-section {
     flex: 1;
-    padding: 40px 60px;
+    padding: 30px;
     background-color: #f5efe6;
-    display: flex;
-    flex-direction: column;
 }
-
-
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-}
-.signup-title {
-    font-size: 2.2rem;
-    color: #b19079;
-    margin-bottom: 30px;
-    font-weight: normal;
-}
-
 
 .navbar .logo {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #b19079;
+    color: #a67c68;
+    margin-bottom: 20px;
 }
 
 .left-section h1 {
-    font-size: 2.2rem;
-    color: #b19079;
-    margin-bottom: 30px;
-    font-weight: normal;
+    font-size: 2rem;
+    color: #a67c68;
+    margin-bottom: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 .form-group {
-    margin-bottom: 5px;
-}
-
-.row {
-    display: flex;
-    gap: 20px;
-}
-
-.col {
-    flex: 1;
+    margin-bottom: 15px;
 }
 
 label {
-    font-size: 1.1rem;
-    color: #b19079;
-    margin-bottom: 8px;
-    display: block;
-}
-
+    font-size: 0.9rem;
+    color: #6b4f4f;
+    margin-bottom: 5px;
+    display: block}
+    label {
+        color: #8b5e4f; /* Updated color */
+    }
 input, select {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     font-size: 1rem;
     background-color: #f9f9f9;
-    box-sizing: border-box;
-}
-
-input::placeholder {
-    color: #bbb;
-}
-
-select {
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%226%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M0%200h12L6%206z%22%20fill%3D%22%23B19079%22%2F%3E%3C%2Fsvg%3E");
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-    padding-right: 30px;
 }
 
 button {
-    padding: 12px 20px;
-    margin-top: 10px;
-    background-color: #b19079;
+    padding: 10px 20px;
+    background-color: #a67c68;
     color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s;
-    width: fit-content;
 }
 
-
 button:hover {
-    background-color: #a67c68;
+    background-color: #8b5e4f;
 }
 
 /* Right Section */
 .right-section {
     flex: 1;
-    background-color: #b19079;
+    background-color: #a67c68;
     color: white;
     text-align: center;
-    padding: 40px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.right-section h2 {
-    font-size: 1.8rem;
-    font-weight: normal;
-    margin-bottom: 0;
+.right-section h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
 }
 
-.right-section h1 {
-    font-size: 3rem;
-    margin: 10px 0 40px;
+.right-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .image-container {
     position: relative;
-    width: 80%;
-    max-width: 400px;
+    margin-top: 20px;
 }
 
 .image-container img {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .verified-badge {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: white;
-    color: #333;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.verified-badge::before {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
+    top: 10px;
+    right: 10px;
     background-color: #00c853;
-    border-radius: 50%;
-    margin-right: 5px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+/* Amélioration des champs de formulaire */
+input, select {
+    width: 100%;
+    padding: 12px; /* Augmenté pour plus de confort */
+    border: 1px solid #b8a398; /* Couleur plus douce */
+    border-radius: 8px; /* Coins plus arrondis */
+    font-size: 1rem;
+    background-color: #fdfcfb; /* Couleur légèrement différente */
+    transition: border-color 0.3s ease;
 }
 
-/* Password field with eye icon */
-.password-container {
-    position: relative;
+input:focus, select:focus {
+    border-color: #a67c68; /* Couleur de focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(166, 124, 104, 0.5); /* Effet lumineux */
 }
 
-.password-container input {
-    padding-right: 40px;
-}
-
-.password-toggle {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+/* Amélioration du bouton */
+button {
+    padding: 12px 25px; /* Taille augmentée */
+    background-color: #a67c68;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Coins plus arrondis */
     cursor: pointer;
-    color: #999;
+    font-size: 1.1rem; /* Texte légèrement plus grand */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        height: auto;
-    }
-    
-    .right-section {
-        display: none;
-    }
-    
-    .left-section {
-        padding: 20px;
-    }
-    
-    .row {
-        flex-direction: column;
-        gap: 15px;
-    }
+button:hover {
+    background-color: #8b5e4f; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Légère mise en avant */
 }
-.error-message {
-    color: #dc3545;
-    font-size: 14px;
-    margin-top: 5px;
+.error-border {
+    border-color: red !important;
 }
-
-.input-error {
-    border-color: #dc3545 !important;
-}
-
-.password-strength {
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.password-strength.weak {
-    color: #dc3545;
-}
-
-.password-strength.medium {
-    color: #ffc107;
-}
-
-.password-strength.strong {
-    color: #28a745;
-}
+ 

@@ -122,9 +122,27 @@ body {
     font-size: 16px;
     background-color: white;
 }
-.form-select, .year-select{
+/*.form-select, .year-select{
     position:right;
-}
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;    
+    background-color: white;
+    margin-right: 10px;
+}*/
+
+/*.form-select, .major-select{
+    padding: 5px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: #ccc solid 1px;
+    border-radius: 3px;
+    font-size: 16px;
+    
+}*/
 .education-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -147,19 +165,36 @@ body {
 .education-fields .major-select {
     flex: 1;
 }
+.education-fields .year-select{
+    flex: 0 0 100px;
+}
 
-.footer {
+/*.footer {
     background-color: #b49175;
-    padding: 15px 20px;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
     margin-top: auto;
-}
+}*/
+.footer {
+    background-color: #b49175;
+    padding: 5px 8px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;}
+
+
 
 .btn {
     padding: 12px 40px;
     border-radius: 25px;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     cursor: pointer;
     border: none;
