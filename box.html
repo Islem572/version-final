@@ -7,66 +7,59 @@
     <link rel="stylesheet" href="box.css">
 </head>
 <body>
-    <header>
-        <div class="logo"><span>F</span>rellio</div>
-       <!--<div class="user-menu">
-            <img src="profil.png" alt="Profil" class="profile-pic">
-        </div>-->
-    </header>
+</header>
+
+<div class="container">
+    <div class="inbox-header">
+        <h1>Boîte de réception</h1>
+        <input type="text" class="search-bar" placeholder="Rechercher des messages...">
+    </div>
     
-    <div class="container">
-        <div class="inbox-header">
-            <h1>Boîte de réception</h1>
-            <input type="text" class="search-bar" placeholder="Rechercher des messages...">
+    <div class="messages-list">
+        <!-- Message non lu -->
+        <div class="message unread">
+            <div class="message-avatar">JD</div>
+            <div class="message-content">
+                <div class="message-sender">John Doe</div>
+                <div class="message-preview">Bonjour, je suis intéressé par votre profil pour mon projet de site web...</div>
+            </div>
+            <div class="message-time">10:30</div>
         </div>
         
-        <div class="messages-list">
-            <!-- Message non lu -->
-            <div class="message unread">
-                <div class="message-avatar">JD</div>
-                <div class="message-content">
-                    <div class="message-sender">John Doe</div>
-                    <div class="message-preview">Bonjour, je suis intéressé par votre profil pour mon projet de site web...</div>
-                </div>
-                <div class="message-time">10:30</div>
+        <!-- Message lu -->
+        <div class="message">
+            <div class="message-avatar">AS</div>
+            <div class="message-content">
+                <div class="message-sender">Alice Smith</div>
+                <div class="message-preview">Merci pour votre proposition, je reviens vers vous rapidement...</div>
             </div>
-            
-            <!-- Message lu -->
-            <div class="message">
-                <div class="message-avatar">AS</div>
-                <div class="message-content">
-                    <div class="message-sender">Alice Smith</div>
-                    <div class="message-preview">Merci pour votre proposition, je reviens vers vous rapidement...</div>
-                </div>
-                <div class="message-time">Hier</div>
+            <div class="message-time">Hier</div>
+        </div>
+        
+        <!-- Autre message -->
+        <div class="message">
+            <div class="message-avatar">F</div>
+            <div class="message-content">
+                <div class="message-sender">Frellio Team</div>
+                <div class="message-preview">Nouvelles fonctionnalités disponibles sur votre tableau de bord...</div>
             </div>
-            
-            <!-- Autre message -->
-            <div class="message">
-                <div class="message-avatar">F</div>
-                <div class="message-content">
-                    <div class="message-sender">Frellio Team</div>
-                    <div class="message-preview">Nouvelles fonctionnalités disponibles sur votre tableau de bord...</div>
-                </div>
-                <div class="message-time">Lundi</div>
+            <div class="message-time">Lundi</div>
+        </div>
+        
+        <!-- Message archivé -->
+        <div class="message">
+            <div class="message-avatar">RB</div>
+            <div class="message-content">
+                <div class="message-sender">Robert Brown</div>
+                <div class="message-preview">Projet terminé avec succès, merci pour votre travail...</div>
             </div>
-            
-            <!-- Message archivé -->
-            <div class="message">
-                <div class="message-avatar">RB</div>
-                <div class="message-content">
-                    <div class="message-sender">Robert Brown</div>
-                    <div class="message-preview">Projet terminé avec succès, merci pour votre travail...</div>
-                </div>
-                <div class="message-time">12/05</div>
-            </div>
+            <div class="message-time">12/05</div>
         </div>
     </div>
-    <a href="profil11.html">
-        <button class="back-button" onclick="window.history.back()">Retour</button>
-    </a>
-    <footer>
-        © 2023 Frellio - Tous droits réservés
-    </footer>
-</body>
-</html>
+</div>
+<a href="profil11.html">
+    <button class="back-button" onclick="window.history.back()">Retour</button>
+</a>
+<footer>
+    © 2023 Frellio - Tous droits réservés
+</footer>

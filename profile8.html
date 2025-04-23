@@ -5,29 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frellio - Account Security</title>
     <link rel="stylesheet" href="profile8.css">
-    <script>
-        // Fonction pour vérifier les deux champs avant soumission
-        function verifyFields() {
-            var email = document.forms["securityForm"]["email"].value;
-            var phone = document.forms["securityForm"]["phone"].value;
-
-            // Vérification de l'email
-            if (email == "") {
-                alert("Email must be filled out");
-                return false;
-            }
-
-            // Vérification du téléphone
-            if (phone == "") {
-                alert("Phone number must be filled out");
-                return false;
-            }
-
-            // Si tout est valide
-            alert("Both email and phone number are valid!");
-            return true;
+    <!-- Ajout de SweetAlert pour de belles alertes -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .error-input {
+            border: 1px solid #ff3860 !important;
         }
-    </script>
+        .success-input {
+            border: 1px solid #09c372 !important;
+        }
+        .error-message {
+            color: #ff3860;
+            font-size: 0.8em;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -57,15 +49,16 @@
         <p class="section-description">Please Verify Your Email And Phone Number So That We Can Keep Your Account Secured.</p>
         
         <div class="divider"></div>
-        <form name="securityForm" action="save_security.php" method="POST">
+        <form name="securityForm" id="securityForm" action="save_security.php" method="POST" onsubmit="return validateForm()">
             <div class="form-row">
                 <div class="form-label-section">
                     <div class="label">Email</div>
                     <div class="label-privacy">Private</div>
                 </div>
                 <div class="input-button-section">
-                    <input type="email" name="email" class="form-input" placeholder="Enter your email">
-                    <button class="verified-button">Verified</button>
+                    <input type="email" name="email" id="emailInput" class="form-input" placeholder="Enter your email">
+                    <div id="emailError" class="error-message"></div>
+                    <button type="button" id="verifyEmailBtn" class="verified-button">Verify Email</button>
                 </div>
             </div>
             
@@ -76,21 +69,227 @@
                     <div class="label-note">We'll Never Share Your Phone Number.</div>
                 </div>
                 <div class="input-button-section">
-                    <input type="tel" name="phone" class="form-input" placeholder="Enter your phone number">
-                    <button class="add-button">Add Phone Number</button>
+                    <input type="tel" name="phone" id="phoneInput" class="form-input" placeholder="Enter your phone number">
+                    <div id="phoneError" class="error-message"></div>
+                    <button type="button" id="verifyPhoneBtn" class="add-button">Verify Phone</button>
                 </div>
             </div>
 
             <div class="footer">
-                <!-- Le bouton Next pour soumettre le formulaire -->
-                 <a href="profil10.html">
-                    <button type="submit" class="next-button">Next</button>
-                </a>
-                <!-- Nouveau bouton pour vérifier les champs avant soumission -->
-                <button type="button" class="verify-button" onclick="verifyFields()">Verify</button>
+                <button type="submit" class="next-button">Next</button>
+                <button type="button" class="verify-button" onclick="validateForm(true)">Verify All</button>
             </div>
         </form>
     </div>
+
+    <script>
+        // Variables pour suivre l'état de vérification
+        let isEmailVerified = false;
+        let isPhoneVerified = false;
+        
+        // Initialisation après chargement du DOM
+        document.addEventListener('DOMContentLoaded', function() {
+            // Écouteurs d'événements pour la validation en temps réel
+            document.getElementById('emailInput').addEventListener('input', function() {
+                validateEmail(this.value);
+            });
+            
+            document.getElementById('phoneInput').addEventListener('input', function() {
+                validatePhone(this.value);
+            });
+            
+            // Bouton de vérification d'email
+            document.getElementById('verifyEmailBtn').addEventListener('click', function() {
+                const email = document.getElementById('emailInput').value;
+                if (validateEmail(email)) {
+                    verifyEmail(email);
+                }
+            });
+            
+            // Bouton de vérification de téléphone
+            document.getElementById('verifyPhoneBtn').addEventListener('click', function() {
+                const phone = document.getElementById('phoneInput').value;
+                if (validatePhone(phone)) {
+                    verifyPhone(phone);
+                }
+            });
+        });
+        
+        // Fonction de validation d'email
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailError = document.getElementById('emailError');
+            
+            if (!email) {
+                emailError.textContent = 'Email is required';
+                document.getElementById('emailInput').classList.add('error-input');
+                return false;
+            }
+            
+            if (!emailRegex.test(email)) {
+                emailError.textContent = 'Please enter a valid email address';
+                document.getElementById('emailInput').classList.add('error-input');
+                return false;
+            }
+            
+            emailError.textContent = '';
+            document.getElementById('emailInput').classList.remove('error-input');
+            document.getElementById('emailInput').classList.add('success-input');
+            return true;
+        }
+        
+        // Fonction de validation de téléphone
+        function validatePhone(phone) {
+            const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+            const phoneError = document.getElementById('phoneError');
+            
+            if (!phone) {
+                phoneError.textContent = 'Phone number is required';
+                document.getElementById('phoneInput').classList.add('error-input');
+                return false;
+            }
+            
+            if (!phoneRegex.test(phone)) {
+                phoneError.textContent = 'Please enter a valid phone number';
+                document.getElementById('phoneInput').classList.add('error-input');
+                return false;
+            }
+            
+            phoneError.textContent = '';
+            document.getElementById('phoneInput').classList.remove('error-input');
+            document.getElementById('phoneInput').classList.add('success-input');
+            return true;
+        }
+        
+        // Fonction de vérification d'email (simulée)
+        function verifyEmail(email) {
+            // Simulation d'envoi de code de vérification
+            document.getElementById('verifyEmailBtn').disabled = true;
+            document.getElementById('verifyEmailBtn').textContent = 'Sending code...';
+            
+            setTimeout(() => {
+                Swal.fire({
+                    title: 'Verification Code Sent',
+                    html: `We've sent a 6-digit code to <b>${email}</b>. Please check your inbox.`,
+                    icon: 'info',
+                    input: 'text',
+                    inputPlaceholder: 'Enter verification code',
+                    showCancelButton: true,
+                    confirmButtonText: 'Verify',
+                    cancelButtonText: 'Cancel',
+                    preConfirm: (code) => {
+                        if (!code || code.length !== 6) {
+                            Swal.showValidationMessage('Please enter a valid 6-digit code');
+                            return false;
+                        }
+                        return true;
+                    }
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Simulation de vérification réussie
+                        isEmailVerified = true;
+                        document.getElementById('verifyEmailBtn').textContent = 'Verified';
+                        document.getElementById('verifyEmailBtn').style.backgroundColor = '#4CAF50';
+                        Swal.fire(
+                            'Success!',
+                            'Your email has been verified.',
+                            'success'
+                        );
+                    } else {
+                        document.getElementById('verifyEmailBtn').disabled = false;
+                        document.getElementById('verifyEmailBtn').textContent = 'Verify Email';
+                    }
+                });
+            }, 1500);
+        }
+        
+        // Fonction de vérification de téléphone (simulée)
+        function verifyPhone(phone) {
+            // Simulation d'envoi de code SMS
+            document.getElementById('verifyPhoneBtn').disabled = true;
+            document.getElementById('verifyPhoneBtn').textContent = 'Sending SMS...';
+            
+            setTimeout(() => {
+                Swal.fire({
+                    title: 'SMS Verification',
+                    html: `We've sent a 6-digit code to <b>${phone}</b>. Please check your messages.`,
+                    icon: 'info',
+                    input: 'text',
+                    inputPlaceholder: 'Enter SMS code',
+                    showCancelButton: true,
+                    confirmButtonText: 'Verify',
+                    cancelButtonText: 'Cancel',
+                    preConfirm: (code) => {
+                        if (!code || code.length !== 6) {
+                            Swal.showValidationMessage('Please enter a valid 6-digit code');
+                            return false;
+                        }
+                        return true;
+                    }
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // Simulation de vérification réussie
+                        isPhoneVerified = true;
+                        document.getElementById('verifyPhoneBtn').textContent = 'Verified';
+                        document.getElementById('verifyPhoneBtn').className = 'verified-button';
+                        Swal.fire(
+                            'Success!',
+                            'Your phone number has been verified.',
+                            'success'
+                        );
+                    } else {
+                        document.getElementById('verifyPhoneBtn').disabled = false;
+                        document.getElementById('verifyPhoneBtn').textContent = 'Verify Phone';
+                    }
+                });
+            }, 1500);
+        }
+        
+        // Validation globale du formulaire
+        function validateForm(showAlerts = false) {
+            const email = document.getElementById('emailInput').value;
+            const phone = document.getElementById('phoneInput').value;
+            
+            const isEmailValid = validateEmail(email);
+            const isPhoneValid = validatePhone(phone);
+            
+            if (showAlerts) {
+                if (!isEmailValid || !isPhoneValid) {
+                    Swal.fire({
+                        title: 'Validation Error',
+                        text: 'Please correct the errors in the form before proceeding.',
+                        icon: 'error'
+                    });
+                    return false;
+                }
+                
+                if (!isEmailVerified || !isPhoneVerified) {
+                    Swal.fire({
+                        title: 'Verification Required',
+                        text: 'Please verify both your email and phone number before proceeding.',
+                        icon: 'warning'
+                    });
+                    return false;
+                }
+            }
+            
+            if (!isEmailValid || !isPhoneValid || !isEmailVerified || !isPhoneVerified) {
+                return false;
+            }
+            
+            // Si tout est valide, le formulaire peut être soumis
+            if (!showAlerts) {
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Your account security information has been saved.',
+                    icon: 'success'
+                }).then(() => {
+                    document.getElementById('securityForm').submit();
+                });
+            }
+            
+            return true;
+        }
+    </script>
 </body>
 </html>
-
