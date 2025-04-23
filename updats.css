@@ -1,0 +1,124 @@
+  /* Styles de base */
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f5f2;
+    color: #333;
+    position: relative;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 60px; /* Espace pour le bouton */
+}
+
+/* Header */
+header {
+    background-color: #b3937a;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    background-color: white;
+    color: #b3937a;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+/* Contenu principal */
+h1 {
+    color: #b3937a;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 28px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.project-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #b3937a;
+}
+
+.project-status {
+    background-color: #e0d8c9;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+.update {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #b3937a;
+    border-radius: 0 4px 4px 0;
+}
+
+.update-date {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.update-content {
+    line-height: 1.5;
+}
+
+/* Bouton de retour */
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #b3937a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #9a7d64;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #888;
+    font-size: 14px;
+}

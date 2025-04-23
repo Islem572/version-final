@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #B19079;
+    color: white;
+    padding: 1rem;
+  }
+  .home-btn {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        color: #B19079;
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .home-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+  
+  .container {
+    max-width: 42rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .content {
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+    margin-bottom: 1.5rem;
+  }
+  
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75;
+    opacity: 0.9;
+  }
+  
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    color: #B19079;
+    padding: 0.75rem 2rem;
+    border-radius: 150px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .btn a {
+  text-decoration: none; /* enlève le soulignement */
+  color: inherit;         /* hérite de la couleur du parent (facultatif) */
+    }
+
+  
+  .btn:hover {
+    background-color: #fff1e7;
+    
+  }
+  
+  .play-icon {
+    opacity: 0;
+    transition: opacity 0.2s;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .btn:hover .play-icon {
+    opacity: 1;
+  }

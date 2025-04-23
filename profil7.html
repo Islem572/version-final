@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frellio - Informations Personnelles</title>
+    <link rel="stylesheet" href="profil7.css">
+    <script src="script1-7.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><span>F</span>rellio</div>
+    </div>
+
+    <div class="steps-nav">
+        <div class="step">
+            <span class="step-number">1</span>
+            <a>Personal info</a>
+        </div>
+        <span class="step-arrow">></span>
+        <div class="step active">
+            <span class="step-number">2</span>
+            <a>Personal info</a>
+        </div>
+        <span class="step-arrow">></span>
+        <div class="step">
+            <span class="step-number">3</span>
+            <a>Account Security</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1 class="section-title">Personal Info</h1>
+        <p class="section-description">This Is Your Time To Shine. Let Potential Buyers Know What<br>You Do Best And How You Gained Your Skills, Certifications And Experience.</p>
+
+        <div class="section-divider"></div>
+
+        <form action="save_profile_step2.php" method="POST">
+            <div class="form-group">
+                <label class="form-label required">Your Occupation</label>
+                <select name="occupation" class="form-select">
+                    <option>Select Occupation</option>
+                    <option>Web Developer</option>
+                    <option>Mobile Developer</option>
+                    <option>Frontend Developer</option>
+                    <option>Backend Developer</option>
+                    <option>Full-Stack Developer</option>
+                    <option>Software Engineer</option>
+                    <option>DevOps Engineer</option>
+                    <option>AI/ML Engineer</option>
+                    <option>Cybersecurity Expert</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label required">Education</label>
+                <div class="education-section">
+                    <select name="university_country" class="form-select">
+                        <option>Country Of College / University</option>
+                        <option>Sfax</option>
+                        <option>Sousse</option>
+                        <option>Gabès</option>
+                        <option>Gafsa</option>
+                        <option>Kairouan</option>
+                        <option>Monastir</option>
+                        <option>Jendouba</option>
+                        <option>Kasserine</option>
+                    </select>
+                    <select name="university_name" class="form-select">
+                        <option>Country Of College / University Name</option>
+                        <option>Université de Sfax</option>
+                        <option>Université de Sousse</option>
+                        <option>Université de Gabès</option>
+                        <option>Université de Gafsa</option>
+                        <option>Université de Kairouan</option>
+                        <option>Université de Monastir</option>
+                        <option>Université de Jendouba</option>
+                        <option>Université de Kasserine</option>
+                    </select>
+                    <div class="education-fields">
+                        <select name="education_title" class="form-select title-select">
+                            <option>Title</option>
+                            <option>Information Technology</option>
+                            <option>Artificial Intelligence</option>
+                            <option>Computer Science</option>
+                            <option>Data Science</option>
+                            <option>Software Engineering</option>
+                        </select>
+                        <select name="education_major" class="form-select major-select">
+                            <option>Major</option>
+                            <option>High School Diploma</option>
+                            <option>Bachelor's Degree</option>
+                            <option>Master's Degree</option>
+                            <option>PhD/Doctorate</option>
+                            <option>Engineering Degree</option>
+                        </select>
+                        <select name="graduation_year" class="form-select year-select">
+                            <option>Year</option>
+                            <option>2012</option>
+                            <option>2013</option>
+                            <option>2014</option>
+                            <option>2015</option>
+                            <option>2016</option>
+                            <option>2017</option>
+                            <option>2018</option>
+                            <option>2019</option>
+                            <option>2020</option>
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Personal Website</label>
+                <input type="text" name="personal_website" class="form-input" placeholder="Provide A Link To Your Own Professional Website">
+            </div>
+
+            <div class="footer">
+                <a href="profil6.html">
+                    <button type="button" class="btn" onclick="history.back()">Back</button>
+                </a>
+             
+                <button type="button" class="btn" onclick="verifyFields()">Verify</button>
+                <a href="profile8.html">
+                    <button type="submit" class="btn">Next</button>
+                </a>
+             
+            </div>
+        </form>
+    </div>
+</body>
+</html>

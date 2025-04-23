@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #EFEBE0;
+
+    background-color:  #B19079;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section */
+.left-section {
+    flex: 1;
+    padding: 30px;
+    background-color: #f5efe6;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #a67c68;
+    margin-bottom: 20px;
+}
+
+.left-section h1 {
+    font-size: 2rem;
+    color: #a67c68;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 0.9rem;
+    color: #6b4f4f;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #a67c68;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #8b5e4f;
+}
+
+/* Right Section */
+.right-section {
+    flex: 1;
+    background-color: #a67c68;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-section h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.right-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.verified-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #00c853;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+/* Amélioration des champs de formulaire */
+input, select {
+    width: 100%;
+    padding: 12px; /* Augmenté pour plus de confort */
+    border: 1px solid #b8a398; /* Couleur plus douce */
+    border-radius: 8px; /* Coins plus arrondis */
+    font-size: 1rem;
+    background-color: #fdfcfb; /* Couleur légèrement différente */
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #a67c68; /* Couleur de focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(166, 124, 104, 0.5); /* Effet lumineux */
+}
+
+/* Amélioration du bouton */
+button {
+    padding: 12px 25px; /* Taille augmentée */
+    background-color: #a67c68;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Coins plus arrondis */
+    cursor: pointer;
+    font-size: 1.1rem; /* Texte légèrement plus grand */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #8b5e4f; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Légère mise en avant */
+}
+.error-border {
+    border-color: red !important;
+}
+#signup-form a {
+    color: black; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 0.9rem;
+    text-decoration: solid;
+    margin-top: 10px;
+    text-align: left;
+}

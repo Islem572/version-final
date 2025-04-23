@@ -1,0 +1,238 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #B19079;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #B19079;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: Regular;
+}
+ul li a{
+    border: 1px solid transparent;
+    margin: 1px;
+    font-weight: 500px;
+    transition: 0.6s ease;
+}
+ul li a:hover {
+    background: #EFEBE0;
+    color: #000;
+    transform: translateY(-5px);
+    max-width: 114rem;
+    margin: 0 auto;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.logo spam {
+    color: rgb(7, 7, 7);
+    font-size: 2rem;
+    background-color: #EFEBE0;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.logo a {
+    color: aliceblue;
+    padding: 0px 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 900px;
+    text-shadow: rgba(0, 0, 0, 0.7);
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #0f0e0e;
+    font-size: 1rem;
+}
+
+.navbar ul li a.signup {
+    background-color: #EFEBE0;
+    padding: 10px 15px;
+    border-radius: 15px;
+    color: #181717;
+}
+
+/* Signup Options Section */
+.signup-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 125px;
+}
+
+.option-card {
+    background-color: #fff;
+    color: black;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.option-card img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.option-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.option-card p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.option-card button {
+    background-color: #EFEBE0;
+    color: #181717;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option-card button:hover {
+    background-color: #EFEBE0;
+}
+/* Standard Page Form Styling */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #00291f;
+}
+
+.form-box {
+    background-color: #fff;
+    color: #003d2e;
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-box h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-box label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-box button {
+    width: 100%;
+    background-color: #00b894;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-box button:hover {
+    background-color: #007b5e;
+}
+
+.form-box .form-footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.form-box .form-footer a {
+    color: #00b894;
+    text-decoration: none;
+}
+
+.form-box .form-footer a:hover {
+    text-decoration: underline;
+}
+/* Responsive Design for Mobile Phones */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .signup-options {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .option-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .form-box {
+        padding: 20px;
+        width: 90%;
+    }
+}

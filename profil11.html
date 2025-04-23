@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frellio - Dashboard</title>
+    <link rel="stylesheet" href="profil11.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><span>F</span>rellio</div>
+        <div class="nav-icons">
+            <svg class="icon" viewBox="0 0 24 24">
+                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <svg class="icon" viewBox="0 0 24 24">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <svg class="icon" viewBox="0 0 24 24">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            <button class="post-project-btn" id="postProjectBtn">Post A Project</button>
+            <svg class="profile-icon" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+        </div>
+    </header>
+    
+    <div class="browse-section">
+        <h2 class="browse-title">Browse</h2>
+        <div class="search-container">
+            <svg class="search-icon" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" class="search-bar" placeholder="Search for projects, clients or keywords...">
+        </div>
+    </div>
+    
+    <nav class="nav-tabs">
+        <a class="tab active">Dashboard</a>
+        <a  href="projet.html" class="tab">My Project</a>
+        <a class="tab" href="box.html">In Box</a>
+        <a class="tab"  href="feedback.html">Feedback</a>
+        <a class="tab" href="updats.html">Project Updates</a>
+    </nav>
+    
+    <div class="onboarding">
+        <h3 class="onboarding-title">You Are Almost Ready To Start Earning Money As A Freelancer, Simply Complete The Following Steps:</h3>
+        
+        <div class="step">
+            <form action="config1.php" methode="POST">
+            
+            <div class="step-content">
+                <h4 class="step-title">Email Address</h4>
+                <p class="step-description">Verify Your Email Address To Make Your Profile More Secure</p>
+            </div>
+            <button class="step-action">Already Verified</button>
+        </div>
+        
+        <div class="step">
+            <svg class="step-icon" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <div class="step-content">
+                <h4 class="step-title">Update Your Profile</h4>
+                <p class="step-description">A Complete Profile Increases Your Chance Of Getting Hired</p>
+            </div>
+            <button class="step-action">Profil Page</button>
+        </div>
+        
+        <div class="step">
+            <svg class="step-icon" viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+            <div class="step-content">
+                <h4 class="step-title">Place Your First Bid</h4>
+                <p class="step-description">Browse Through Projects And Place Your First Bid</p>
+            </div>
+            <a href="#" class="browse-projects-btn">Browse Projects</a>
+        </div>
+    </div>
+    </form>
+
+    <script>
+        // Fonctionnalité du bouton Post A Project
+        document.getElementById('postProjectBtn').addEventListener('click', function() {
+            alert('Post A Project button clicked! This would open a project submission form.');
+            // Ici vous pourriez ajouter une redirection ou afficher un formulaire modal
+            // window.location.href = '/post-project';
+        });
+
+        // Fonctionnalité de la barre de recherche
+        const searchBar = document.querySelector('.search-bar');
+        searchBar.addEventListener('focus', function() {
+            this.placeholder = '';
+        });
+        
+        searchBar.addEventListener('blur', function() {
+            if(this.value === '') {
+                this.placeholder = 'Search for projects, clients or keywords...';
+            }
+        });
+
+        // Fonctionnalité des onglets
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Fonctionnalité des boutons d'action
+        const stepActions = document.querySelectorAll('.step-action');
+        stepActions.forEach(button => {
+            button.addEventListener('click', function() {
+                const stepTitle = this.closest('.step').querySelector('.step-title').textContent;
+                alert(`Action clicked for: ${stepTitle}`);
+                // Ici vous pourriez ajouter une redirection ou autre logique
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frellio - Account Security</title>
+    <link rel="stylesheet" href="profile8.css">
+    <script>
+        // Fonction pour vérifier les deux champs avant soumission
+        function verifyFields() {
+            var email = document.forms["securityForm"]["email"].value;
+            var phone = document.forms["securityForm"]["phone"].value;
+
+            // Vérification de l'email
+            if (email == "") {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            // Vérification du téléphone
+            if (phone == "") {
+                alert("Phone number must be filled out");
+                return false;
+            }
+
+            // Si tout est valide
+            alert("Both email and phone number are valid!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><span>F</span>rellio</div>
+    </div>
+    
+    <div class="progress-steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <span>Personal info</span>
+        </div>
+        <span class="step-arrow">></span>
+        <div class="step">
+            <div class="step-number">2</div>
+            <span>Personal info</span>
+        </div>
+        <span class="step-arrow">></span>
+        <div class="step current">
+            <div class="step-number">3</div>
+            <span>Account Security</span>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="section-title">Account Security</h1>
+        <p class="section-subtitle">Trust And Safety Is A Big Deal In Our Community.</p>
+        <p class="section-description">Please Verify Your Email And Phone Number So That We Can Keep Your Account Secured.</p>
+        
+        <div class="divider"></div>
+        <form name="securityForm" action="save_security.php" method="POST">
+            <div class="form-row">
+                <div class="form-label-section">
+                    <div class="label">Email</div>
+                    <div class="label-privacy">Private</div>
+                </div>
+                <div class="input-button-section">
+                    <input type="email" name="email" class="form-input" placeholder="Enter your email">
+                    <button class="verified-button">Verified</button>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-label-section">
+                    <div class="label">Phone Number</div>
+                    <div class="label-privacy">Private</div>
+                    <div class="label-note">We'll Never Share Your Phone Number.</div>
+                </div>
+                <div class="input-button-section">
+                    <input type="tel" name="phone" class="form-input" placeholder="Enter your phone number">
+                    <button class="add-button">Add Phone Number</button>
+                </div>
+            </div>
+
+            <div class="footer">
+                <!-- Le bouton Next pour soumettre le formulaire -->
+                 <a href="profil10.html">
+                    <button type="submit" class="next-button">Next</button>
+                </a>
+                <!-- Nouveau bouton pour vérifier les champs avant soumission -->
+                <button type="button" class="verify-button" onclick="verifyFields()">Verify</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+

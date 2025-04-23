@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frellio </title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <a href="garde.html" class="home-btn">
+        <i class="fas fa-home"></i> Home
+    </a>
+    <div class="container">
+        <div class="contact-section">
+            <h2>Restons en contact !</h2>
+            <p class="intro-text">
+                Vous avez une question ou souhaitez en savoir
+                plus sur nos services ?<br><br>
+                N'hésitez pas à nous contacter via ce
+                formulaire. Notre équipe sera ravie
+                de vous répondre dans les plus brefs délais.
+            </p>
+
+            <form class="contact-form" action="contact.php" method="POST">
+                <div class="form-group">
+                    <input type="text" id="nom" name="nom" placeholder="Nom" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Adresse e-mail" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="sujet" name="sujet" placeholder="Sujet du message" required>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Envoyer</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

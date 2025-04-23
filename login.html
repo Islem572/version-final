@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frellio - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Librairie Google Identity Services -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div class="login-container">
+      <div class="logo"><span>F</span>rellio</div>
+        <!-- Formulaire de connexion manuel -->
+        <form class="login-form" action="login.php" method="POST">
+            <h1 class="login-title">Log in to Frellio</h1>
+            <input type="text" name="username" class="input-field" placeholder="Username or Email" required>
+            <button type="submit" class="login-btn">Log In</button>
+        </form>
+
+        <div class="divider">Or</div>
+
+        <!-- Formulaire Google Sign-In -->
+        <form id="google-form" action="google-callback.php" method="post">
+            <input type="hidden" name="credential" id="credential">
+            <div id="google-signin-button"></div>
+        </form>
+
+        <div class="upwork-text">Don't have a Frellio account?</div>
+       
+        <button type="button" class="signup-btn" onclick="window.location='signup.html';">Sign up</button>
+    </div>
+
+    <div class="right-banner">
+        <div class="banner-title">The best freelancers are on</div>
+        <div class="banner-logo">FRELLIO</div>
+        <div class="profile-card">
+            <div class="verified-badge">
+                <span class="check-icon">✓</span>
+                verified profile
+            </div>
+            <img src="new_project-main/photo/signup/custemer/photo.jpg"
+                 alt="Photo de profil"
+                 class="profile-image">
+        </div>
+    </div>
+
+    <!-- Initialisation Google Sign-In -->
+    <script>
+      function handleCredentialResponse(response) {
+        console.log("ID Token :", response.credential);
+        // Injecte le token dans le champ hidden et soumet le formulaire
+        document.getElementById("credential").value = response.credential;
+        document.getElementById("google-form").submit();
+      }
+
+      window.onload = function() {
+        google.accounts.id.initialize({
+          client_id: 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com',
+          callback: handleCredentialResponse,
+          ux_mode: 'popup'
+        });
+        google.accounts.id.renderButton(
+          document.getElementById('google-signin-button'),
+          { theme: 'outline', size: 'large', width: '100%' }
+        );
+      };
+    </script>
+</body>
+</html>

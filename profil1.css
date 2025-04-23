@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel {
+    flex: 1;
+    background-color: #f9f5f2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-panel {
+    flex: 1;
+    background-color: #c4a894;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.logo-text {
+    color: #fff;
+    background-color: #bb9777;
+    border-radius: 4px;
+    font-weight: 100;
+    padding: 0.25rem;
+  }
+  
+  .logo {
+    color: #bb9777;
+    padding: 5px 10px;
+    font-weight: 1000;
+    margin-right: 2rem;
+    font-size: 1.25rem;
+  }
+  
+
+.welcome {
+    margin-bottom: 100px;
+}
+
+.welcome h1 {
+    color: #c4a894;
+    font-size: 28px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    color: #c4a894;
+    font-size: 24px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #e0d5cc;
+}
+
+.step-icon {
+    margin-right: 15px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-text {
+    font-size: 18px;
+    color: #333;
+}
+.bottom-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bottom-line .disclaimer {
+    margin-top: 0;
+    font-size: 14px;
+    color: #B19079;
+    max-width: 60%;
+    text-align: right;
+}
+
+.bottom-line .get-started {
+    margin-top: 0;
+
+}
+
+
+.right-panel h2 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.right-panel .logo-large {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+
+.freelancer-card {
+    background-color: white;
+    width: 80%;
+    max-width: 400px;
+    height: 450px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.verified-badge {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 14px;
+}
+
+.verified-badge svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    fill: #26c944;
+}
+
+.freelancer-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.get-started{
+    background-color: #B19079;
+    border-radius: 2px;
+    padding: 10px 20px;
+    color: white;
+
+}

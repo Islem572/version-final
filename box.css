@@ -1,0 +1,152 @@
+ /* Reset et styles de base */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b3937a;
+}
+
+.logo span {
+    display: inline-block;
+    background-color: #b3937a;
+    color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+/* Contenu principal */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.inbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #b3937a;
+    font-size: 28px;
+}
+
+.search-bar {
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    width: 300px;
+}
+
+/* Liste des messages */
+.messages-list {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.message {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.message:hover {
+    background-color: #f9f9f9;
+}
+
+.message.unread {
+    background-color: #f0f7ff;
+}
+
+.message-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e0d8c9;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b3937a;
+    font-weight: bold;
+}
+
+.message-content {
+    flex-grow: 1;
+}
+
+.message-sender {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.message-preview {
+    color: #666;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.message-time {
+    color: #999;
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #999;
+    font-size: 14px;
+    margin-top: 30px;
+}
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #b3937a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #9a7d64;
+}

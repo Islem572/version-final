@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapports et Statistiques - Portfolio Freelance</title>
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"><span class="logo-text">F</span>rellio</div>
+                <div class="mobile-menu">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Rapports et Statistiques</h1>
+            <p>Des résultats mesurables et des analyses détaillées pour suivre l'impact de mes prestations sur votre activité.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tableaux de bord</h2>
+            </div>
+            <div class="dashboard">
+                <div class="dashboard-card success">
+                    <div class="icon">↗️</div>
+                    <h3>Trafic Web</h3>
+                    <p>Augmentation moyenne pour mes clients</p>
+                    <div class="value">+152%</div>
+                </div>
+                <div class="dashboard-card info">
+                    <div class="icon">👥</div>
+                    <h3>Conversion</h3>
+                    <p>Taux de conversion moyen</p>
+                    <div class="value">4.8%</div>
+                </div>
+                <div class="dashboard-card warning">
+                    <div class="icon">⏱️</div>
+                    <h3>Temps sur site</h3>
+                    <p>Augmentation de l'engagement</p>
+                    <div class="value">+86%</div>
+                </div>
+                <div class="dashboard-card danger">
+                    <div class="icon">📱</div>
+                    <h3>Mobile</h3>
+                    <p>Score de performance mobile</p>
+                    <div class="value">94/100</div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3>Performance des projets récents</h3>
+                    <div class="chart-filter">
+                        <select>
+                            <option>Derniers 6 mois</option>
+                            <option>Dernière année</option>
+                            <option>Tous les projets</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="chart">
+                    <div class="bar-container">
+                        <div class="bar" data-value="85" data-label="Jan"></div>
+                        <div class="bar" data-value="92" data-label="Fév"></div>
+                        <div class="bar" data-value="78" data-label="Mar"></div>
+                        <div class="bar" data-value="95" data-label="Avr"></div>
+                        <div class="bar" data-value="88" data-label="Mai"></div>
+                        <div class="bar" data-value="90" data-label="Juin"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Retours clients</h2>
+            </div>
+            <div class="feedback-container">
+                <div class="feedback-item">
+                    <p class="feedback-content">Les résultats obtenus grâce à ce freelance ont dépassé toutes nos attentes. Les rapports mensuels nous ont permis de suivre précisément le ROI de notre investissement et d'optimiser notre stratégie en permanence.</p>
+                    <div class="feedback-author">
+                        <div class="author-avatar">SD</div>
+                        <div class="author-info">
+                            <h4>Sophie Durand</h4>
+                            <p>Directrice Marketing, BelleNature</p>
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="feedback-item">
+                    <p class="feedback-content">Ce qui m'a le plus impressionné, c'est la clarté des rapports et la façon dont les données complexes sont présentées de manière compréhensible. J'ai pu présenter ces résultats à mon conseil d'administration sans difficulté.</p>
+                    <div class="feedback-author">
+                        <div class="author-avatar">ML</div>
+                        <div class="author-info">
+                            <h4>Marc Lambert</h4>
+                            <p>CEO, TechInnovate</p>
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Besoin d'une analyse détaillée pour votre projet ?</h2>
+                <p>Contactez-moi dès aujourd'hui pour découvrir comment je peux vous aider à atteindre vos objectifs avec des résultats mesurables.</p>
+                <a href="contact.html" class="btn">Demander une consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#">in</a>
+                <a href="#">X</a>
+                <a href="#">Ig</a>
+                <a href="#">Fb</a>
+            </div>
+            <p>&copy; 2025 Frellio - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <!-- Bouton de retour -->
+     <a href="indexe.html">
+        <button class="back-button" onclick="window.history.back()">Retour</button>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', () => {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks) {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            }
+        });
+    </script>
+</body>
+</html>

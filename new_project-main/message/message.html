@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boîte de messagerie</title>
+   <link rel="stylesheet" href="message.css">
+    
+</head>
+<body>
+    <div class="messagerie-container">
+        <!-- Liste des contacts -->
+        <div class="liste-contacts">
+            <div class="entete-contacts">
+                <span>Messagerie</span>
+                <span>+</span>
+            </div>
+            <div class="recherche">
+                <input type="text" placeholder="Rechercher...">
+            </div>
+            <div class="contact active">
+                <div class="nom-contact">Marie Dupont</div>
+                <div class="dernier-message">Bonjour, comment vas-tu aujourd'hui?</div>
+            </div>
+            <div class="contact">
+                <div class="nom-contact">Pierre Martin</div>
+                <div class="dernier-message">On se retrouve demain pour le projet?</div>
+            </div>
+            <div class="contact">
+                <div class="nom-contact">Sophie Bernard</div>
+                <div class="dernier-message">J'ai envoyé les documents par mail.</div>
+            </div>
+            <div class="contact">
+                <div class="nom-contact">Julien Robert</div>
+                <div class="dernier-message">Merci pour ton aide!</div>
+            </div>
+            <div class="contact">
+                <div class="nom-contact">Emma Petit</div>
+                <div class="dernier-message">À quelle heure commence la réunion?</div>
+            </div>
+        </div>
+        
+        <!-- Fenêtre de messages -->
+        <div class="fenetre-messages">
+            <div class="entete-conversation">
+                <div class="info-contact">
+                    <div class="nom-contact">Marie Dupont</div>
+                    <div class="status">En ligne</div>
+                </div>
+            </div>
+            
+            <div class="corps-messages" id="corps-messages">
+                <!-- Cette zone est maintenant vide, les messages seront ajoutés dynamiquement -->
+            </div>
+            
+            <div class="zone-saisie">
+                <input type="text" id="message-input" placeholder="Écrivez votre message...">
+                <button class="btn-envoyer" id="btn-envoyer">Envoyer</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Attendre que le document soit chargé
+        document.addEventListener("DOMContentLoaded", function() {
+            // Récupérer les éléments du DOM
+            const messageInput = document.getElementById("message-input");
+            const btnEnvoyer = document.getElementById("btn-envoyer");
+            const corpsMessages = document.getElementById("corps-messages");
+            
+            // Gestionnaire d'événements pour le bouton d'envoi
+            btnEnvoyer.addEventListener("click", envoyerMessage);
+            
+            // Gestionnaire d'événements pour la touche Entrée
+            messageInput.addEventListener("keypress", function(event) {
+                if (event.key === "Enter") {
+                    envoyerMessage();
+                }
+            });
+            
+            // Fonction pour envoyer un message
+            function envoyerMessage() {
+                const texteMessage = messageInput.value.trim();
+                
+                // Vérifier si le message n'est pas vide
+                if (texteMessage !== "") {
+                    // Obtenir l'heure actuelle
+                    const maintenant = new Date();
+                    const heures = maintenant.getHours().toString().padStart(2, "0");
+                    const minutes = maintenant.getMinutes().toString().padStart(2, "0");
+                    const heureFormatee = `${heures}:${minutes}`;
+                    
+                    // Créer la structure HTML du message
+                    const messageHTML = `
+                        <div class="message envoye">
+                            <div class="contenu-message">
+                                ${texteMessage}
+                                <div class="heure-message">${heureFormatee}</div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    // Ajouter le message à la zone de messages
+                    corpsMessages.innerHTML += messageHTML;
+                    
+                    // Vider le champ de saisie
+                    messageInput.value = "";
+                    
+                    // Faire défiler vers le bas pour voir le nouveau message
+                    corpsMessages.scrollTop = corpsMessages.scrollHeight;
+                    
+                    // Simuler une réponse (optionnel)
+                    setTimeout(function() {
+                        simulerReponse();
+                    }, 1000 + Math.random() * 2000); // Réponse après 1-3 secondes
+                }
+            }
+            
+            // Fonction pour simuler une réponse
+            function simulerReponse() {
+                const reponses = [
+                    "D'accord, je comprends.",
+                    "Intéressant, dis-m'en plus.",
+                    "Je vais y réfléchir.",
+                    "Merci pour l'information!",
+                    "Super, on en reparle bientôt."
+                ];
+                
+                const reponseAleatoire = reponses[Math.floor(Math.random() * reponses.length)];
+                
+                // Obtenir l'heure actuelle
+                const maintenant = new Date();
+                const heures = maintenant.getHours().toString().padStart(2, "0");
+                const minutes = maintenant.getMinutes().toString().padStart(2, "0");
+                const heureFormatee = `${heures}:${minutes}`;
+                
+                // Créer la structure HTML de la réponse
+                const reponseHTML = `
+                    <div class="message recu">
+                        <div class="contenu-message">
+                            ${reponseAleatoire}
+                            <div class="heure-message">${heureFormatee}</div>
+                        </div>
+                    </div>
+                `;
+                
+                // Ajouter la réponse à la zone de messages
+                corpsMessages.innerHTML += reponseHTML;
+                
+                // Faire défiler vers le bas pour voir la nouvelle réponse
+                corpsMessages.scrollTop = corpsMessages.scrollHeight;
+            }
+            
+            // Gérer le clic sur les contacts
+            const contacts = document.querySelectorAll(".contact");
+            contacts.forEach(contact => {
+                contact.addEventListener("click", function() {
+                    // Supprimer la classe active de tous les contacts
+                    contacts.forEach(c => c.classList.remove("active"));
+                    
+                    // Ajouter la classe active au contact cliqué
+                    this.classList.add("active");
+                    
+                    // Mettre à jour l'en-tête de conversation
+                    const nomContact = this.querySelector(".nom-contact").textContent;
+                    document.querySelector(".entete-conversation .nom-contact").textContent = nomContact;
+                    
+                    // Vider la zone de messages pour simuler une nouvelle conversation
+                    corpsMessages.innerHTML = "";
+                });
+            });
+        });
+    </script>
+</body>
+</html>

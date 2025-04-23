@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frellio - Objectifs de freelancing</title>
+    <link rel="stylesheet" href="profil3.css">
+    <script src="script5.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><span class="logo-text">F</span>rellio</div>
+    </header>
+    
+    <div class="progress-indicator">
+        2/2
+    </div>
+    
+    <main class="main-content">
+        <h1 class="question-header">
+            Got it. What's your biggest goal for freelancing?
+        </h1>
+        
+        <p class="question-subtext">
+            Different people come to Upwork for various reasons.<br>
+            We want to highlight the opportunities that fit your goals best while still showing you all the possibilities.
+        </p>
+        
+        <!-- Formulaire avec méthode POST vers le fichier PHP -->
+        <form action="submit_goal.php" method="POST">
+            <div class="options-container">
+                <div class="option-card" onclick="selectRadio('earn_main_income')">
+                    <input type="radio" name="goal" value="earn_main_income" id="earn_main_income" required>
+                    <div class="option-select"></div>
+                    <div class="option-image">
+                        <img src="sac-dargent.png">
+                    </div>
+                    <div class="option-text">To earn my main income</div>
+                </div>
+                
+                <div class="option-card" onclick="selectRadio('make_money_side')">
+                    <input type="radio" name="goal" value="make_money_side" id="make_money_side" required>
+                    <div class="option-select"></div>
+                    <div class="option-image">
+                        <img src="de-largent.png">
+                    </div>
+                    <div class="option-text">To make money on the side</div>
+                </div>
+                
+                <div class="option-card" onclick="selectRadio('get_experience')">
+                    <input type="radio" name="goal" value="get_experience" id="get_experience" required>
+                    <div class="option-select"></div>
+                    <div class="option-image">
+                        <img src="avis-client.png">
+                    </div>
+                    <div class="option-text">To get experience, for a full-time job</div>
+                </div>
+                
+                <div class="option-card" onclick="selectRadio('no_goal')">
+                    <input type="radio" name="goal" value="no_goal" id="no_goal" required>
+                    <div class="option-select"></div>
+                    <div class="option-image">
+                        <img src="main.png">
+                    </div>
+                    <div class="option-text">I Don't have a goal in mind yet</div>
+                </div>
+            </div>
+
+            <!-- Boutons -->
+            <footer class="footer">
+                <a href="profil2.html">
+                    <button class="nav-button">Back</button>
+                </a>
+                
+                <div>
+                    <a href="recu.html">
+                        <button type="button" class="nav-button skip-button">Skip for now</button>
+                    </a>
+                    <a href="recu.html">
+                        <button type="submit" class="nav-button">Next</button>
+                    </a>
+                </div>
+            </footer>
+        </form>
+    </main>
+
+    <script>
+        // Fonction pour sélectionner le bouton radio lorsqu'une carte est cliquée
+        function selectRadio(id) {
+            var radio = document.getElementById(id);
+            radio.checked = true;
+        }
+    </script>
+</body>
+</html>

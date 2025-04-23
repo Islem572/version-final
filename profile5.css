@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f0e8;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 15px;
+    border-bottom: 1px solid #e0d8cc;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b3937a;
+}
+
+.logo span {
+    display: inline-block;
+    background-color: #b3937a;
+    color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+.main-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.section-title {
+    font-size: 36px;
+    color: #b49175;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.selling-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.brain-icon {
+    background-color: #fbf8e3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon {
+    background-color: #a8d8fa;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-icon {
+    background-color: #00a99d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.step-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.step-heading {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.step-description {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.footer {
+    background-color: #b49175;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.btn {
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #f5f0e8;
+    color: #333;
+}
+
+.profile-placeholder {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid #00a99d;
+}

@@ -1,0 +1,108 @@
+  /* Styles de base */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f0e8;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #b3937a;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Contenu principal */
+h1 {
+    color: #b3937a;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.feedback-item {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.client-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e0d8c9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: #b3937a;
+    font-weight: bold;
+}
+
+.client-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.project-title {
+    color: #666;
+    font-style: italic;
+}
+
+.rating {
+    color: #ffc107;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.feedback-text {
+    margin-top: 10px;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+}
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #b3937a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #9a7d64;
+}

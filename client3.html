@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frellio</title>
+  <link rel="stylesheet" href="client3.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo"><span class="logo-text">F</span>rellio</div>
+    <div class="nav-item dropdown-icon"><a href="hire.html">Hire client</div></a>
+    <div class="nav-item dropdown-icon"><a href="mange.html">Manage work</div></a>
+    <div class="nav-item dropdown-icon"><a href="reports.html">Reports</div></a>
+    <div class="nav-item"><a href="message.html">Messages</div></a>
+    <div class="search-container">
+      <input type="text" class="search-box" placeholder="">
+    </div>
+  </nav>
+  
+  <div class="container">
+    <form action="budget.php" method="POST">
+      <div class="main-content">
+        <div class="left-section">
+          <h1 class="heading">Tell us your budget<br>or your best guess</h1>
+          <p class="subheading">This will help us match you to talent<br>within your range.</p>
+        </div>
+        
+        <div class="right-section">
+          <div class="rate-options">
+            <div class="rate-card">
+              <div class="selection-indicator"></div>
+              <input type="radio" name="rate_type" id="hourly_rate" value="hourly_rate">
+              <div class="icon-container">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIj48L2NpcmNsZT48cG9seWxpbmUgcG9pbnRzPSIxMiA2IDEyIDEyIDE2IDE0Ij48L3BvbHlsaW5lPjwvc3ZnPg==">
+              </div>
+              <div class="rate-title">Hourly rate</div>
+            </div>
+
+            <!-- ✅ rate-card Fixed price modifié -->
+            <div class="rate-card" id="fixed-price-card">
+              <div class="selection-indicator"></div>
+              <input type="radio" name="rate_type" id="fixed_price" value="fixed_price">
+              <div class="icon-container">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxyZWN0IHg9IjIiIHk9IjQiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNiIgcng9IjIiPjwvcmVjdD48cGF0aCBkPSJNMTIgMTJINyI+PC9wYXRoPjxwYXRoIGQ9Ik0xMiA4SDciPjwvcGF0aD48cGF0aCBkPSJNMTIgMTZINyI+PC9wYXRoPjwvc3ZnPg==">
+              </div>
+              <div class="rate-title">Fixed price</div>
+            </div>
+          </div>
+          
+          <div class="price-range">
+            <div class="price-column">
+              <div class="price-label">From</div>
+              <div class="input-group">
+                <span class="currency-symbol">$</span>
+                <input type="text" name="hourly_rate_from" class="price-input" value="15.00">
+                <span class="per-hour">/hr</span>
+              </div>
+            </div>
+
+            <div class="price-column">
+              <div class="price-label">To</div>
+              <div class="input-group">
+                <span class="currency-symbol">$</span>
+                <input type="text" name="hourly_rate_to" class="price-input" value="30.00">
+                <span class="per-hour">/hr</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    
+      <div class="footer">
+        <div class="expand-icon"></div>
+        <div class="navigation">
+          <button class="nav-button back-button">Back</button>
+          <button class="nav-button next-button">Next</button>
+          <!-- Bouton "Envoyer" ajouté ici -->
+          <button type="submit" class="nav-button send-button">Envoyer</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const rateCards = document.querySelectorAll('.rate-card');
+  
+      rateCards.forEach(card => {
+        card.addEventListener('click', function() {
+          rateCards.forEach(c => c.classList.remove('selected'));
+          this.classList.add('selected');
+          const radio = this.querySelector('input[type="radio"]');
+          radio.checked = true;
+  
+          if (radio.id === 'fixed_price') {
+            // Pas d'envoi du formulaire, on redirige direct
+            window.location.href = 'page1-4.html';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

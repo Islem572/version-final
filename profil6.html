@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frellio - Informations Personnelles</title>
+    <link rel="stylesheet" href="profil6.css">
+    <script src="script6.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><span>F</span>rellio</div>
+    </div>
+    
+    <div class="steps-nav">
+        <div class="step active">
+            <span class="step-number">1</span>
+            <a href="#">Personal info</a>
+        </div>
+        <span class="step-arrow">></span>
+        <div class="step">
+            <span class="step-number">2</span>
+            <a href="#">Personal info</a>
+        </div>
+        <span class="step-arrow">></span>
+        <div class="step">
+            <span class="step-number">3</span>
+            <a href="#">Account Security</a>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <h1 class="section-title">Personal Info</h1>
+        <p class="section-description">Tell Us A Bit About Yourself. This Information Will Appear On Your<br>Public Profile, So That Potential Buyers Can Get To Know You Better.</p>
+        
+        <div class="section-divider"></div>
+        
+        <form>
+            <div class="form-group">
+                <label class="form-label required">Full Name <span class="private">Private</span></label>
+                <div class="form-row">
+                    <input type="text" class="form-input" placeholder="First Name">
+                    <input type="text" class="form-input" placeholder="Last Name">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label required">Display Name</label>
+                <input type="text" class="form-input" placeholder="Display Name" style="max-width: 300px;">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label required">Profile Picture</label>
+              <!-- <div class="profile-picture">
+                    <div class="profile-placeholder"></div>
+                </div>-->
+                <a href="https://www.flaticon.com/fr/icones-gratuites/contact" title="contact icônes"></a>
+                <img src="profil.png" alt="Profile Picture" class="profile-picture">
+                <div class="profile-placeholder"></div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label required">Description</label>
+                <textarea class="form-textarea" placeholder="Share A Bit About Your Work Experience, Cool Projects You've Completed, And Your Area Of Expertise"></textarea>
+                <div class="character-count">Min. 150 Characters</div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label required">Languages</label>
+                <div class="language-section">
+                    <select class="form-select language-select">
+                        <option>Language</option>
+                        <option>Html</option>
+                        <option>Css</option>
+                        <option>JavaScript</option>
+                        <option>Java</option>
+                        <option>Python</option>
+                        <option>PHP</option>
+                        
+                        <option>C++</option>
+                        <option>C#</option>
+                        <option>TypeScript</option>
+                        
+                    </select>
+                    <select class="form-select language-select">
+                        <option>Language Level</option>
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option>Advanced</option>
+                        <option>Fluent</option>
+                        <option>Native</option>
+
+                    </select>
+                    <button class="add-btn">ADD</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="footer">
+        <a href="profil5.html">
+            <button class="btn">Back</button> 
+        </a>      
+       
+        <a href="profil7.html">
+            <button class="btn">Next</button>
+        </a>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,240 @@
+/* Style global pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f3f0;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #fff;
+    padding: 15px 30px;
+    border-bottom: 1px solid #e0d7cf;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b3937a;
+}
+
+.logo span {
+    display: inline-block;
+    background-color: #b3937a;
+    color: white;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.progress-steps {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0d7cf;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    background-color: #c4b5a6;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.current .step-number {
+    background-color: #b3937a;
+}
+
+.step-arrow {
+    margin: 0 15px;
+    color: #9c8975;
+}
+
+.main-content {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 20px 30px;
+    flex-grow: 1;
+}
+
+.section-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.section-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.divider {
+    height: 1px;
+    background-color: #e0d7cf;
+    margin: 20px 0;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding: 10px 0;
+}
+
+.form-label-section {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.label-privacy {
+    font-size: 14px;
+    color: #888;
+}
+
+.label-note {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+.input-button-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 65%;
+}
+
+.form-input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    flex: 1;
+    min-width: 300px;
+    height: 48px;
+}
+
+.verified-button {
+    padding: 15px 30px;
+    background-color: #d3c5b8;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    min-width: 120px;
+    height: 48px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.add-button {
+    padding: 15px 30px;
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #d3c5b8;
+    border-radius: 5px;
+    font-size: 16px;
+    min-width: 180px;
+    height: 48px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.footer {
+    background-color: #c4b5a6;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.next-button {
+    padding: 12px 30px;
+    background-color: #f2ede9;
+    color: #333;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 100px;
+}
+
+.next-button:hover {
+    background-color: #e8e1da;
+}
+
+/* Ajout du style pour le bouton "Verify" */
+.verify-button {
+    padding: 12px 30px;
+    background-color: #f2ede9;
+    color: #333;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 100px;
+    margin-left: 10px; /* Pour ajouter un peu d'espace entre "Next" et "Verify" */
+}
+
+.verify-button:hover {
+    background-color: #e8e1da;
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-label-section,
+    .input-button-section {
+        width: 100%;
+    }
+    
+    .input-button-section {
+        margin-top: 15px;
+    }
+    
+    .form-input {
+        min-width: 0;
+    }
+}

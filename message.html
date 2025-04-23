@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Frellio</title>
+    <link rel="stylesheet" href="message.css">
+</head>
+<body>
+    <div class="messagerie-container" style="width: 600px;">
+        <!-- Fenêtre de messages -->
+        <div class="fenetre-messages" style="width: 100%;">
+            <div class="entete-conversation">
+                <div class="info-contact">
+                    <div class="nom-contact">Frellio Bot 🤖</div>
+                    <div class="status">En ligne</div>
+                </div>
+            </div>
+
+            <div class="corps-messages" id="corps-messages">
+                <!-- Zone où les messages s'afficheront -->
+            </div>
+
+            <div class="zone-saisie">
+                <input type="text" id="message-input" placeholder="Écrivez votre message...">
+                <button class="btn-envoyer" id="btn-envoyer">Envoyer</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const messageInput = document.getElementById("message-input");
+            const btnEnvoyer = document.getElementById("btn-envoyer");
+            const corpsMessages = document.getElementById("corps-messages");
+
+            btnEnvoyer.addEventListener("click", envoyerMessage);
+            messageInput.addEventListener("keypress", function (event) {
+                if (event.key === "Enter") {
+                    envoyerMessage();
+                }
+            });
+
+            function envoyerMessage() {
+                const texteMessage = messageInput.value.trim();
+                if (texteMessage !== "") {
+                    const heureFormatee = getHeure();
+                    const messageHTML = `
+                        <div class="message envoye">
+                            <div class="contenu-message">
+                                ${texteMessage}
+                                <div class="heure-message">${heureFormatee}</div>
+                            </div>
+                        </div>
+                    `;
+                    corpsMessages.innerHTML += messageHTML;
+                    messageInput.value = "";
+                    corpsMessages.scrollTop = corpsMessages.scrollHeight;
+
+                    sauvegarderMessage("utilisateur", texteMessage);
+
+                    setTimeout(() => simulerReponse(texteMessage), 800);
+                }
+            }
+
+            function getHeure() {
+                const maintenant = new Date();
+                const heures = maintenant.getHours().toString().padStart(2, "0");
+                const minutes = maintenant.getMinutes().toString().padStart(2, "0");
+                return `${heures}:${minutes}`;
+            }
+
+            function simulerReponse(messageUtilisateur) {
+                const texte = messageUtilisateur.toLowerCase();
+                let reponse = "Bonjour ! Je suis Frellio, comment puis-je vous aider ?";
+
+                if (texte.includes("bonjour")) {
+                    reponse = "Dans notre site vous pouvez trouver des informations sur nos produits et services.";
+                } else if (texte.includes("heure")) {
+                    const maintenant = new Date();
+                    reponse = `Il est actuellement ${maintenant.getHours()}h${maintenant.getMinutes().toString().padStart(2, '0')}.`;
+                } else if (texte.includes("merci")) {
+                    reponse = "Avec plaisir ! 😊";
+                } else if (texte.includes("comment ça va")) {
+                    reponse = "Je vais bien, merci ! Et toi ?";
+                }
+
+                const heureFormatee = getHeure();
+                const reponseHTML = `
+                    <div class="message recu">
+                        <div class="contenu-message">
+                            ${reponse}
+                            <div class="heure-message">${heureFormatee}</div>
+                        </div>
+                    </div>
+                `;
+                corpsMessages.innerHTML += reponseHTML;
+                corpsMessages.scrollTop = corpsMessages.scrollHeight;
+
+                sauvegarderMessage("bot", reponse);
+            }
+
+            function sauvegarderMessage(auteur, contenu) {
+                fetch('save_message.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ auteur: auteur, contenu: contenu })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.status !== 'ok') {
+                        console.error("Erreur lors de l'enregistrement du message :", data.message);
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

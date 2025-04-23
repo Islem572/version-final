@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embaucher un Client</title>
+    <link rel="stylesheet" href="hire.css">
+    <script src="script1-5.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Frellio<span></span></div>
+                
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Trouvez les meilleurs talents pour votre projet</h1>
+                <p>Notre plateforme vous met en relation avec des professionnels qualifiés et vérifiés dans divers domaines. Embauchez en toute confiance.</p>
+                <a href="#contact" class="btn">Commencer maintenant</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="clients-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos clients disponibles</h2>
+                <p>Découvrez notre sélection de talents de haute qualité prêts à travailler sur vos projets</p>
+            </div>
+            <div class="clients-grid">
+                <div class="client-card">
+                    <div class="client-img">
+                        <img src="client1.jpg" alt="Client 1">
+                    </div>
+                    <div class="client-info">
+                        <h3>Sophie Martin</h3>
+                        <p>Designer UX/UI expérimentée avec une expertise en interfaces mobiles</p>
+                        <div class="client-tags">
+                            <span class="tag">UI Design</span>
+                            <span class="tag">Figma</span>
+                            <span class="tag">Mobile App</span>
+                        </div>
+                        <a href="#" class="hire-btn">Embaucher</a>
+                    </div>
+                </div>
+                <div class="client-card">
+                    <div class="client-img">
+                        <img src="/api/placeholder/300/200" alt="Client 2">
+                    </div>
+                    <div class="client-info">
+                        <h3>Thomas Dupont</h3>
+                        <p>Développeur Full Stack avec 8 ans d'expérience en applications web</p>
+                        <div class="client-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                        <a href="#" class="hire-btn">Embaucher</a>
+                    </div>
+                </div>
+                <div class="client-card">
+                    <div class="client-img">
+                        <img src="/api/placeholder/300/200" alt="Client 3">
+                    </div>
+                    <div class="client-info">
+                        <h3>Émilie Bernard</h3>
+                        <p>Spécialiste en marketing digital et stratégie de contenu</p>
+                        <div class="client-tags">
+                            <span class="tag">SEO</span>
+                            <span class="tag">Content</span>
+                            <span class="tag">Analytics</span>
+                        </div>
+                        <a href="#" class="hire-btn">Embaucher</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="process-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Notre processus d'embauche</h2>
+                <p>Simple, transparent et efficace - voici comment nous facilitons votre collaboration avec nos talents</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h3>Parcourez les talents</h3>
+                    <p>Explorez notre catalogue de professionnels qualifiés et trouvez celui qui correspond à vos besoins.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h3>Discutez des détails</h3>
+                    <p>Contactez le talent choisi pour discuter de votre projet, du budget et des délais.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h3>Finalisez l'embauche</h3>
+                    <p>Réglez les détails contractuels et commencez votre collaboration en toute sécurité.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contactez-nous</h2>
+                <p>Besoin d'aide pour trouver le talent parfait? Notre équipe est là pour vous aider.</p>
+            </div>
+            <div class="contact-form">
+                <form action="contact1.php" method="post">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name"class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email"name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject"name="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" name="message"required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><span>Frellio</span></div>
+                
+            </div>
+            <div class="copyright">
+                &copy; 2025 Frellio. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
