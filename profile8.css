@@ -1,240 +1,256 @@
 /* Style global pour tous les éléments */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    margin: 0;  /* Supprime les marges par défaut */
+    padding: 0;  /* Supprime les espacements par défaut */
+    box-sizing: border-box;  /* Assure que les dimensions des éléments incluent les bordures et les marges */
+    font-family: Arial, sans-serif;  /* Définit la police de caractères pour tous les éléments */
 }
 
 body {
-    background-color: #f5f3f0;
-    color: #333;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background-color: #f5f3f0;  /* Couleur de fond douce pour le corps */
+    color: #333;  /* Couleur du texte */
+    min-height: 100vh;  /* Assure que le corps prend au moins toute la hauteur de l'écran */
+    display: flex;  /* Utilisation de flexbox pour la mise en page */
+    flex-direction: column;  /* Disposition des éléments dans une colonne */
 }
 
 .header {
-    background-color: #fff;
-    padding: 15px 30px;
-    border-bottom: 1px solid #e0d7cf;
+    background-color: #fff;  /* Fond blanc pour l'en-tête */
+    padding: 15px 30px;  /* Espacement interne de l'en-tête */
+    border-bottom: 1px solid #e0d7cf;  /* Bordure sous l'en-tête */
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #b3937a;
+    font-size: 24px;  /* Taille de la police pour le logo */
+    font-weight: bold;  /* Rendre le texte en gras */
+    color: #b3937a;  /* Couleur du texte du logo */
 }
 
 .logo span {
-    display: inline-block;
-    background-color: #b3937a;
-    color: white;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    line-height: 30px;
-    border-radius: 5px;
-    margin-right: 5px;
+    display: inline-block;  /* Pour que le span se comporte comme un élément en ligne mais avec des propriétés de bloc */
+    background-color: #b3937a;  /* Fond de couleur assortie à celle du texte du logo */
+    color: white;  /* Texte en blanc */
+    width: 30px;  /* Largeur fixe pour le span */
+    height: 30px;  /* Hauteur fixe pour le span */
+    text-align: center;  /* Centrer le texte dans le span */
+    line-height: 30px;  /* Centrer verticalement le texte */
+    border-radius: 5px;  /* Coins arrondis */
+    margin-right: 5px;  /* Espacement à droite du span */
 }
 
+/* Styles pour la barre de progression des étapes */
 .progress-steps {
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #fff;
-    border-bottom: 1px solid #e0d7cf;
+    display: flex;  /* Affichage des étapes en ligne */
+    align-items: center;  /* Alignement vertical des éléments */
+    padding: 15px 30px;  /* Espacement autour de la barre de progression */
+    background-color: #fff;  /* Fond blanc */
+    border-bottom: 1px solid #e0d7cf;  /* Bordure sous la barre de progression */
 }
 
 .step {
-    display: flex;
-    align-items: center;
+    display: flex;  /* Affichage en ligne des éléments de chaque étape */
+    align-items: center;  /* Alignement vertical des éléments */
 }
 
 .step-number {
-    width: 30px;
-    height: 30px;
-    background-color: #c4b5a6;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    margin-right: 10px;
+    width: 30px;  /* Taille de l'icône des numéros d'étape */
+    height: 30px;  /* Taille de l'icône des numéros d'étape */
+    background-color: #c4b5a6;  /* Couleur de fond de l'icône */
+    color: white;  /* Couleur du texte dans l'icône */
+    border-radius: 50%;  /* Rendre l'icône circulaire */
+    display: flex;  /* Utilisation de flexbox pour centrer le texte à l'intérieur */
+    align-items: center;  /* Alignement vertical du texte */
+    justify-content: center;  /* Alignement horizontal du texte */
+    font-weight: bold;  /* Texte en gras */
+    margin-right: 10px;  /* Espacement à droite de l'icône */
 }
 
 .current .step-number {
-    background-color: #b3937a;
+    background-color: #b3937a;  /* Couleur différente pour l'étape en cours */
 }
 
 .step-arrow {
-    margin: 0 15px;
-    color: #9c8975;
+    margin: 0 15px;  /* Espacement à gauche et à droite de la flèche */
+    color: #9c8975;  /* Couleur de la flèche */
 }
 
+/* Contenu principal */
 .main-content {
-    background-color: #fff;
-    margin: 10px 0;
-    padding: 20px 30px;
-    flex-grow: 1;
+    background-color: #fff;  /* Fond blanc pour la section principale */
+    margin: 10px 0;  /* Espacement autour de la section */
+    padding: 20px 30px;  /* Espacement interne */
+    flex-grow: 1;  /* Permet à cette section de grandir pour remplir l'espace restant */
 }
 
+/* Titres des sections */
 .section-title {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 5px;
+    font-size: 28px;  /* Taille du titre de la section */
+    color: #333;  /* Couleur du texte */
+    margin-bottom: 5px;  /* Espacement sous le titre */
 }
 
 .section-subtitle {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 5px;
+    font-size: 18px;  /* Taille du sous-titre */
+    color: #555;  /* Couleur du texte du sous-titre */
+    margin-bottom: 5px;  /* Espacement sous le sous-titre */
 }
 
 .section-description {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 20px;
+    font-size: 16px;  /* Taille de la description */
+    color: #555;  /* Couleur du texte de la description */
+    margin-bottom: 20px;  /* Espacement sous la description */
 }
 
+/* Séparateur de section */
 .divider {
-    height: 1px;
-    background-color: #e0d7cf;
-    margin: 20px 0;
+    height: 1px;  /* Hauteur du séparateur */
+    background-color: #e0d7cf;  /* Couleur du séparateur */
+    margin: 20px 0;  /* Espacement autour du séparateur */
 }
 
+/* Style pour les lignes de formulaire */
 .form-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 40px;
-    padding: 10px 0;
+    display: flex;  /* Affichage en ligne pour la disposition des étiquettes et des champs */
+    justify-content: space-between;  /* Distribution égale de l'espace entre les éléments */
+    align-items: flex-start;  /* Alignement des éléments en haut */
+    margin-bottom: 40px;  /* Espacement entre les lignes de formulaire */
+    padding: 10px 0;  /* Espacement interne */
 }
 
+/* Section pour l'étiquette dans le formulaire */
 .form-label-section {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
+    display: flex;  /* Affichage en colonne pour les étiquettes */
+    flex-direction: column;  /* Disposition des éléments dans une colonne */
+    width: 30%;  /* Largeur de la section des étiquettes */
 }
 
+/* Styles des étiquettes */
 .label {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 5px;
+    font-size: 18px;  /* Taille de la police pour les étiquettes */
+    font-weight: bold;  /* Texte en gras */
+    color: #333;  /* Couleur du texte des étiquettes */
+    margin-bottom: 5px;  /* Espacement sous les étiquettes */
 }
 
 .label-privacy {
-    font-size: 14px;
-    color: #888;
+    font-size: 14px;  /* Taille de la police pour les informations de confidentialité */
+    color: #888;  /* Couleur plus claire pour le texte de confidentialité */
 }
 
 .label-note {
-    font-size: 14px;
-    color: #777;
-    margin-top: 5px;
+    font-size: 14px;  /* Taille de la police pour les notes */
+    color: #777;  /* Couleur pour les notes */
+    margin-top: 5px;  /* Espacement au-dessus de la note */
 }
 
+/* Section pour les champs de formulaire */
 .input-button-section {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    width: 65%;
+    display: flex;  /* Affichage en ligne pour la section des champs et boutons */
+    align-items: center;  /* Alignement vertical des éléments */
+    gap: 15px;  /* Espacement entre les éléments */
+    width: 65%;  /* Largeur de la section des champs et boutons */
 }
 
+/* Styles pour les champs de texte */
 .form-input {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    flex: 1;
-    min-width: 300px;
-    height: 48px;
+    padding: 12px 15px;  /* Espacement interne dans le champ */
+    border: 1px solid #ddd;  /* Bordure du champ */
+    border-radius: 5px;  /* Coins arrondis pour le champ */
+    font-size: 16px;  /* Taille du texte dans le champ */
+    flex: 1;  /* Prend tout l'espace disponible */
+    min-width: 300px;  /* Largeur minimale du champ */
+    height: 48px;  /* Hauteur du champ */
 }
 
+/* Bouton "Vérifié" */
 .verified-button {
-    padding: 15px 30px;
-    background-color: #d3c5b8;
-    color: #333;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    min-width: 120px;
-    height: 48px;
-    cursor: pointer;
-    text-align: center;
-    white-space: nowrap;
+    padding: 15px 30px;  /* Espacement interne du bouton */
+    background-color: #d3c5b8;  /* Couleur de fond du bouton */
+    color: #333;  /* Couleur du texte */
+    border: none;  /* Pas de bordure */
+    border-radius: 5px;  /* Coins arrondis */
+    font-size: 16px;  /* Taille de la police */
+    min-width: 120px;  /* Largeur minimale */
+    height: 48px;  /* Hauteur du bouton */
+    cursor: pointer;  /* Curseur en forme de main au survol */
+    text-align: center;  /* Centrer le texte dans le bouton */
+    white-space: nowrap;  /* Empêche le texte de se diviser sur plusieurs lignes */
 }
 
+/* Bouton "Ajouter" */
 .add-button {
-    padding: 15px 30px;
-    background-color: transparent;
-    color: #333;
-    border: 1px solid #d3c5b8;
-    border-radius: 5px;
-    font-size: 16px;
-    min-width: 180px;
-    height: 48px;
-    cursor: pointer;
-    text-align: center;
-    white-space: nowrap;
+    padding: 15px 30px;  /* Espacement interne du bouton */
+    background-color: transparent;  /* Fond transparent */
+    color: #333;  /* Couleur du texte */
+    border: 1px solid #d3c5b8;  /* Bordure du bouton */
+    border-radius: 5px;  /* Coins arrondis */
+    font-size: 16px;  /* Taille de la police */
+    min-width: 180px;  /* Largeur minimale du bouton */
+    height: 48px;  /* Hauteur du bouton */
+    cursor: pointer;  /* Curseur en forme de main */
+    text-align: center;  /* Centrer le texte dans le bouton */
+    white-space: nowrap;  /* Empêche le texte de se diviser */
 }
 
+/* Pied de page */
 .footer {
-    background-color: #c4b5a6;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: flex-end;
+    background-color: #c4b5a6;  /* Couleur de fond du pied de page */
+    padding: 15px 30px;  /* Espacement interne */
+    display: flex;  /* Affichage en ligne pour les éléments du pied de page */
+    justify-content: flex-end;  /* Aligner les éléments à droite */
 }
 
+/* Bouton "Next" dans le pied de page */
 .next-button {
-    padding: 12px 30px;
-    background-color: #f2ede9;
-    color: #333;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    min-width: 100px;
+    padding: 12px 30px;  /* Espacement interne */
+    background-color: #f2ede9;  /* Couleur de fond du bouton */
+    color: #333;  /* Couleur du texte */
+    border: none;  /* Pas de bordure */
+    border-radius: 20px;  /* Coins arrondis */
+    font-size: 16px;  /* Taille de la police */
+    cursor: pointer;  /* Curseur en forme de main */
+    min-width: 100px;  /* Largeur minimale du bouton */
 }
 
+/* Effet au survol du bouton "Next" */
 .next-button:hover {
-    background-color: #e8e1da;
+    background-color: #e8e1da;  /* Couleur de fond lors du survol */
 }
 
-/* Ajout du style pour le bouton "Verify" */
+/* Bouton "Verify" */
 .verify-button {
-    padding: 12px 30px;
-    background-color: #f2ede9;
-    color: #333;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    min-width: 100px;
-    margin-left: 10px; /* Pour ajouter un peu d'espace entre "Next" et "Verify" */
+    padding: 12px 30px;  /* Espacement interne du bouton */
+    background-color: #f2ede9;  /* Couleur de fond du bouton */
+    color: #333;  /* Couleur du texte */
+    border: none;  /* Pas de bordure */
+    border-radius: 20px;  /* Coins arrondis */
+    font-size: 16px;  /* Taille de la police */
+    cursor: pointer;  /* Curseur en forme de main */
+    min-width: 100px;  /* Largeur minimale du bouton */
+    margin-left: 10px;  /* Espacement à gauche du bouton */
 }
 
+/* Effet au survol du bouton "Verify" */
 .verify-button:hover {
-    background-color: #e8e1da;
+    background-color: #e8e1da;  /* Couleur de fond lors du survol */
 }
 
+/* Styles responsive pour les petits écrans */
 @media (max-width: 768px) {
     .form-row {
-        flex-direction: column;
+        flex-direction: column;  /* Passage de la disposition en ligne à une disposition en colonne */
     }
     
     .form-label-section,
     .input-button-section {
-        width: 100%;
+        width: 100%;  /* Largeur de 100% pour les sections */
     }
     
     .input-button-section {
-        margin-top: 15px;
+        margin-top: 15px;  /* Espacement en haut pour la section des champs */
     }
     
     .form-input {
-        min-width: 0;
+        min-width: 0;  /* Largeur minimale des champs */
     }
 }

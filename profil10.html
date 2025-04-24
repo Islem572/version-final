@@ -1,86 +1,89 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frellio - Configuration du Profil</title>
-    <link rel="stylesheet" href="profil10.css">
-    <script src="profil10.js"></script>
+    <meta charset="UTF-8"> <!-- Définit le jeu de caractères utilisé (UTF-8) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Assure une mise en page responsive sur tous les appareils -->
+    <title>Frellio - Configuration du Profil</title> <!-- Titre de la page affiché dans l'onglet du navigateur -->
+    <link rel="stylesheet" href="profil10.css"> <!-- Lien vers le fichier CSS pour le style -->
+    <script src="profil10.js"></script> <!-- Lien vers le fichier JavaScript -->
 </head>
 <body>
     <header>
-        <div class="logo">Frellio</div>
+        <div class="logo">Frellio</div> <!-- Logo du site, à afficher en haut de la page -->
     </header>
     
     <div class="progress-steps">
+        <!-- Bar de progression des étapes -->
         <div class="step">
-            <div class="step-number">1</div>
-            <div class="step-text">Personal info</div>
+            <div class="step-number">1</div> <!-- Numéro de la première étape -->
+            <div class="step-text">Personal info</div> <!-- Texte de la première étape -->
         </div>
-        <div class="separator">></div>
+        <div class="separator">></div> <!-- Séparateur entre les étapes -->
         <div class="step">
-            <div class="step-number">2</div>
-            <div class="step-text"></div>
+            <div class="step-number">2</div> <!-- Numéro de la deuxième étape -->
+            <div class="step-text"></div> <!-- Texte vide pour la deuxième étape (pour l'instant) -->
         </div>
     </div>
     
     <div class="main-content">
+        <!-- Contenu principal de la page -->
         <div class="account-security">
-            <h1>Account Security</h1>
-            <p>Trust And Safety Is A Priority</p>
-            <p>Please Verify Your Email And Phone Number</p>
+            <h1>Account Security</h1> <!-- Titre de la section sécurité du compte -->
+            <p>Trust And Safety Is A Priority</p> <!-- Sous-titre pour rassurer l'utilisateur -->
+            <p>Please Verify Your Email And Phone Number</p> <!-- Indication pour la vérification -->
         </div>
         
         <div class="form-field">
-            <div class="field-label">Email</div>
-            <div class="field-value">Private</div>
-            <button class="field-input" style="background-color: #d2b8a4; width: 120px; margin-left: auto;">Verify</button>
+            <div class="field-label">Email</div> <!-- Libellé pour le champ Email -->
+            <div class="field-value">Private</div> <!-- Affichage du statut de l'email -->
+            <button class="field-input" style="background-color: #d2b8a4; width: 120px; margin-left: auto;">Verify</button> <!-- Bouton pour vérifier l'email -->
         </div>
         
         <div class="form-field">
-            <div class="field-label">Phone Number</div>
-            <div class="field-value">Private</div>
-            <p style="flex-grow: 1; margin-left: 10px;">We'll Never Share Your Phone Number</p>
-            <input type="text" class="field-input" placeholder="Enter Phone Number" style="margin-left: auto; max-width: 300px;">
+            <div class="field-label">Phone Number</div> <!-- Libellé pour le champ Numéro de téléphone -->
+            <div class="field-value">Private</div> <!-- Affichage du statut du numéro de téléphone -->
+            <p style="flex-grow: 1; margin-left: 10px;">We'll Never Share Your Phone Number</p> <!-- Message de confidentialité -->
+            <input type="text" class="field-input" placeholder="Enter Phone Number" style="margin-left: auto; max-width: 300px;"> <!-- Champ de saisie pour le numéro de téléphone -->
         </div>
     </div>
     
+    <!-- Fenêtre modale qui s'affiche une fois que l'utilisateur a accompli certaines étapes -->
     <div class="modal-overlay">
         <div class="modal">
             <div class="modal-content">
                 <div class="profile-icon">
+                    <!-- Icône de profil sous forme de SVG -->
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                        <circle cx="12" cy="8" r="4"/>
-                        <path d="M4 18C4 15.34 9.33 14 12 14C14.67 14 20 15.34 20 18V20H4V18Z"/>
+                        <circle cx="12" cy="8" r="4"/> <!-- Cercle représentant le visage dans l'icône de profil -->
+                        <path d="M4 18C4 15.34 9.33 14 12 14C14.67 14 20 15.34 20 18V20H4V18Z"/> <!-- Silhouette du corps dans l'icône de profil -->
                     </svg>
                 </div>
                 
-                <h2 class="modal-title">You're Almost Done!</h2>
+                <h2 class="modal-title">You're Almost Done!</h2> <!-- Titre de la modale -->
                 
                 <p class="modal-text">
                     You Need To Complete At Least 65% Of Your Profile To Continue.<br>
                     A Detailed Profile Can Help Build More Trust Between You And Your<br>
                     Customers - Resulting In More Orders.
-                </p>
+                </p> <!-- Message dans la modale encourageant l'utilisateur à compléter son profil -->
                 
                 <div class="steps-box">
                     <p style="font-weight: bold; text-align: left;">Please Complete The Following Steps:</p>
+                    <!-- Liste des étapes à compléter -->
                     <ul class="steps-list">
-                        <li>Confirm Your Phone Number</li>
-                        <li>Provide Your Education Details</li>
-                        <li>Provide Your Certifications</li>
+                        <li>Confirm Your Phone Number</li> <!-- Étape 1 -->
+                        <li>Provide Your Education Details</li> <!-- Étape 2 -->
+                        <li>Provide Your Certifications</li> <!-- Étape 3 -->
                     </ul>
                 </div>
                 
                 <div class="button-row">
-                    <a hre="profil11.html">
-                        <button class="edit-button">Edit Profil</button>
+                    <a href="profil11.html">
+                        <button class="edit-button">Edit Profil</button> <!-- Bouton pour éditer le profil -->
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    
-    
 </body>
 </html>

@@ -1,17 +1,18 @@
- /* Reset et styles de base */
- * {
+/* Réinitialisation des marges, paddings et boîtes, avec police par défaut */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
 
+/* Style de base du corps de la page */
 body {
     background-color: #f5f5f5;
     color: #333;
 }
 
-/* Header */
+/* En-tête (header) avec fond blanc, ombre légère, et contenu aligné */
 header {
     background-color: #fff;
     padding: 15px 30px;
@@ -21,12 +22,14 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Logo principal avec style et couleur personnalisée */
 .logo {
     font-size: 24px;
     font-weight: bold;
     color: #b3937a;
 }
 
+/* Première lettre ou élément du logo mis en avant dans un carré coloré */
 .logo span {
     display: inline-block;
     background-color: #b3937a;
@@ -39,13 +42,14 @@ header {
     margin-right: 5px;
 }
 
-/* Contenu principal */
+/* Conteneur principal centré et avec marges internes */
 .container {
     max-width: 1200px;
     margin: 30px auto;
     padding: 0 20px;
 }
 
+/* En-tête de la boîte de réception (titre + barre de recherche) */
 .inbox-header {
     display: flex;
     justify-content: space-between;
@@ -53,11 +57,13 @@ header {
     margin-bottom: 20px;
 }
 
+/* Titre principal */
 h1 {
     color: #b3937a;
     font-size: 28px;
 }
 
+/* Barre de recherche stylisée */
 .search-bar {
     padding: 10px 15px;
     border-radius: 20px;
@@ -65,13 +71,14 @@ h1 {
     width: 300px;
 }
 
-/* Liste des messages */
+/* Conteneur de la liste des messages */
 .messages-list {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Un message individuel avec hover et transition douce */
 .message {
     padding: 15px 20px;
     border-bottom: 1px solid #eee;
@@ -81,14 +88,17 @@ h1 {
     transition: background-color 0.2s;
 }
 
+/* Effet au survol du message */
 .message:hover {
     background-color: #f9f9f9;
 }
 
+/* Style pour les messages non lus */
 .message.unread {
     background-color: #f0f7ff;
 }
 
+/* Avatar de l'expéditeur avec fond et initiales */
 .message-avatar {
     width: 50px;
     height: 50px;
@@ -102,15 +112,18 @@ h1 {
     font-weight: bold;
 }
 
+/* Zone contenant le texte du message */
 .message-content {
     flex-grow: 1;
 }
 
+/* Nom de l'expéditeur en gras */
 .message-sender {
     font-weight: bold;
     margin-bottom: 5px;
 }
 
+/* Aperçu du message avec ellipse si trop long */
 .message-preview {
     color: #666;
     font-size: 14px;
@@ -119,13 +132,14 @@ h1 {
     text-overflow: ellipsis;
 }
 
+/* Heure du message, discrète */
 .message-time {
     color: #999;
     font-size: 12px;
     margin-left: 15px;
 }
 
-/* Pied de page */
+/* Pied de page centré et discret */
 footer {
     text-align: center;
     padding: 20px;
@@ -133,6 +147,8 @@ footer {
     font-size: 14px;
     margin-top: 30px;
 }
+
+/* Bouton de retour en bas à droite de l'écran */
 .back-button {
     position: fixed;
     bottom: 20px;
@@ -147,6 +163,7 @@ footer {
     transition: background-color 0.3s;
 }
 
+/* Changement de couleur au survol du bouton */
 .back-button:hover {
     background-color: #9a7d64;
 }

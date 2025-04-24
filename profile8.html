@@ -1,18 +1,23 @@
+<!-- Structure de base du document HTML avec langue française -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Métadonnées standard avec encodage et responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frellio - Account Security</title>
+    <!-- Lien vers une feuille de style externe - le nom indique qu'il pourrait y avoir plusieurs versions -->
     <link rel="stylesheet" href="profile8.css">
-    <!-- Ajout de SweetAlert pour de belles alertes -->
+    <!-- Intégration de SweetAlert pour des alertes améliorées -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Styles CSS intégrés directement dans le HTML au lieu d'être dans le fichier CSS externe -->
     <style>
+        /* Styles pour indiquer visuellement les états de validation */
         .error-input {
-            border: 1px solid #ff3860 !important;
+            border: 1px solid #ff3860 !important; /* Use of !important should be minimized */
         }
         .success-input {
-            border: 1px solid #09c372 !important;
+            border: 1px solid #09c372 !important; /* Same here, !important overrides all other styles */
         }
         .error-message {
             color: #ff3860;
@@ -22,46 +27,60 @@
     </style>
 </head>
 <body>
+    <!-- En-tête avec logo de l'application -->
     <div class="header">
+        <!-- Logo stylisé avec la première lettre mise en avant -->
         <div class="logo"><span>F</span>rellio</div>
     </div>
     
+    <!-- Indicateur de progression multi-étapes -->
     <div class="progress-steps">
+        <!-- Étape 1 (déjà complétée) -->
         <div class="step">
             <div class="step-number">1</div>
             <span>Personal info</span>
         </div>
         <span class="step-arrow">></span>
+        <!-- Étape 2 (déjà complétée) -->
         <div class="step">
             <div class="step-number">2</div>
-            <span>Personal info</span>
+            <span>Personal info</span> <!-- Même nom que l'étape 1, possible erreur -->
         </div>
         <span class="step-arrow">></span>
+        <!-- Étape 3 (actuelle) -->
         <div class="step current">
             <div class="step-number">3</div>
             <span>Account Security</span>
         </div>
     </div>
     
+    <!-- Contenu principal de la page -->
     <div class="main-content">
+        <!-- Titres et explications -->
         <h1 class="section-title">Account Security</h1>
         <p class="section-subtitle">Trust And Safety Is A Big Deal In Our Community.</p>
         <p class="section-description">Please Verify Your Email And Phone Number So That We Can Keep Your Account Secured.</p>
         
         <div class="divider"></div>
+        <!-- Formulaire de sécurité avec validation côté client -->
         <form name="securityForm" id="securityForm" action="save_security.php" method="POST" onsubmit="return validateForm()">
+            <!-- Champ pour l'email -->
             <div class="form-row">
                 <div class="form-label-section">
                     <div class="label">Email</div>
                     <div class="label-privacy">Private</div>
                 </div>
                 <div class="input-button-section">
+                    <!-- Pas d'attribut required pour l'email malgré sa nécessité -->
                     <input type="email" name="email" id="emailInput" class="form-input" placeholder="Enter your email">
+                    <!-- Conteneur pour les messages d'erreur de validation -->
                     <div id="emailError" class="error-message"></div>
+                    <!-- Bouton de vérification d'email sans attribut type -->
                     <button type="button" id="verifyEmailBtn" class="verified-button">Verify Email</button>
                 </div>
             </div>
             
+            <!-- Champ pour le numéro de téléphone -->
             <div class="form-row">
                 <div class="form-label-section">
                     <div class="label">Phone Number</div>
@@ -69,36 +88,43 @@
                     <div class="label-note">We'll Never Share Your Phone Number.</div>
                 </div>
                 <div class="input-button-section">
+                    <!-- Input de type tel sans pattern précisé dans le HTML -->
                     <input type="tel" name="phone" id="phoneInput" class="form-input" placeholder="Enter your phone number">
+                    <!-- Conteneur pour les messages d'erreur de validation -->
                     <div id="phoneError" class="error-message"></div>
+                    <!-- Bouton avec une classe différente du bouton email -->
                     <button type="button" id="verifyPhoneBtn" class="add-button">Verify Phone</button>
                 </div>
             </div>
 
+            <!-- Pied de page avec boutons d'action -->
             <div class="footer">
+                <!-- Bouton pour soumettre le formulaire -->
                 <button type="submit" class="next-button">Next</button>
+                <!-- Bouton pour vérifier tous les champs en une fois -->
                 <button type="button" class="verify-button" onclick="validateForm(true)">Verify All</button>
             </div>
         </form>
     </div>
 
     <script>
-        // Variables pour suivre l'état de vérification
+        // Variables de suivi d'état - bonne pratique pour le suivi de l'état de vérification
         let isEmailVerified = false;
         let isPhoneVerified = false;
         
-        // Initialisation après chargement du DOM
+        // Attente du chargement complet du DOM avant d'ajouter les écouteurs d'événements
         document.addEventListener('DOMContentLoaded', function() {
-            // Écouteurs d'événements pour la validation en temps réel
+            // Validation en temps réel de l'email pendant la saisie
             document.getElementById('emailInput').addEventListener('input', function() {
                 validateEmail(this.value);
             });
             
+            // Validation en temps réel du téléphone pendant la saisie
             document.getElementById('phoneInput').addEventListener('input', function() {
                 validatePhone(this.value);
             });
             
-            // Bouton de vérification d'email
+            // Gestion du clic sur le bouton de vérification d'email
             document.getElementById('verifyEmailBtn').addEventListener('click', function() {
                 const email = document.getElementById('emailInput').value;
                 if (validateEmail(email)) {
@@ -106,7 +132,7 @@
                 }
             });
             
-            // Bouton de vérification de téléphone
+            // Gestion du clic sur le bouton de vérification du téléphone
             document.getElementById('verifyPhoneBtn').addEventListener('click', function() {
                 const phone = document.getElementById('phoneInput').value;
                 if (validatePhone(phone)) {
@@ -115,46 +141,53 @@
             });
         });
         
-        // Fonction de validation d'email
+        // Fonction de validation d'email avec regex
         function validateEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex basique pour email
             const emailError = document.getElementById('emailError');
             
+            // Vérification si le champ est vide
             if (!email) {
                 emailError.textContent = 'Email is required';
                 document.getElementById('emailInput').classList.add('error-input');
                 return false;
             }
             
+            // Vérification du format d'email
             if (!emailRegex.test(email)) {
                 emailError.textContent = 'Please enter a valid email address';
                 document.getElementById('emailInput').classList.add('error-input');
                 return false;
             }
             
+            // Validation réussie
             emailError.textContent = '';
             document.getElementById('emailInput').classList.remove('error-input');
             document.getElementById('emailInput').classList.add('success-input');
             return true;
         }
         
-        // Fonction de validation de téléphone
+        // Fonction de validation de téléphone avec regex
         function validatePhone(phone) {
+            // Regex pour formats téléphoniques communs mais pas universels
             const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
             const phoneError = document.getElementById('phoneError');
             
+            // Vérification si le champ est vide
             if (!phone) {
                 phoneError.textContent = 'Phone number is required';
                 document.getElementById('phoneInput').classList.add('error-input');
                 return false;
             }
             
+            // Vérification du format de téléphone
             if (!phoneRegex.test(phone)) {
                 phoneError.textContent = 'Please enter a valid phone number';
                 document.getElementById('phoneInput').classList.add('error-input');
                 return false;
             }
             
+            // Validation réussie
             phoneError.textContent = '';
             document.getElementById('phoneInput').classList.remove('error-input');
             document.getElementById('phoneInput').classList.add('success-input');
@@ -163,11 +196,13 @@
         
         // Fonction de vérification d'email (simulée)
         function verifyEmail(email) {
-            // Simulation d'envoi de code de vérification
+            // Simulation d'envoi - désactivation du bouton et changement de texte
             document.getElementById('verifyEmailBtn').disabled = true;
             document.getElementById('verifyEmailBtn').textContent = 'Sending code...';
             
+            // Simulation d'un délai réseau de 1.5 secondes
             setTimeout(() => {
+                // Utilisation de SweetAlert pour une interface utilisateur améliorée
                 Swal.fire({
                     title: 'Verification Code Sent',
                     html: `We've sent a 6-digit code to <b>${email}</b>. Please check your inbox.`,
@@ -177,6 +212,7 @@
                     showCancelButton: true,
                     confirmButtonText: 'Verify',
                     cancelButtonText: 'Cancel',
+                    // Validation du code à 6 chiffres
                     preConfirm: (code) => {
                         if (!code || code.length !== 6) {
                             Swal.showValidationMessage('Please enter a valid 6-digit code');
@@ -186,7 +222,7 @@
                     }
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        // Simulation de vérification réussie
+                        // Validation réussie - pas de vérification réelle du code
                         isEmailVerified = true;
                         document.getElementById('verifyEmailBtn').textContent = 'Verified';
                         document.getElementById('verifyEmailBtn').style.backgroundColor = '#4CAF50';
@@ -196,6 +232,7 @@
                             'success'
                         );
                     } else {
+                        // L'utilisateur a annulé - réactivation du bouton
                         document.getElementById('verifyEmailBtn').disabled = false;
                         document.getElementById('verifyEmailBtn').textContent = 'Verify Email';
                     }
@@ -205,7 +242,7 @@
         
         // Fonction de vérification de téléphone (simulée)
         function verifyPhone(phone) {
-            // Simulation d'envoi de code SMS
+            // Même structure que verifyEmail - idéalement, ces fonctions devraient être combinées
             document.getElementById('verifyPhoneBtn').disabled = true;
             document.getElementById('verifyPhoneBtn').textContent = 'Sending SMS...';
             
@@ -228,7 +265,7 @@
                     }
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        // Simulation de vérification réussie
+                        // Validation réussie - changement de classe plutôt que de style direct
                         isPhoneVerified = true;
                         document.getElementById('verifyPhoneBtn').textContent = 'Verified';
                         document.getElementById('verifyPhoneBtn').className = 'verified-button';
@@ -238,6 +275,7 @@
                             'success'
                         );
                     } else {
+                        // L'utilisateur a annulé
                         document.getElementById('verifyPhoneBtn').disabled = false;
                         document.getElementById('verifyPhoneBtn').textContent = 'Verify Phone';
                     }
@@ -250,9 +288,11 @@
             const email = document.getElementById('emailInput').value;
             const phone = document.getElementById('phoneInput').value;
             
+            // Validation des formats
             const isEmailValid = validateEmail(email);
             const isPhoneValid = validatePhone(phone);
             
+            // Affichage des alertes si demandé explicitement (pour le bouton Verify All)
             if (showAlerts) {
                 if (!isEmailValid || !isPhoneValid) {
                     Swal.fire({
@@ -273,11 +313,12 @@
                 }
             }
             
+            // Validation globale
             if (!isEmailValid || !isPhoneValid || !isEmailVerified || !isPhoneVerified) {
                 return false;
             }
             
-            // Si tout est valide, le formulaire peut être soumis
+            // Soumission du formulaire si tout est valide
             if (!showAlerts) {
                 Swal.fire({
                     title: 'Success!',

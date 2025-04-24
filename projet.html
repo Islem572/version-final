@@ -1,28 +1,41 @@
+<!-- Déclaration du type de document HTML5 -->
 <!DOCTYPE html>
+<!-- La langue est définie comme français, ce qui est cohérent pour une plateforme française -->
 <html lang="fr">
 <head>
+    <!-- Configuration de l'encodage et du viewport pour le responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de la page descriptif -->
     <title>Frellio - Projets disponibles</title>
     
+    <!-- Référence à la feuille de style externe - nom correspondant au fichier CSS analysé précédemment -->
     <link rel="stylesheet" href="projet.css">
 </head>
 <body>
+    <!-- En-tête avec logo et icônes de navigation -->
     <header>
+        <!-- Logo avec mise en évidence de la première lettre -->
         <div class="logo"><span>F</span>rellio</div>
+        <!-- Barre de navigation avec icônes SVG inline -->
         <div class="nav-icons">
+            <!-- Icône de notification - SVG inline plutôt qu'image pour plus de flexibilité -->
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
                 <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
             </svg>
+            <!-- Icône de dossier -->
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
             </svg>
+            <!-- Icône de message/email -->
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="2" y="4" width="20" height="16" rx="2"></rect>
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
             </svg>
+            <!-- Bouton pour poster un nouveau projet - appel à l'action important -->
             <button class="post-project-btn">Post A Project</button>
+            <!-- Icône de profil utilisateur -->
             <svg class="profile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                 <circle cx="12" cy="7" r="4"></circle>
@@ -30,13 +43,17 @@
         </div>
     </header>
 
+    <!-- Contenu principal -->
     <div class="main-content">
+        <!-- En-tête de la section projets avec titre et compteur -->
         <div class="projects-header">
             <h1 class="projects-title">Projets disponibles</h1>
             <div class="projects-count">347 projets</div>
         </div>
 
+        <!-- Barre de filtres par catégorie -->
         <div class="filters">
+            <!-- Boutons de filtre avec le premier activé par défaut -->
             <button class="filter-btn active">Tous les projets</button>
             <button class="filter-btn">Développement web</button>
             <button class="filter-btn">Design graphique</button>
@@ -44,28 +61,36 @@
             <button class="filter-btn">Rédaction</button>
         </div>
 
+        <!-- Barre de recherche avec icône -->
         <div class="search-container">
+            <!-- Champ de recherche sans attribut name (problématique pour traitement côté serveur) -->
             <input type="text" class="search-bar" placeholder="Rechercher des projets...">
+            <!-- Icône de loupe SVG pour la recherche -->
             <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <circle cx="11" cy="11" r="8"></circle>
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
         </div>
 
+        <!-- Grille des projets - conteneur principal -->
         <div class="projects-grid">
-            <!-- Projet 1 -->
+            <!-- Projet 1 : Création site e-commerce -->
             <div class="project-card">
+                <!-- En-tête de la carte avec titre et info client -->
                 <div class="project-header">
                     <h3 class="project-title">Création d'un site e-commerce</h3>
                     <div class="project-client">
+                        <!-- Avatar client vide - aucune image réelle -->
                         <div class="client-avatar"></div>
                         <span>Jean Dupont</span>
                     </div>
                 </div>
+                <!-- Corps de la carte avec description et tags -->
                 <div class="project-body">
                     <p class="project-description">
                         Création d'un site e-commerce complet avec système de paiement, gestion des stocks et interface administrateur.
                     </p>
+                    <!-- Technologies/compétences requises sous forme de tags -->
                     <div class="project-tags">
                         <span class="tag">PHP</span>
                         <span class="tag">MySQL</span>
@@ -73,14 +98,17 @@
                         <span class="tag">E-commerce</span>
                     </div>
                 </div>
+                <!-- Pied de carte avec budget et bouton d'action -->
                 <div class="project-footer">
                     <div class="project-price">2500€ - 3500€</div>
                     <button class="bid-btn">Postuler</button>
                 </div>
             </div>
 
-            <!-- Projet 2 -->
+            <!-- Structure répétée pour les 5 autres projets avec des données différentes -->
+            <!-- Projet 2 : Logo pour startup -->
             <div class="project-card">
+                <!-- Structure identique aux autres cartes -->
                 <div class="project-header">
                     <h3 class="project-title">Logo pour startup fintech</h3>
                     <div class="project-client">
@@ -104,7 +132,7 @@
                 </div>
             </div>
 
-            <!-- Projet 3 -->
+            <!-- Projet 3 : Application mobile -->
             <div class="project-card">
                 <div class="project-header">
                     <h3 class="project-title">Application mobile de livraison</h3>
@@ -129,7 +157,7 @@
                 </div>
             </div>
 
-            <!-- Projet 4 -->
+            <!-- Projet 4 : Rédaction d'articles -->
             <div class="project-card">
                 <div class="project-header">
                     <h3 class="project-title">Rédaction d'articles de blog</h3>
@@ -154,7 +182,7 @@
                 </div>
             </div>
 
-            <!-- Projet 5 -->
+            <!-- Projet 5 : Campagne marketing -->
             <div class="project-card">
                 <div class="project-header">
                     <h3 class="project-title">Campagne marketing sur les réseaux sociaux</h3>
@@ -179,7 +207,7 @@
                 </div>
             </div>
 
-            <!-- Projet 6 -->
+            <!-- Projet 6 : Refonte site web -->
             <div class="project-card">
                 <div class="project-header">
                     <h3 class="project-title">Refonte d'un site web corporate</h3>
@@ -205,6 +233,7 @@
             </div>
         </div>
 
+        <!-- Pagination simple avec 5 pages -->
         <div class="pagination">
             <button class="page-btn active">1</button>
             <button class="page-btn">2</button>
@@ -214,15 +243,17 @@
         </div>
     </div>
 
-    <!-- Bouton de retour ajouté ici -->
+    <!-- Bouton de retour avec double fonctionnalité -->
      <a href="profil11.html">
+         <!-- Le bouton a deux comportements potentiellement conflictuels : lien et onclick -->
          <button class="back-button" onclick="window.history.back()">Retour</button>
         </a>
     <script>
-        // Script optionnel pour améliorer le bouton de retour
+        // Script JavaScript minimal pour le bouton de retour
+        // Ce code est redondant avec l'attribut onclick déjà défini sur le bouton
         document.querySelector('.back-button').addEventListener('click', function() {
-            // Vous pouvez personnaliser ce comportement
-            // Par défaut, il utilise history.back()
+            // Commentaire suggérant une personnalisation possible
+            // Le code actuel ne fait rien car l'événement par défaut sera l'attribut onclick
         });
     </script>
 </body>

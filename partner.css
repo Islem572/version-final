@@ -1,168 +1,188 @@
-/* General Styles */
+/* Styles généraux */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif; /* Police de base */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #EFEBE0;
-
-    background-color:  #B19079;
-    box-sizing: border-box;
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    background-color: #EFEBE0; /* Couleur de fond initiale (écrasée plus bas) */
+    background-color: #B19079; /* Nouvelle couleur de fond beige/marron */
+    box-sizing: border-box; /* Modèle de boîte plus intuitif */
 }
 
+/* Conteneur principal */
 .container {
     display: flex;
-    width: 80%;
-    max-width: 1200px;
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Largeur relative */
+    max-width: 1200px; /* Largeur maximale */
+    background-color: white; /* Fond blanc */
+    border-radius: 10px; /* Coins arrondis */
+    overflow: hidden; /* Cache les débordements */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre subtile */
 }
 
-/* Left Section */
+/* Section gauche (formulaire) */
 .left-section {
-    flex: 1;
-    padding: 30px;
-    background-color: #f5efe6;
+    flex: 1; /* Prend l'espace disponible */
+    padding: 30px; /* Espacement interne */
+    background-color: #f5efe6; /* Fond beige clair */
 }
 
+/* Logo */
 .navbar .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #a67c68;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Taille du texte */
+    font-weight: bold; /* Gras */
+    color: #a67c68; /* Couleur marron clair */
+    margin-bottom: 20px; /* Espacement bas */
 }
 
+/* Titre */
 .left-section h1 {
-    font-size: 2rem;
-    color: #a67c68;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Taille du texte */
+    color: #a67c68; /* Couleur marron clair */
+    margin-bottom: 20px; /* Espacement bas */
 }
 
+/* Formulaire */
 form {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Organisation verticale */
 }
 
+/* Groupe de champs */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Espace entre les champs */
 }
 
+/* Labels */
 label {
-    font-size: 0.9rem;
-    color: #6b4f4f;
-    margin-bottom: 5px;
-    display: block}
-    label {
-        color: #8b5e4f; /* Updated color */
-    }
+    font-size: 0.9rem; /* Taille du texte */
+    color: #6b4f4f; /* Couleur marron foncé */
+    margin-bottom: 5px; /* Espacement bas */
+    display: block; /* Affichage en bloc */
+}
+
+/* Nouvelle couleur pour les labels (déclaration dupliquée) */
+label {
+    color: #8b5e4f; /* Couleur marron moyen */
+}
+
+/* Champs de formulaire */
 input, select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: #f9f9f9;
+    width: 100%; /* Pleine largeur */
+    padding: 10px; /* Espacement interne */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 1rem; /* Taille du texte */
+    background-color: #f9f9f9; /* Fond gris très clair */
 }
 
+/* Bouton */
 button {
-    padding: 10px 20px;
-    background-color: #a67c68;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
+    padding: 10px 20px; /* Espacement interne */
+    background-color: #a67c68; /* Couleur marron clair */
+    color: white; /* Texte blanc */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur main */
+    font-size: 1rem; /* Taille du texte */
 }
 
+/* Effet hover du bouton */
 button:hover {
-    background-color: #8b5e4f;
+    background-color: #8b5e4f; /* Couleur marron plus foncée */
 }
 
-/* Right Section */
+/* Section droite (contenu illustratif) */
 .right-section {
-    flex: 1;
-    background-color: #a67c68;
-    color: white;
-    text-align: center;
-    padding: 30px;
+    flex: 1; /* Prend l'espace disponible */
+    background-color: #a67c68; /* Couleur marron clair */
+    color: white; /* Texte blanc */
+    text-align: center; /* Centrage du texte */
+    padding: 30px; /* Espacement interne */
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Organisation verticale */
+    justify-content: center; /* Centrage vertical */
+    align-items: center; /* Centrage horizontal */
 }
 
+/* Titres section droite */
 .right-section h1 {
-    font-size: 2.5rem;
-    margin: 10px 0;
+    font-size: 2.5rem; /* Très gros texte */
+    margin: 10px 0; /* Espacement vertical */
 }
 
 .right-section h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem; /* Gros texte */
+    margin-bottom: 20px; /* Espacement bas */
 }
 
+/* Conteneur d'image */
 .image-container {
-    position: relative;
-    margin-top: 20px;
+    position: relative; /* Pour positionner le badge */
+    margin-top: 20px; /* Espacement haut */
 }
 
+/* Image */
 .image-container img {
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Largeur relative */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre portée */
 }
 
+/* Badge "vérifié" */
 .verified-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #00c853;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    font-weight: bold;
+    position: absolute; /* Positionnement absolu */
+    top: 10px; /* Position depuis le haut */
+    right: 10px; /* Position depuis la droite */
+    background-color: #00c853; /* Vert */
+    color: white; /* Texte blanc */
+    padding: 5px 10px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 0.8rem; /* Petit texte */
+    font-weight: bold; /* Gras */
 }
-/* Amélioration des champs de formulaire */
+
+/* Améliorations des champs de formulaire */
 input, select {
     width: 100%;
-    padding: 12px; /* Augmenté pour plus de confort */
-    border: 1px solid #b8a398; /* Couleur plus douce */
+    padding: 12px; /* Plus grand pour meilleure ergonomie */
+    border: 1px solid #b8a398; /* Couleur de bordure plus douce */
     border-radius: 8px; /* Coins plus arrondis */
     font-size: 1rem;
-    background-color: #fdfcfb; /* Couleur légèrement différente */
-    transition: border-color 0.3s ease;
+    background-color: #fdfcfb; /* Fond légèrement différent */
+    transition: border-color 0.3s ease; /* Animation fluide */
 }
 
+/* Etat focus des champs */
 input:focus, select:focus {
     border-color: #a67c68; /* Couleur de focus */
-    outline: none;
-    box-shadow: 0 0 5px rgba(166, 124, 104, 0.5); /* Effet lumineux */
+    outline: none; /* Supprime le contour par défaut */
+    box-shadow: 0 0 5px rgba(166, 124, 104, 0.5); /* Effet de halo */
 }
 
-/* Amélioration du bouton */
+/* Améliorations du bouton */
 button {
-    padding: 12px 25px; /* Taille augmentée */
+    padding: 12px 25px; /* Plus grand */
     background-color: #a67c68;
     color: white;
     border: none;
     border-radius: 8px; /* Coins plus arrondis */
     cursor: pointer;
-    font-size: 1.1rem; /* Texte légèrement plus grand */
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1rem; /* Texte légèrement plus gros */
+    font-weight: bold; /* Gras */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animations */
 }
 
+/* Effet hover amélioré */
 button:hover {
-    background-color: #8b5e4f; /* Couleur plus foncée au survol */
-    transform: scale(1.05); /* Légère mise en avant */
+    background-color: #8b5e4f; /* Couleur plus foncée */
+    transform: scale(1.05); /* Légère augmentation de taille */
 }
+
+/* Classe pour erreur de validation */
 .error-border {
-    border-color: red !important;
+    border-color: red !important; /* Bordure rouge pour erreur */
 }
- 

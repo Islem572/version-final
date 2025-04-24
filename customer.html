@@ -1,46 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Métadonnées et liens vers les fichiers CSS -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Signup</title>
+    <!-- Lien vers le fichier CSS de la page (custom) -->
     <link rel="stylesheet" href="customer.css">
+    <!-- Lien vers le fichier Bootstrap (assurez-vous que le chemin est correct, la typo était 'bootsrap' mais devrait être 'bootstrap') -->
     <link rel="stylesheet" href="../../bootsrap/bootstrap.min.css">
+    <!-- Icône du site affichée dans l'onglet du navigateur -->
     <link rel="icon" href="../../photo/signup/custemer/customericon.png" type="image/x-icon">
+    <!-- Lien vers un fichier JavaScript, si nécessaire pour la page -->
     <script src="customer.js"></script>
 </head>
 <body>
-    <div style="margin: 6px; height: 517px;">
+    <div style="margin: 6px; height: 517px;"> <!-- Style inline pour ajuster la taille de la page -->
 
-    <div class="container">
+    <div class="container"> <!-- Section principale contenant le formulaire et l'image -->
+        
+        <!-- Section gauche : Formulaire de création de compte -->
         <div class="left-section">
+            <!-- Barre de navigation avec le logo -->
             <header class="navbar">
                 <div class="logo">Frellio</div>
             </header>
+            
+            <!-- Titre de la section -->
             <h1 class="signup-title">Sign up to find work you love</h1>
             
-            <form action="customer.php"method="POST">
+            <!-- Formulaire d'inscription (méthode POST pour soumettre les données au serveur) -->
+            <form action="customer.php" method="POST">
+                
+                <!-- Groupe de champs pour le nom -->
                 <div class="form-group">
                     <div class="row">
                         <div class="col">
-                            <label for="first-name">first name:</label>
-                          <input type="text"name="First_name" class="form-control" placeholder="First name" id=  "first-name" aria-label="First name">
+                            <label for="first-name">First name:</label>
+                            <!-- Champ pour le prénom avec validation -->
+                            <input type="text" name="First_name" class="form-control" placeholder="First name" id="first-name" aria-label="First name">
                         </div>
-                        <div class="col">    
-                            <label for="last-name">last name:</label>
-                          <input type="text" name="Last_name"class="form-control" placeholder="Last name" aria-label="Last name" id="last-name" name="last-name" required>
+                        <div class="col">
+                            <label for="last-name">Last name:</label>
+                            <!-- Champ pour le nom de famille avec validation -->
+                            <input type="text" name="Last_name" class="form-control" placeholder="Last name" id="last-name" aria-label="Last name" required>
                         </div>
-                      </div>
+                    </div>
                 </div>
+
+                <!-- Champ pour l'adresse email professionnelle -->
                 <div class="form-group">
                     <label for="work-email">Work Email Address:</label>
-                    <input type="email" name="Workemailadress"id="work-email" name="work-email" required placeholder="work-email">
+                    <input type="email" name="Workemailadress" id="work-email" placeholder="work-email" required>
                 </div>
+
+                <!-- Champ pour le mot de passe -->
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" name="Password"id="password" name="password" placeholder="Password (8 or more characters)" required>
+                    <input type="password" name="Password" id="password" placeholder="Password (8 or more characters)" required>
                 </div>
+
+                <!-- Sélection de la localisation (pays) -->
                 <div class="form-group">
                     <label for="location">Country:</label>
                     <select id="location" name="country" required>
@@ -68,23 +88,29 @@
                         <option value="Tozeur">Tozeur</option>
                         <option value="Tunis">Tunis</option>
                         <option value="Zaghouan">Zaghouan</option>
-                        
                     </select>
                 </div>
-                <button type="submit" onclick="main()">Create My Account</button>
+
+                <!-- Bouton pour soumettre le formulaire -->
+                <button type="submit">Create My Account</button>
             </form>
         </div>
+        
+        <!-- Section droite : Informations supplémentaires et image -->
         <div class="right-section">
             <h2>The best freelancers are on</h2>
             <h1>FRELLIO</h1>
             <div class="image-container">
+                <!-- Image représentant un freelance (ajustez le chemin selon vos besoins) -->
                 <img src="new_project-main/photo/signup/custemer/photo.jpg" alt="Freelancer">
-                <span class="verified-badge">✔ verified profile</span>
+                <span class="verified-badge">✔ Verified Profile</span> <!-- Badge de vérification -->
             </div>
         </div>
     </div>
-</div>
-<script src="script.js"></script>
+
+    </div>
+
+    <!-- Lien vers le fichier JavaScript (si nécessaire pour le comportement de la page) -->
+    <script src="script.js"></script>
 </body>
 </html>
-</html></html>

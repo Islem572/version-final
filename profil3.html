@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Déclaration de l'encodage des caractères et adaptation à tous les écrans -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titre affiché dans l'onglet du navigateur -->
     <title>Frellio - Objectifs de freelancing</title>
+    
+    <!-- Lien vers la feuille de style CSS externe -->
     <link rel="stylesheet" href="profil3.css">
+
+    <!-- Lien vers un script JavaScript externe (facultatif si vide pour le moment) -->
     <script src="profil3.js"></script>
 </head>
 <body>
+    <!-- En-tête contenant le logo -->
     <header class="header">
         <div class="logo"><span class="logo-text">F</span>rellio</div>
     </header>
     
+    <!-- Indicateur de progression (désactivé ici avec un commentaire HTML) -->
     <!--<div class="progress-indicator">
         2/2
     </div>-->
     
+    <!-- Contenu principal de la page -->
     <main class="main-content">
+        <!-- Titre de la question posée à l'utilisateur -->
         <h1 class="question-header">
             Got it. What's your biggest goal for freelancing?
         </h1>
         
+        <!-- Texte explicatif sous le titre -->
         <p class="question-subtext">
             Different people come to Upwork for various reasons.<br>
             We want to highlight the opportunities that fit your goals best while still showing you all the possibilities.
         </p>
         
-        <!-- Formulaire avec méthode POST vers le fichier PHP -->
+        <!-- Formulaire HTML qui envoie les données en méthode POST vers submit_goal.php -->
         <form action="submit_goal.php" method="POST">
+
+            <!-- Conteneur des cartes d'options -->
             <div class="options-container">
+
+                <!-- Carte 1 - Objectif : revenu principal -->
                 <div class="option-card" onclick="selectRadio('earn_main_income')">
                     <input type="radio" name="goal" value="earn_main_income" id="earn_main_income" required>
                     <div class="option-select"></div>
@@ -37,7 +53,8 @@
                     </div>
                     <div class="option-text">To earn my main income</div>
                 </div>
-                
+
+                <!-- Carte 2 - Objectif : revenu complémentaire -->
                 <div class="option-card" onclick="selectRadio('make_money_side')">
                     <input type="radio" name="goal" value="make_money_side" id="make_money_side" required>
                     <div class="option-select"></div>
@@ -46,7 +63,8 @@
                     </div>
                     <div class="option-text">To make money on the side</div>
                 </div>
-                
+
+                <!-- Carte 3 - Objectif : gagner de l'expérience -->
                 <div class="option-card" onclick="selectRadio('get_experience')">
                     <input type="radio" name="goal" value="get_experience" id="get_experience" required>
                     <div class="option-select"></div>
@@ -55,7 +73,8 @@
                     </div>
                     <div class="option-text">To get experience, for a full-time job</div>
                 </div>
-                
+
+                <!-- Carte 4 - Aucun objectif défini -->
                 <div class="option-card" onclick="selectRadio('no_goal')">
                     <input type="radio" name="goal" value="no_goal" id="no_goal" required>
                     <div class="option-select"></div>
@@ -66,16 +85,20 @@
                 </div>
             </div>
 
-            <!-- Boutons -->
+            <!-- Pied de page avec les boutons de navigation -->
             <footer class="footer">
+                <!-- Bouton pour revenir à la page précédente -->
                 <a href="profil2.html">
                     <button class="nav-button">Back</button>
                 </a>
-                
+
                 <div>
+                    <!-- Bouton pour passer l'étape sans répondre -->
                     <a href="recu.html">
                         <button type="button" class="nav-button skip-button">Skip for now</button>
                     </a>
+
+                    <!-- Bouton pour soumettre le formulaire -->
                     <a href="recu.html">
                         <button type="submit" class="nav-button">Next</button>
                     </a>
@@ -84,8 +107,8 @@
         </form>
     </main>
 
+    <!-- Script JavaScript intégré : coche le bouton radio correspondant lorsqu'une carte est cliquée -->
     <script>
-        // Fonction pour sélectionner le bouton radio lorsqu'une carte est cliquée
         function selectRadio(id) {
             var radio = document.getElementById(id);
             radio.checked = true;

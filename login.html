@@ -1,52 +1,69 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frellio - Login</title>
-    <link rel="stylesheet" href="login.css">
-    <!-- Librairie Google Identity Services -->
+    <!-- Définition des métadonnées de base -->
+    <meta charset="UTF-8"> <!-- Encodage UTF-8 pour supporter tous les caractères -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Frellio - Login</title> <!-- Titre de la page -->
+    <link rel="stylesheet" href="login.css"> <!-- Lien vers la feuille de style CSS -->
+    
+    <!-- Intégration de la librairie Google Identity Services pour l'authentification Google -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
+    <!-- Conteneur principal pour le formulaire de connexion -->
     <div class="login-container">
-      <div class="logo"><span>F</span>rellio</div>
-        <!-- Formulaire de connexion manuel -->
+        <!-- Logo de l'application -->
+        <div class="logo"><span>F</span>rellio</div>
+        
+        <!-- Formulaire de connexion traditionnel -->
         <form class="login-form" action="login.php" method="POST">
             <h1 class="login-title">Log in to Frellio</h1>
+            <!-- Champ pour le nom d'utilisateur ou email -->
             <input type="text" name="username" class="input-field" placeholder="Username or Email" required>
+            <!-- Bouton de soumission -->
             <button type="submit" class="login-btn">Log In</button>
         </form>
 
+        <!-- Séparateur visuel entre les méthodes de connexion -->
         <div class="divider">Or</div>
 
-        <!-- Formulaire Google Sign-In -->
+        <!-- Formulaire pour la connexion Google (les données sont envoyées via POST) -->
         <form id="google-form" action="google-callback.php" method="post">
+            <!-- Champ caché pour stocker le token d'authentification Google -->
             <input type="hidden" name="credential" id="credential">
+            <!-- Conteneur où le bouton Google sera injecté -->
             <div id="google-signin-button"></div>
         </form>
 
+        <!-- Texte pour rediriger vers l'inscription -->
         <div class="upwork-text">Don't have a Frellio account?</div>
        
+        <!-- Bouton pour s'inscrire -->
         <button type="button" class="signup-btn" onclick="window.location='signup.html';">Sign up</button>
     </div>
 
+    <!-- Bannière latérale (marketing) -->
     <div class="right-banner">
         <div class="banner-title">The best freelancers are on</div>
         <div class="banner-logo">FRELLIO</div>
+        
+        <!-- Carte de profil (exemple de freelancer) -->
         <div class="profile-card">
             <div class="verified-badge">
                 <span class="check-icon">✓</span>
                 verified profile
             </div>
+            <!-- Image du profil -->
             <img src="new_project-main/photo/signup/custemer/photo.jpg"
                  alt="Photo de profil"
                  class="profile-image">
         </div>
     </div>
 
-    <!-- Initialisation Google Sign-In -->
+    <!-- Script pour gérer l'authentification Google -->
     <script>
+      // Fonction de callback pour gérer la réponse d'authentification Google
       function handleCredentialResponse(response) {
         console.log("ID Token :", response.credential);
         // Injecte le token dans le champ hidden et soumet le formulaire
@@ -54,15 +71,18 @@
         document.getElementById("google-form").submit();
       }
 
+      // Initialisation du service Google Identity au chargement de la page
       window.onload = function() {
         google.accounts.id.initialize({
-          client_id: 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com',
-          callback: handleCredentialResponse,
-          ux_mode: 'popup'
+          client_id: 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com', // À remplacer par votre vrai client ID
+          callback: handleCredentialResponse, // Fonction à appeler après authentification
+          ux_mode: 'popup' // Mode popup pour l'authentification
         });
+        
+        // Rendu du bouton Google dans le conteneur spécifié
         google.accounts.id.renderButton(
           document.getElementById('google-signin-button'),
-          { theme: 'outline', size: 'large', width: '100%' }
+          { theme: 'outline', size: 'large', width: '100%' } // Options de style du bouton
         );
       };
     </script>

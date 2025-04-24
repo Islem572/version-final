@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frellio </title>
-    <link rel="stylesheet" href="contact.css">
-    <script src="contact.js"></script>
+    <meta charset="UTF-8"> <!-- Définition de l'encodage des caractères en UTF-8 pour supporter les caractères spéciaux -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Permet une meilleure adaptation de la page sur mobile avec un viewport responsive -->
+    <title>Frellio</title> <!-- Titre de la page affiché dans l'onglet du navigateur -->
+    <link rel="stylesheet" href="contact.css"> <!-- Lien vers la feuille de style CSS -->
+    <script src="contact.js"></script> <!-- Lien vers le fichier JavaScript (pour une interaction dynamique avec le formulaire par exemple) -->
 </head>
 <body>
+    <!-- Lien vers la page d'accueil avec un bouton stylisé -->
     <a href="garde.html" class="home-btn">
-        <i class="fas fa-home"></i> Home
+        <i class="fas fa-home"></i> Home <!-- Icône font-awesome pour la maison, et texte "Home" -->
     </a>
+    
+    <!-- Conteneur principal de la page -->
     <div class="container">
+        <!-- Section de contact, où se trouve le formulaire -->
         <div class="contact-section">
-            <h2>Restons en contact !</h2>
+            <h2>Restons en contact !</h2> <!-- Titre principal de la section -->
+            
             <p class="intro-text">
-                Vous avez une question ou souhaitez en savoir
-                plus sur nos services ?<br><br>
-                N'hésitez pas à nous contacter via ce
-                formulaire. Notre équipe sera ravie
+                Vous avez une question ou souhaitez en savoir plus sur nos services ?<br><br>
+                N'hésitez pas à nous contacter via ce formulaire. Notre équipe sera ravie
                 de vous répondre dans les plus brefs délais.
-            </p>
+            </p> <!-- Texte introductif expliquant l'objectif du formulaire -->
 
+            <!-- Formulaire de contact, méthode POST pour envoyer les données à contact.php -->
             <form class="contact-form" action="contact.php" method="POST">
+                
+                <!-- Champ de saisie pour le nom -->
                 <div class="form-group">
-                    <input type="text" id="nom" name="nom" placeholder="Nom" required>
+                    <input type="text" id="nom" name="nom" placeholder="Nom" required> <!-- Champ requis pour entrer un nom -->
                 </div>
 
+                <!-- Champ de saisie pour l'email -->
                 <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Adresse e-mail" required>
+                    <input type="email" id="email" name="email" placeholder="Adresse e-mail" required> <!-- Champ requis pour l'email -->
                 </div>
 
+                <!-- Champ de saisie pour le sujet -->
                 <div class="form-group">
-                    <input type="text" id="sujet" name="sujet" placeholder="Sujet du message" required>
+                    <input type="text" id="sujet" name="sujet" placeholder="Sujet du message" required> <!-- Champ requis pour le sujet du message -->
                 </div>
 
+                <!-- Champ de saisie pour le message -->
                 <div class="form-group">
-                    <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    <textarea id="message" name="message" placeholder="Message" required></textarea> <!-- Champ requis pour entrer un message -->
                 </div>
 
+                <!-- Bouton d'envoi du formulaire -->
                 <button type="submit" class="submit-btn">Envoyer</button>
             </form>
         </div>

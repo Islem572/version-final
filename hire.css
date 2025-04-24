@@ -1,247 +1,287 @@
+/* Règles globales pour réinitialiser les marges et les paddings, et garantir une base uniforme pour le design */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; /* Annule les marges par défaut de tous les éléments */
+    padding: 0; /* Annule les paddings par défaut de tous les éléments */
+    box-sizing: border-box; /* Assure que les dimensions incluent les bordures et le padding */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Définir une police sans-serif pour l'ensemble du site */
 }
 
+/* Style général pour le corps de la page */
 body {
-    background-color: #f7f9fc;
-    color: #333;
-    line-height: 1.6;
+    background-color: #f7f9fc; /* Fond légèrement gris clair pour l'ensemble de la page */
+    color: #333; /* Texte sombre pour une bonne lisibilité */
+    line-height: 1.6; /* Interligne confortable pour la lecture */
 }
 
+/* Style de l'en-tête du site */
 header {
-    background-color: #B19079;
-    color: white;
-    padding: 1.5rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #B19079; /* Couleur de fond beige doré */
+    color: white; /* Texte blanc */
+    padding: 1.5rem 0; /* Espacement interne pour le header */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet de profondeur */
 }
 
+/* Conteneur principal avec largeur maximum et centrage */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 90%; /* Utilisation de 90% de la largeur disponible */
+    max-width: 1200px; /* Largeur maximale de 1200px */
+    margin: 0 auto; /* Centrer le conteneur */
 }
 
+/* Contenu de l'en-tête, avec une disposition flexible */
 .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Disposition en ligne (flexbox) */
+    justify-content: space-between; /* Espacement entre les éléments */
+    align-items: center; /* Alignement vertical centré */
 }
 
+/* Logo de la page */
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-size: 1.8rem; /* Taille de police plus grande pour le logo */
+    font-weight: 700; /* Poids du texte en gras */
 }
 
+/* Style pour le span du logo, appliquant une couleur spécifique */
 .logo span {
-    color: #B19079;
+    color: #B19079; /* Couleur dorée pour la partie du logo */
 }
 
+/* Navigation principale */
 nav ul {
-    display: flex;
-    list-style: none;
+    display: flex; /* Disposition horizontale des éléments du menu */
+    list-style: none; /* Retirer les puces de la liste */
 }
 
+/* Espacement entre les éléments de navigation */
 nav ul li {
-    margin-left: 2rem;
+    margin-left: 2rem; /* Espacement horizontal entre les liens */
 }
 
+/* Style pour les liens de navigation */
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
+    color: white; /* Couleur du texte en blanc */
+    text-decoration: none; /* Retirer la sous-ligne des liens */
+    font-weight: 500; /* Poids de texte moyen */
+    transition: color 0.3s; /* Transition douce pour la couleur */
 }
 
+/* Effet au survol des liens */
 nav ul li a:hover {
-    color: #B19079;
+    color: #B19079; /* Changer la couleur en doré au survol */
 }
 
+/* Section hero (principal visuel de la page) */
 .hero {
-    background: linear-gradient(135deg, #B19079, #B19079);
-    color: white;
-    padding: 5rem 0;
-    text-align: center;
+    background: linear-gradient(135deg, #B19079, #B19079); /* Dégradé de couleur pour l'arrière-plan */
+    color: white; /* Texte en blanc */
+    padding: 5rem 0; /* Espacement généreux pour la section hero */
+    text-align: center; /* Alignement centré du texte */
 }
 
+/* Contenu interne de la section hero */
 .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 800px; /* Limiter la largeur du contenu à 800px */
+    margin: 0 auto; /* Centrer le contenu */
 }
 
+/* Style pour le titre de la section hero */
 .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Grande taille de police pour le titre */
+    margin-bottom: 1rem; /* Espacement en bas du titre */
 }
 
+/* Style pour le texte de la section hero */
 .hero p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+    font-size: 1.1rem; /* Taille de texte légèrement plus petite */
+    margin-bottom: 2rem; /* Espacement sous le paragraphe */
+    opacity: 0.9; /* Rendre le texte légèrement transparent pour un effet doux */
 }
 
+/* Bouton principal (ex: Call-to-action) */
 .btn {
-    display: inline-block;
-    background-color: #f89954;
-    color: white;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s;
-    border: none;
-    cursor: pointer;
+    display: inline-block; /* Le bouton se comporte comme un élément en ligne mais avec des caractéristiques de bloc */
+    background-color: #f89954; /* Couleur de fond orange clair */
+    color: white; /* Texte en blanc */
+    padding: 0.8rem 2rem; /* Espacement interne du bouton */
+    border-radius: 50px; /* Bords arrondis pour un effet de pillule */
+    text-decoration: none; /* Retirer la sous-ligne */
+    font-weight: 600; /* Poids du texte plus lourd */
+    transition: all 0.3s; /* Transition pour tous les effets */
+    border: none; /* Retirer les bordures du bouton */
+    cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
 }
 
+/* Effet au survol du bouton */
 .btn:hover {
-    background-color: #f79f61;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #f79f61; /* Couleur du bouton au survol */
+    transform: translateY(-3px); /* Léger effet de déplacement vers le haut */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre au survol */
 }
 
+/* Section des clients, avec espacement généreux */
 .clients-section {
     padding: 5rem 0;
 }
 
+/* Titre de section des clients */
 .section-title {
-    text-align: center;
-    margin-bottom: 3rem;
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 3rem; /* Espacement sous le titre */
 }
 
+/* Style pour le sous-titre de section */
 .section-title h2 {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 1rem;
+    font-size: 2rem; /* Taille du texte */
+    color: #2c3e50; /* Couleur sombre */
+    margin-bottom: 1rem; /* Espacement sous le titre */
 }
 
+/* Paragraphe sous le titre de section */
 .section-title p {
-    color: #7f8c8d;
-    max-width: 600px;
-    margin: 0 auto;
+    color: #7f8c8d; /* Texte en gris clair */
+    max-width: 600px; /* Limiter la largeur du texte */
+    margin: 0 auto; /* Centrer le texte */
 }
 
+/* Grille de clients, avec une disposition flexible */
 .clients-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grille flexible avec des colonnes adaptables */
+    gap: 2rem; /* Espacement entre les cartes */
 }
 
+/* Carte individuelle d'un client */
 .client-card {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white; /* Fond blanc */
+    border-radius: 8px; /* Coins arrondis */
+    overflow: hidden; /* Cacher les éléments qui dépassent */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Ombre subtile pour un effet de profondeur */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition pour l'effet de survol */
 }
 
+/* Effet au survol de la carte d'un client */
 .client-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px); /* Légère élévation de la carte au survol */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Ombre renforcée */
 }
 
+/* Section pour l'image du client dans la carte */
 .client-img {
-    height: 200px;
-    background-color: #ecf0f1;
+    height: 200px; /* Taille fixe pour l'image */
+    background-color: #ecf0f1; /* Couleur de fond claire */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* Centrer l'image */
 }
 
+/* Style de l'image du client */
 .client-img img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+    max-width: 100%; /* L'image prend toute la largeur */
+    max-height: 100%; /* L'image prend toute la hauteur */
+    object-fit: cover; /* L'image est recadrée pour remplir la zone */
 }
 
+/* Informations du client dans la carte */
 .client-info {
-    padding: 1.5rem;
+    padding: 1.5rem; /* Espacement interne */
 }
 
+/* Style pour le nom du client dans la carte */
 .client-info h3 {
     margin-bottom: 0.5rem;
-    color: #c78352;
+    color: #c78352; /* Couleur dorée pour le nom */
 }
 
+/* Style pour la description du client */
 .client-info p {
-    color: #856651;
+    color: #856651; /* Couleur du texte plus claire */
     margin-bottom: 1rem;
 }
 
+/* Tags des compétences ou catégories des clients */
 .client-tags {
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 1rem;
+    flex-wrap: wrap; /* Les tags se distribuent sur plusieurs lignes */
+    margin-bottom: 1rem; /* Espacement sous les tags */
 }
 
+/* Style des tags */
 .tag {
-    background-color: #f1f5f9;
-    color: #B19079;
+    background-color: #f1f5f9; /* Fond gris clair pour les tags */
+    color: #B19079; /* Texte en couleur dorée */
     padding: 0.3rem 0.8rem;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
+    border-radius: 50px; /* Coins arrondis pour un effet pillule */
+    font-size: 0.8rem; /* Petite taille de texte */
+    margin-right: 0.5rem; /* Espacement entre les tags */
+    margin-bottom: 0.5rem; /* Espacement sous chaque tag */
 }
 
+/* Bouton d'embauche d'un client */
 .hire-btn {
     display: inline-block;
-    background-color: #B19079;
-    color: white;
-    padding: 0.6rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
+    background-color: #B19079; /* Couleur dorée */
+    color: white; /* Texte en blanc */
+    padding: 0.6rem 1.5rem; /* Espacement du bouton */
+    border-radius: 4px; /* Coins légèrement arrondis */
+    text-decoration: none; /* Retirer la sous-ligne */
     font-weight: 500;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Transition pour la couleur */
 }
 
+/* Effet au survol du bouton d'embauche */
 .hire-btn:hover {
-    background-color: #e0ba9e;
+    background-color: #e0ba9e; /* Couleur dorée plus claire au survol */
 }
 
+/* Section du processus avec un fond gris clair */
 .process-section {
     background-color: #ecf0f1;
     padding: 5rem 0;
 }
 
+/* Disposition des étapes du processus */
 .steps {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espacement entre les étapes */
     margin-top: 3rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permet aux étapes de passer à la ligne suivante si nécessaire */
 }
 
+/* Style pour chaque étape du processus */
 .step {
     text-align: center;
-    flex: 1;
-    min-width: 250px;
+    flex: 1; /* Chaque étape prend une part égale de la largeur */
+    min-width: 250px; /* Largeur minimale pour chaque étape */
     margin-bottom: 2rem;
-    padding: 0 1rem;
+    padding: 0 1rem; /* Espacement interne */
 }
 
+/* Style pour l'icône de chaque étape */
 .step-icon {
-    background-color: #B19079;
+    background-color: #B19079; /* Fond doré pour l'icône */
     color: white;
     width: 80px;
     height: 80px;
-    border-radius: 50%;
+    border-radius: 50%; /* Icône circulaire */
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
+    justify-content: center; /* Centrer l'icône */
+    font-size: 1.8rem; /* Taille de l'icône */
     margin: 0 auto 1.5rem;
 }
 
+/* Style pour le titre de chaque étape */
 .step h3 {
     margin-bottom: 1rem;
-    color: #ebc2a5;
+    color: #ebc2a5; /* Couleur dorée pour le texte */
 }
 
+/* Section de contact */
 .contact-section {
     padding: 5rem 0;
 }
 
+/* Formulaire de contact */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -251,116 +291,136 @@ nav ul li a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Groupe de champs de formulaire */
 .form-group {
     margin-bottom: 1.5rem;
 }
 
+/* Label des champs de formulaire */
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: #e2a77c;
+    color: #e2a77c; /* Couleur dorée pour les labels */
 }
 
+/* Style pour les champs de formulaire */
 .form-control {
-    width: 100%;
+    width: 100%; /* Largeur totale */
     padding: 0.8rem;
-    border: 1px solid #ddd;
+    border: 1px solid #ddd; /* Bordure légère */
     border-radius: 4px;
     font-size: 1rem;
 }
 
+/* Style spécifique pour les champs textarea */
 textarea.form-control {
-    min-height: 150px;
-    resize: vertical;
+    min-height: 150px; /* Hauteur minimale */
+    resize: vertical; /* Permet de redimensionner verticalement */
 }
 
+/* Style du bouton de soumission */
 .submit-btn {
-    background-color: #e9ad81;
+    background-color: #e9ad81; /* Fond doré clair */
     color: white;
     border: none;
     padding: 0.8rem 2rem;
     border-radius: 4px;
     font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    cursor: pointer; /* Curseur cliquable */
+    transition: background-color 0.3s; /* Transition pour la couleur */
 }
 
+/* Effet au survol du bouton de soumission */
 .submit-btn:hover {
-    background-color: #B19079;
+    background-color: #B19079; /* Changer la couleur au survol */
 }
 
+/* Section de pied de page */
 footer {
-    background-color: #dfa780;
+    background-color: #dfa780; /* Fond doré plus foncé */
     color: white;
     padding: 2rem 0;
     text-align: center;
 }
 
+/* Contenu du pied de page */
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Adaptation sur mobile */
 }
 
+/* Logo du pied de page */
 .footer-logo {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 700; /* Poids de texte en gras */
 }
 
+/* Liens du pied de page */
 .footer-links {
     display: flex;
     list-style: none;
 }
 
 .footer-links li {
-    margin-left: 1.5rem;
+    margin-left: 1.5rem; /* Espacement entre les liens */
 }
 
+/* Style pour les liens dans le pied de page */
 .footer-links li a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* Pas de sous-ligne */
     transition: color 0.3s;
 }
 
+/* Effet de survol pour les liens du pied de page */
 .footer-links li a:hover {
-    color: #B19079;
+    color: #B19079; /* Changer la couleur au survol */
 }
 
+/* Copyright dans le pied de page */
 .copyright {
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 1.5rem; /* Espacement au-dessus du texte */
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7); /* Texte moins visible */
 }
 
+/* Media Queries pour les appareils mobiles */
 @media (max-width: 768px) {
+    /* Réorganisation du contenu de l'en-tête pour les petits écrans */
     .header-content {
         flex-direction: column;
         text-align: center;
     }
-    
+
+    /* Ajustements de la navigation */
     nav ul {
         margin-top: 1rem;
     }
-    
+
     nav ul li {
         margin: 0 0.5rem;
     }
-    
+
+    /* Ajustement de la taille du titre dans la section hero */
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Plus petit sur mobile */
     }
-    
+
+    /* Réorganisation des étapes du processus pour les petits écrans */
     .steps {
         flex-direction: column;
     }
-    
+
+    /* Réorganisation du pied de page pour les petits écrans */
     .footer-content {
         flex-direction: column;
     }
-    
+
+    /* Centrer les liens du pied de page */
     .footer-links {
         margin-top: 1rem;
         justify-content: center;

@@ -1,35 +1,62 @@
 <!DOCTYPE html>
+<!-- Déclaration du type de document HTML5 -->
 <html lang="fr">
+<!-- Début du document HTML, avec la langue définie en français -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- Encodage des caractères pour le support des accents et caractères spéciaux -->
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsive design : adapte le rendu aux tailles d’écran -->
+
     <title>Frellio - Questions d'expérience</title>
+    <!-- Titre de la page affiché dans l'onglet du navigateur -->
+
     <link rel="stylesheet" href="profil2.css">
+    <!-- Lien vers la feuille de style CSS externe -->
+
     <script src="profil2.js"></script>
+    <!-- Lien vers un fichier JavaScript externe -->
 </head>
+
 <body>
+    <!-- Corps de la page -->
+
     <header class="header">
+        <!-- En-tête contenant le logo -->
         <div class="logo"><span class="logo-text">F</span>rellio</div>
     </header>
 
     <div class="progress-indicator">
+        <!-- Indicateur de progression (exemple : étape 1 sur 2) -->
         1/2
     </div>
 
     <main class="main-content">
+        <!-- Contenu principal de la page -->
+
         <h1 class="question-header">
+            <!-- Question principale posée à l'utilisateur -->
             A few quick questions:<br>
             <span style="margin-left: 100px;">first, have you freelanced before?</span>
         </h1>
 
         <p class="question-subtext">
+            <!-- Texte explicatif sous la question -->
             This lets us know how much help to give you along the way. We won't share your answer with anyone else, including potential clients.
         </p>
 
         <form action="submit_experience.php" method="POST">
+            <!-- Formulaire envoyé en POST à un script PHP -->
+
             <div class="options-container">
+                <!-- Conteneur des différentes options proposées à l'utilisateur -->
+
+                <!-- Option 1 : Débutant -->
                 <div class="option-card">
                     <input type="radio" name="experience_level" value="brand_new" id="brand_new" required>
+                    <!-- Bouton radio (obligatoire) -->
                     <div class="option-select"></div>
                     <div class="option-image">
                         <img src="evaluation (1).png" alt="Brand New">
@@ -37,6 +64,7 @@
                     <div class="option-text">I am brand new to this</div>
                 </div>
 
+                <!-- Option 2 : Moyennement expérimenté -->
                 <div class="option-card">
                     <input type="radio" name="experience_level" value="some_experience" id="some_experience" required>
                     <div class="option-select"></div>
@@ -46,6 +74,7 @@
                     <div class="option-text">I have some experience</div>
                 </div>
 
+                <!-- Option 3 : Expert -->
                 <div class="option-card">
                     <input type="radio" name="experience_level" value="expert" id="expert" required>
                     <div class="option-select"></div>
@@ -57,14 +86,21 @@
             </div>
 
             <footer class="footer">
+                <!-- Pied de page contenant les boutons de navigation -->
+
                 <a href="page1.html">
+                    <!-- Bouton "Retour" vers la page précédente -->
                     <button class="nav-button">Back</button>
                 </a>
+
                 <div>
                     <a href="page3.html">
+                        <!-- Bouton "Passer cette étape" -->
                         <button class="nav-button skip-button">Skip for now</button>
                     </a>
+
                     <a href="page3.html">
+                        <!-- Bouton "Suivant", qui soumet le formulaire -->
                         <button type="submit" class="nav-button">Next</button>
                     </a>
                 </div>

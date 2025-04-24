@@ -1,3 +1,4 @@
+/* Réinitialisation des marges et paddings, utilisation du box-sizing pour éviter les débordements, et choix de la police */
 * {
     margin: 0;
     padding: 0;
@@ -5,49 +6,55 @@
     font-family: Arial, sans-serif;
 }
 
+/* Style global du corps de la page */
 body {
-    background-color: #f0ebe0;
-    color: #333;
-    min-height: 100vh;
+    background-color: #f0ebe0; /* Couleur de fond douce */
+    color: #333; /* Couleur de texte principale */
+    min-height: 100vh; /* Hauteur minimum sur tout l'écran */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Disposition verticale */
 }
 
+/* En-tête contenant le logo */
 .header {
     padding: 20px;
     display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    align-items: center; /* Centrage vertical */
+    border-bottom: 1px solid rgba(0,0,0,0.1); /* Ligne séparatrice */
 }
 
+/* Texte du logo (lettre "F" stylisée) */
 .logo-text {
     color: #fff;
-    background-color: #bb9777;
+    background-color: #bb9777; /* Couleur de fond douce marron */
     border-radius: 4px;
-    font-weight: 100;
+    font-weight: 100; /* Très léger */
     padding: 0.25rem;
-  }
-  
-  .logo {
+}
+
+/* Texte "Frellio" à côté du logo */
+.logo {
     color: #bb9777;
     padding: 5px 10px;
-    font-weight: 1000;
+    font-weight: 1000; /* Gras */
     margin-right: 2rem;
     font-size: 1.25rem;
-  }
-  
+}
 
+/* Indicateur de progression en haut de la page */
 .progress-indicator {
     margin: 20px;
     font-size: 16px;
     color: #333;
 }
 
+/* Conteneur principal de la page */
 .main-content {
     padding: 20px;
-    flex-grow: 1;
+    flex-grow: 1; /* Prend tout l'espace restant */
 }
 
+/* Titre principal de la question */
 .question-header {
     color: #b68f78;
     font-size: 32px;
@@ -56,6 +63,7 @@ body {
     line-height: 1.2;
 }
 
+/* Sous-texte explicatif en dessous de la question */
 .question-subtext {
     font-size: 16px;
     margin-bottom: 30px;
@@ -63,39 +71,31 @@ body {
     line-height: 1.5;
 }
 
+/* Conteneur des options (cartes) */
 .options-container {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 20px; /* Espacement entre les cartes */
+    flex-wrap: wrap; /* Retour à la ligne si nécessaire */
     margin-bottom: 40px;
 }
 
+/* Carte cliquable représentant une option */
 .option-card {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
     flex: 1;
-    min-width: 230px;
+    min-width: 230px; /* Taille minimum pour éviter trop petit */
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
     position: relative;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Légère ombre */
+    border: 1px solid #ddd; /* Bordure discrète */
 }
 
-/*.option-select {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
-}*/
-
+/* Zone contenant l’image d’illustration d’une option */
 .option-image {
     width: 80px;
     height: 80px;
@@ -105,28 +105,33 @@ body {
     align-items: center;
 }
 
+/* Image responsive à l’intérieur de la carte */
 .option-image img {
     max-width: 100%;
     max-height: 100%;
 }
 
+/* Texte descriptif sous chaque image d'option */
 .option-text {
     text-align: center;
     font-size: 16px;
     margin-top: 10px;
 }
 
+/* Pied de page fixé en bas de l’écran */
 .footer {
-    background-color: #b49175;
+    background-color: #b49175; /* Couleur assortie au thème */
     padding: 5px 8px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Éléments de chaque côté */
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;
+    width: 100%; /* Prend toute la largeur */
 }
+
+/* Boutons de navigation (Suivant / Précédent) */
 .nav-button {
     padding: 12px 40px;
     border-radius: 5px;
@@ -137,6 +142,7 @@ body {
     color: #333;
 }
 
+/* Style du bouton "Passer cette étape" */
 .skip-button {
     background-color: white;
     margin-right: 10px;

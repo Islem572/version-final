@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Frellio</title>
-    <link rel="stylesheet" href="message.css">
+    <!-- Métadonnées de base -->
+    <meta charset="UTF-8"> <!-- Encodage UTF-8 pour les caractères spéciaux -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Chatbot Frellio</title> <!-- Titre de la page -->
+    <link rel="stylesheet" href="message.css"> <!-- Lien vers la feuille de style -->
 </head>
 <body>
+    <!-- Conteneur principal du chat -->
     <div class="messagerie-container" style="width: 600px;">
-        <!-- Fenêtre de messages -->
+        <!-- Fenêtre de conversation -->
         <div class="fenetre-messages" style="width: 100%;">
+            <!-- En-tête avec infos du bot -->
             <div class="entete-conversation">
                 <div class="info-contact">
-                    <div class="nom-contact">Frellio Bot 🤖</div>
-                    <div class="status">En ligne</div>
+                    <div class="nom-contact">Frellio Bot 🤖</div> <!-- Nom + emoji -->
+                    <div class="status">En ligne</div> <!-- Statut -->
                 </div>
             </div>
 
+            <!-- Zone d'affichage des messages -->
             <div class="corps-messages" id="corps-messages">
-                <!-- Zone où les messages s'afficheront -->
+                <!-- Les messages seront injectés ici dynamiquement -->
             </div>
 
+            <!-- Zone de saisie utilisateur -->
             <div class="zone-saisie">
                 <input type="text" id="message-input" placeholder="Écrivez votre message...">
                 <button class="btn-envoyer" id="btn-envoyer">Envoyer</button>
@@ -29,22 +34,29 @@
     </div>
 
     <script>
+        // Attendre que le DOM soit chargé
         document.addEventListener("DOMContentLoaded", function () {
+            // Récupération des éléments DOM
             const messageInput = document.getElementById("message-input");
             const btnEnvoyer = document.getElementById("btn-envoyer");
             const corpsMessages = document.getElementById("corps-messages");
 
+            // Gestionnaires d'événements
             btnEnvoyer.addEventListener("click", envoyerMessage);
             messageInput.addEventListener("keypress", function (event) {
-                if (event.key === "Enter") {
+                if (event.key === "Enter") { // Envoi avec la touche Entrée
                     envoyerMessage();
                 }
             });
 
+            // Fonction d'envoi de message
             function envoyerMessage() {
                 const texteMessage = messageInput.value.trim();
                 if (texteMessage !== "") {
+                    // Formatage de l'heure
                     const heureFormatee = getHeure();
+                    
+                    // Création du HTML du message utilisateur
                     const messageHTML = `
                         <div class="message envoye">
                             <div class="contenu-message">
@@ -53,16 +65,21 @@
                             </div>
                         </div>
                     `;
+                    
+                    // Ajout du message à la conversation
                     corpsMessages.innerHTML += messageHTML;
-                    messageInput.value = "";
-                    corpsMessages.scrollTop = corpsMessages.scrollHeight;
+                    messageInput.value = ""; // Vidage du champ
+                    corpsMessages.scrollTop = corpsMessages.scrollHeight; // Défilement automatique
 
+                    // Sauvegarde du message
                     sauvegarderMessage("utilisateur", texteMessage);
 
+                    // Simulation de réponse après 800ms
                     setTimeout(() => simulerReponse(texteMessage), 800);
                 }
             }
 
+            // Fonction pour obtenir l'heure actuelle formatée
             function getHeure() {
                 const maintenant = new Date();
                 const heures = maintenant.getHours().toString().padStart(2, "0");
@@ -70,10 +87,12 @@
                 return `${heures}:${minutes}`;
             }
 
+            // Fonction de simulation de réponse du bot
             function simulerReponse(messageUtilisateur) {
                 const texte = messageUtilisateur.toLowerCase();
-                let reponse = "Bonjour ! Je suis Frellio, comment puis-je vous aider ?";
+                let reponse = "Bonjour ! Je suis Frellio, comment puis-je vous aider ?"; // Réponse par défaut
 
+                // Réponses conditionnelles basées sur le contenu du message
                 if (texte.includes("bonjour")) {
                     reponse = "Dans notre site vous pouvez trouver des informations sur nos produits et services.";
                 } else if (texte.includes("heure")) {
@@ -85,6 +104,7 @@
                     reponse = "Je vais bien, merci ! Et toi ?";
                 }
 
+                // Formatage et affichage de la réponse
                 const heureFormatee = getHeure();
                 const reponseHTML = `
                     <div class="message recu">
@@ -97,9 +117,11 @@
                 corpsMessages.innerHTML += reponseHTML;
                 corpsMessages.scrollTop = corpsMessages.scrollHeight;
 
+                // Sauvegarde de la réponse
                 sauvegarderMessage("bot", reponse);
             }
 
+            // Fonction d'envoi des messages au serveur
             function sauvegarderMessage(auteur, contenu) {
                 fetch('save_message.php', {
                     method: 'POST',

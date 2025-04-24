@@ -1,54 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frellio</title>
-  <link rel="stylesheet" href="client3.css">
+  <meta charset="UTF-8"> <!-- Encodage des caractères -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive mobile -->
+  <title>Frellio</title> <!-- Titre de la page dans l'onglet -->
+  <link rel="stylesheet" href="client3.css"> <!-- Fichier CSS externe -->
 </head>
 <body>
+
+  <!-- Barre de navigation en haut -->
   <nav class="navbar">
+    <!-- Logo de la marque -->
     <div class="logo"><span class="logo-text">F</span>rellio</div>
-    <div class="nav-item dropdown-icon"><a href="hire.html">Hire client</div></a>
-    <div class="nav-item dropdown-icon"><a href="mange.html">Manage work</div></a>
-    <div class="nav-item dropdown-icon"><a href="reports.html">Reports</div></a>
-    <div class="nav-item"><a href="message.html">Messages</div></a>
+    
+    <!-- Liens de navigation -->
+    <div class="nav-item dropdown-icon"><a href="hire.html">Hire client</a></div>
+    <div class="nav-item dropdown-icon"><a href="mange.html">Manage work</a></div>
+    <div class="nav-item dropdown-icon"><a href="reports.html">Reports</a></div>
+    <div class="nav-item"><a href="message.html">Messages</a></div>
+    
+    <!-- Champ de recherche -->
     <div class="search-container">
       <input type="text" class="search-box" placeholder="">
     </div>
   </nav>
   
+  <!-- Conteneur principal -->
   <div class="container">
+    <!-- Formulaire envoyé à budget.php -->
     <form action="budget.php" method="POST">
+
+      <!-- Contenu principal en deux colonnes -->
       <div class="main-content">
+
+        <!-- Colonne gauche avec le titre -->
         <div class="left-section">
           <h1 class="heading">Tell us your budget<br>or your best guess</h1>
           <p class="subheading">This will help us match you to talent<br>within your range.</p>
         </div>
         
+        <!-- Colonne droite avec les options de tarifs -->
         <div class="right-section">
+
+          <!-- Choix du type de tarif : taux horaire ou prix fixe -->
           <div class="rate-options">
+
+            <!-- Carte pour "taux horaire" -->
             <div class="rate-card">
-              <div class="selection-indicator"></div>
-              <input type="radio" name="rate_type" id="hourly_rate" value="hourly_rate">
+              <div class="selection-indicator"></div> <!-- Cercle de sélection -->
+              <input type="radio" name="rate_type" id="hourly_rate" value="hourly_rate"> <!-- Bouton radio caché -->
               <div class="icon-container">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIj48L2NpcmNsZT48cG9seWxpbmUgcG9pbnRzPSIxMiA2IDEyIDEyIDE2IDE0Ij48L3BvbHlsaW5lPjwvc3ZnPg==">
+                <img src="..." alt="Icon"> <!-- Icône SVG -->
               </div>
-              <div class="rate-title">Hourly rate</div>
+              <div class="rate-title">Hourly rate</div> <!-- Titre -->
             </div>
 
-            <!-- ✅ rate-card Fixed price modifié -->
+            <!-- Carte pour "prix fixe" -->
             <div class="rate-card" id="fixed-price-card">
               <div class="selection-indicator"></div>
               <input type="radio" name="rate_type" id="fixed_price" value="fixed_price">
               <div class="icon-container">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxyZWN0IHg9IjIiIHk9IjQiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNiIgcng9IjIiPjwvcmVjdD48cGF0aCBkPSJNMTIgMTJINyI+PC9wYXRoPjxwYXRoIGQ9Ik0xMiA4SDciPjwvcGF0aD48cGF0aCBkPSJNMTIgMTZINyI+PC9wYXRoPjwvc3ZnPg==">
+                <img src="..." alt="Icon">
               </div>
               <div class="rate-title">Fixed price</div>
             </div>
           </div>
           
+          <!-- Champs pour entrer la fourchette de prix -->
           <div class="price-range">
+            <!-- Prix minimum -->
             <div class="price-column">
               <div class="price-label">From</div>
               <div class="input-group">
@@ -58,6 +78,7 @@
               </div>
             </div>
 
+            <!-- Prix maximum -->
             <div class="price-column">
               <div class="price-label">To</div>
               <div class="input-group">
@@ -70,32 +91,40 @@
 
         </div>
       </div>
-    
+
+      <!-- Pied de page avec les boutons de navigation -->
       <div class="footer">
         <div class="expand-icon"></div>
         <div class="navigation">
+          <!-- Bouton précédent -->
           <button class="nav-button back-button">Back</button>
+          <!-- Bouton suivant -->
           <button class="nav-button next-button">Next</button>
-          <!-- Bouton "Envoyer" ajouté ici -->
+          <!-- Bouton envoyer (soumettre le formulaire) -->
           <button type="submit" class="nav-button send-button">Envoyer</button>
         </div>
       </div>
     </form>
   </div>
 
+  <!-- Script pour gérer la sélection des cartes -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const rateCards = document.querySelectorAll('.rate-card');
-  
+      const rateCards = document.querySelectorAll('.rate-card'); // Toutes les cartes
+
       rateCards.forEach(card => {
         card.addEventListener('click', function() {
+          // Retirer la sélection des autres cartes
           rateCards.forEach(c => c.classList.remove('selected'));
+          // Ajouter la sélection à la carte cliquée
           this.classList.add('selected');
+
+          // Sélectionner le bouton radio correspondant
           const radio = this.querySelector('input[type="radio"]');
           radio.checked = true;
-  
+
+          // Si l'utilisateur choisit "fixed price", aller à la page suivante
           if (radio.id === 'fixed_price') {
-            // Pas d'envoi du formulaire, on redirige direct
             window.location.href = 'page1-4.html';
           }
         });

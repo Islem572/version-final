@@ -8,7 +8,7 @@
     position: relative;
     min-height: 100vh;
 }
-
+/* Conteneur principal */
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -25,12 +25,12 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-
+/* Logo */
 .logo {
     font-size: 24px;
     font-weight: bold;
 }
-
+/* Logo avec une lettre en couleur différente */
 .logo span {
     background-color: white;
     color: #b3937a;
@@ -46,7 +46,7 @@ h1 {
     margin: 30px 0;
     font-size: 28px;
 }
-
+/* Liste des projets */
 .project-card {
     background: white;
     border-radius: 8px;
@@ -54,7 +54,7 @@ h1 {
     margin-bottom: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-
+/* En-tête de la carte de projet */
 .project-header {
     display: flex;
     justify-content: space-between;
@@ -63,20 +63,20 @@ h1 {
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
 }
-
+/* Titre du projet */
 .project-title {
     font-size: 20px;
     font-weight: bold;
     color: #b3937a;
 }
-
+/* Informations sur le client */
 .project-status {
     background-color: #e0d8c9;
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 14px;
 }
-
+/* Étoiles de notation */
 .update {
     margin: 15px 0;
     padding: 15px;
@@ -84,13 +84,13 @@ h1 {
     border-left: 3px solid #b3937a;
     border-radius: 0 4px 4px 0;
 }
-
+/* Informations sur la mise à jour */
 .update-date {
     color: #888;
     font-size: 14px;
     margin-bottom: 5px;
 }
-
+/* Contenu de la mise à jour */
 .update-content {
     line-height: 1.5;
 }
@@ -109,7 +109,7 @@ h1 {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     transition: background-color 0.3s;
 }
-
+/* Effet au survol du bouton de retour */
 .back-button:hover {
     background-color: #9a7d64;
 }

@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Définition du jeu de caractères -->
     <meta charset="UTF-8">
+    
+    <!-- Configuration du responsive pour les mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titre de l’onglet du navigateur -->
     <title>Frellio - Inbox</title>
+    
+    <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="box.css">
 </head>
 <body>
+
+<!-- ⚠️ Balise de fermeture d’en-tête sans ouverture : à corriger ou à supprimer -->
 </header>
 
+<!-- Conteneur principal centré -->
 <div class="container">
+
+    <!-- En-tête de la boîte de réception : Titre + barre de recherche -->
     <div class="inbox-header">
         <h1>Boîte de réception</h1>
         <input type="text" class="search-bar" placeholder="Rechercher des messages...">
     </div>
     
+    <!-- Liste des messages -->
     <div class="messages-list">
-        <!-- Message non lu -->
+
+        <!-- Message non lu (avec classe spéciale "unread") -->
         <div class="message unread">
-            <div class="message-avatar">JD</div>
+            <div class="message-avatar">JD</div> <!-- Initiales de l’expéditeur -->
             <div class="message-content">
                 <div class="message-sender">John Doe</div>
                 <div class="message-preview">Bonjour, je suis intéressé par votre profil pour mon projet de site web...</div>
             </div>
-            <div class="message-time">10:30</div>
+            <div class="message-time">10:30</div> <!-- Heure de réception -->
         </div>
         
         <!-- Message lu -->
@@ -36,7 +50,7 @@
             <div class="message-time">Hier</div>
         </div>
         
-        <!-- Autre message -->
+        <!-- Autre message lu -->
         <div class="message">
             <div class="message-avatar">F</div>
             <div class="message-content">
@@ -55,11 +69,19 @@
             </div>
             <div class="message-time">12/05</div>
         </div>
+
     </div>
 </div>
+
+<!-- Bouton de retour vers la page précédente -->
 <a href="profil11.html">
     <button class="back-button" onclick="window.history.back()">Retour</button>
 </a>
+
+<!-- Pied de page avec droits d’auteur -->
 <footer>
     © 2023 Frellio - Tous droits réservés
 </footer>
+
+</body>
+</html>

@@ -1,40 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Définit l'encodage des caractères en UTF-8 pour une compatibilité optimale -->
     <meta charset="UTF-8">
+    
+    <!-- Rend la page responsive, elle s'adapte à différentes tailles d'écrans (comme les mobiles) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titre de la page qui s'affiche dans l'onglet du navigateur -->
     <title>Signup</title>
+
+    <!-- Lien vers le fichier CSS pour les styles de la page -->
     <link rel="stylesheet" href="signup.css">
+    
+    <!-- Inclusion du fichier JavaScript qui peut contenir des interactions dynamiques -->
     <script src="signup.js"></script>
 </head>
 <body>
+    <!-- En-tête de la page contenant le logo et le menu de navigation -->
     <header class="navbar">
+        <!-- Logo de l'entreprise avec un lien vers la page d'accueil -->
         <div class="logo">
             <a href="#"><span>F</span>rellio</a>
-        </div>  
+        </div>
+
+        <!-- Menu de navigation avec les liens vers les différentes pages -->
         <nav>
             <ul>
-                <li><a href="garde.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="login.html">Log in</a></li>
-                <li><a href="signup.html" class="signup">Sign up</a></li>
+                <li><a href="garde.html">Home</a></li> <!-- Lien vers la page d'accueil -->
+                <li><a href="contact.html">Contact</a></li> <!-- Lien vers la page de contact -->
+                <li><a href="about.html">About</a></li> <!-- Lien vers la page "À propos" -->
+                <li><a href="login.html">Log in</a></li> <!-- Lien vers la page de connexion -->
+                <li><a href="signup.html" class="signup">Sign up</a></li> <!-- Lien vers la page d'inscription -->
             </ul>
         </nav>
     </header>
 
+    <!-- Section principale avec les options de type d'inscription -->
     <section class="signup-options">
+        <!-- Première carte pour les freelances (partenaires) -->
         <div class="option-card">
+            <!-- Icône représentant un partenariat -->
             <img src="new_project-main/photo/signup/handshake_2618576.png" alt="Partner Icon">
+            
+            <!-- Titre de la carte -->
             <h2>Partner</h2>
+            
+            <!-- Description indiquant qu'il s'agit d'un freelance -->
             <p>I'm a freelancer, looking for work</p>
+            
+            <!-- Bouton qui redirige vers la page de candidature en tant que freelance -->
             <a href="partner.html"><button>Apply as a Freelancer</button></a>
-        </div>  
+        </div>
+
+        <!-- Deuxième carte pour les clients -->
         <div class="option-card">
+            <!-- Icône représentant un client -->
             <img src="new_project-main/photo/signup/customer.png" alt="Customer Icon">
+            
+            <!-- Titre de la carte -->
             <h2>Customer</h2>
+            
+            <!-- Description indiquant qu'il s'agit d'un client cherchant un freelance -->
             <p>I'm a client, hiring for a project</p>
-            <a href="customer.html"><button>Join as a Client</button></a> 
+            
+            <!-- Bouton qui redirige vers la page d'inscription en tant que client -->
+            <a href="customer.html"><button>Join as a Client</button></a>
         </div>
     </section>
 </body>

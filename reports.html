@@ -1,52 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Déclaration du jeu de caractères (UTF-8) pour la compatibilité avec les caractères spéciaux -->
     <meta charset="UTF-8">
+
+    <!-- Assure que le site est responsive et adapté à différents écrans, comme les mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre de la page qui apparaîtra dans l'onglet du navigateur -->
     <title>Rapports et Statistiques - Portfolio Freelance</title>
+
+    <!-- Lien vers le fichier CSS externe pour le style de la page -->
     <link rel="stylesheet" href="reports.css">
 </head>
 <body>
+    <!-- Entête de la page, contenant la navigation principale -->
     <header>
         <div class="container">
             <nav>
+                <!-- Logo avec un texte stylisé -->
                 <div class="logo"><span class="logo-text">F</span>rellio</div>
+
+                <!-- Menu mobile représenté par une icône ☰ -->
                 <div class="mobile-menu">☰</div>
             </nav>
         </div>
     </header>
 
+    <!-- Section Hero - section d'introduction de la page avec un titre principal -->
     <section class="hero">
         <div class="container">
+            <!-- Titre principal de la page -->
             <h1>Rapports et Statistiques</h1>
+            <!-- Description courte qui explique le contenu de la section -->
             <p>Des résultats mesurables et des analyses détaillées pour suivre l'impact de mes prestations sur votre activité.</p>
         </div>
     </section>
 
+    <!-- Section des tableaux de bord -->
     <section class="section">
         <div class="container">
+            <!-- Titre de la section -->
             <div class="section-title">
                 <h2>Tableaux de bord</h2>
             </div>
+
+            <!-- Conteneur des cartes de statistiques -->
             <div class="dashboard">
+                <!-- Carte de succès, représentant une statistique positive -->
                 <div class="dashboard-card success">
                     <div class="icon">↗️</div>
                     <h3>Trafic Web</h3>
                     <p>Augmentation moyenne pour mes clients</p>
                     <div class="value">+152%</div>
                 </div>
+
+                <!-- Carte d'information, représentant une statistique générale -->
                 <div class="dashboard-card info">
                     <div class="icon">👥</div>
                     <h3>Conversion</h3>
                     <p>Taux de conversion moyen</p>
                     <div class="value">4.8%</div>
                 </div>
+
+                <!-- Carte d'avertissement, représentant une statistique à surveiller -->
                 <div class="dashboard-card warning">
                     <div class="icon">⏱️</div>
                     <h3>Temps sur site</h3>
                     <p>Augmentation de l'engagement</p>
                     <div class="value">+86%</div>
                 </div>
+
+                <!-- Carte de danger, représentant une statistique négative -->
                 <div class="dashboard-card danger">
                     <div class="icon">📱</div>
                     <h3>Mobile</h3>
@@ -55,9 +80,11 @@
                 </div>
             </div>
 
+            <!-- Section des graphiques de performance -->
             <div class="chart-container">
                 <div class="chart-header">
                     <h3>Performance des projets récents</h3>
+                    <!-- Filtre pour sélectionner la période des données à afficher -->
                     <div class="chart-filter">
                         <select>
                             <option>Derniers 6 mois</option>
@@ -66,6 +93,8 @@
                         </select>
                     </div>
                 </div>
+
+                <!-- Graphique à barres représentant la performance des projets -->
                 <div class="chart">
                     <div class="bar-container">
                         <div class="bar" data-value="85" data-label="Jan"></div>
@@ -80,12 +109,16 @@
         </div>
     </section>
 
+    <!-- Section des retours clients -->
     <section class="section">
         <div class="container">
             <div class="section-title">
                 <h2>Retours clients</h2>
             </div>
+
+            <!-- Conteneur des témoignages clients -->
             <div class="feedback-container">
+                <!-- Témoignage 1 -->
                 <div class="feedback-item">
                     <p class="feedback-content">Les résultats obtenus grâce à ce freelance ont dépassé toutes nos attentes. Les rapports mensuels nous ont permis de suivre précisément le ROI de notre investissement et d'optimiser notre stratégie en permanence.</p>
                     <div class="feedback-author">
@@ -94,6 +127,7 @@
                             <h4>Sophie Durand</h4>
                             <p>Directrice Marketing, BelleNature</p>
                             <div class="rating">
+                                <!-- Étoiles pour évaluer le service -->
                                 <span class="star">★</span>
                                 <span class="star">★</span>
                                 <span class="star">★</span>
@@ -103,7 +137,8 @@
                         </div>
                     </div>
                 </div>
-                
+
+                <!-- Témoignage 2 -->
                 <div class="feedback-item">
                     <p class="feedback-content">Ce qui m'a le plus impressionné, c'est la clarté des rapports et la façon dont les données complexes sont présentées de manière compréhensible. J'ai pu présenter ces résultats à mon conseil d'administration sans difficulté.</p>
                     <div class="feedback-author">
@@ -112,6 +147,7 @@
                             <h4>Marc Lambert</h4>
                             <p>CEO, TechInnovate</p>
                             <div class="rating">
+                                <!-- Étoiles pour évaluer le service -->
                                 <span class="star">★</span>
                                 <span class="star">★</span>
                                 <span class="star">★</span>
@@ -125,16 +161,19 @@
         </div>
     </section>
 
+    <!-- Section d'appel à l'action -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-content">
                 <h2>Besoin d'une analyse détaillée pour votre projet ?</h2>
                 <p>Contactez-moi dès aujourd'hui pour découvrir comment je peux vous aider à atteindre vos objectifs avec des résultats mesurables.</p>
+                <!-- Lien vers la page de contact -->
                 <a href="contact.html" class="btn">Demander une consultation</a>
             </div>
         </div>
     </section>
 
+    <!-- Footer avec des liens vers les réseaux sociaux -->
     <footer>
         <div class="container">
             <div class="social-links">
@@ -148,10 +187,11 @@
     </footer>
 
     <!-- Bouton de retour -->
-     <a href="indexe.html">
+    <a href="indexe.html">
         <button class="back-button" onclick="window.history.back()">Retour</button>
     </a>
 
+    <!-- Script pour la gestion du menu mobile -->
     <script>
         // Mobile menu toggle
         document.querySelector('.mobile-menu').addEventListener('click', () => {

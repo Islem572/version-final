@@ -1,197 +1,202 @@
+/* Réinitialisation des marges, des bordures et des espacements pour tous les éléments */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Permet de gérer la taille de l'élément en incluant la bordure et les marges */
+    font-family: Arial, sans-serif; /* Applique une police sans-serif à tout le texte */
 }
 
 body {
-    background-color: #b69c88;
-    color: #fff;
+    background-color: #b69c88; /* Couleur de fond principale de la page */
+    color: #fff; /* Couleur du texte par défaut (blanc) */
 }
 
-/* Navigation */
+/* Styles pour la navigation */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
+    display: flex; /* Utilisation de Flexbox pour l'agencement horizontal */
+    justify-content: space-between; /* Espacement entre les éléments à gauche et à droite */
+    align-items: center; /* Aligne verticalement les éléments du menu */
+    padding: 20px 50px; /* Espacement intérieur autour des éléments */
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 24px; /* Taille de la police du logo */
+    font-weight: bold; /* Rendre le logo en gras */
 }
 
 .logo-letter {
-    background-color: white;
-    color: #b69c88;
-    padding: 2px 8px;
-    border-radius: 5px;
-    margin-right: 2px;
+    background-color: white; /* Fond blanc pour les lettres du logo */
+    color: #b69c88; /* Couleur du texte des lettres du logo */
+    padding: 2px 8px; /* Espacement autour des lettres */
+    border-radius: 5px; /* Coins arrondis pour les lettres */
+    margin-right: 2px; /* Espace entre les lettres du logo */
 }
 
+/* Styles pour les liens de navigation */
 .nav-links {
-    display: flex;
-    gap: 30px;
+    display: flex; /* Utilisation de Flexbox pour les liens */
+    gap: 30px; /* Espacement entre les liens */
 }
 
 .nav-link {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+    color: white; /* Couleur des liens */
+    text-decoration: none; /* Retirer la décoration des liens */
+    font-size: 18px; /* Taille de la police pour les liens */
 }
 
 .nav-link.active {
-    background-color: white;
-    color: #2c7a50;
-    padding: 8px 20px;
-    border-radius: 20px;
+    background-color: white; /* Fond blanc lorsque le lien est actif */
+    color: #2c7a50; /* Changer la couleur du texte lorsqu'il est actif */
+    padding: 8px 20px; /* Espacement intérieur autour du texte */
+    border-radius: 20px; /* Coins arrondis pour les liens actifs */
 }
 
-/* Main Content */
+/* Styles pour la section principale (contenu) */
 .container {
-    display: flex;
-    padding: 50px;
-    justify-content: space-between;
-    max-width: 1400px;
-    margin: 0 auto;
+    display: flex; /* Utilisation de Flexbox pour un agencement horizontal */
+    padding: 50px; /* Espacement intérieur */
+    justify-content: space-between; /* Espacement entre les sections gauche et droite */
+    max-width: 1400px; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centrer le conteneur horizontalement */
 }
 
 .left-section {
-    max-width: 600px;
-    padding-top: 20px;
+    max-width: 600px; /* Limite la largeur de la section gauche */
+    padding-top: 20px; /* Espacement supérieur */
 }
 
 .main-heading {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    line-height: 1.2;
+    font-size: 48px; /* Taille de la police pour le titre principal */
+    font-weight: bold; /* Titre en gras */
+    margin-bottom: 30px; /* Espacement sous le titre */
+    line-height: 1.2; /* Hauteur de ligne ajustée pour une meilleure lisibilité */
 }
 
 .subheading {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 40px;
+    font-size: 18px; /* Taille de la police pour le sous-titre */
+    line-height: 1.6; /* Hauteur de ligne pour une lisibilité optimale */
+    margin-bottom: 40px; /* Espacement sous le sous-titre */
 }
 
 .search-box {
-    display: flex;
-    background-color: white;
-    border-radius: 50px;
-    overflow: hidden;
-    padding: 10px;
-    margin-bottom: 30px;
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments horizontalement */
+    background-color: white; /* Fond blanc pour la barre de recherche */
+    border-radius: 50px; /* Coins arrondis */
+    overflow: hidden; /* Cache les éléments qui débordent du conteneur */
+    padding: 10px; /* Espacement intérieur */
+    margin-bottom: 30px; /* Espacement sous la barre de recherche */
 }
 
 .search-input {
-    flex: 1;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    outline: none;
+    flex: 1; /* L'élément de recherche prend tout l'espace disponible */
+    border: none; /* Retirer la bordure de l'input */
+    padding: 10px 20px; /* Espacement intérieur */
+    font-size: 16px; /* Taille de la police */
+    outline: none; /* Retirer le contour par défaut sur focus */
 }
 
 .search-button {
-    background-color: #f2ebe1;
-    color: #333;
-    border: none;
-    padding: 10px 30px;
-    border-radius: 50px;
-    font-size: 16px;
-    cursor: pointer;
+    background-color: #f2ebe1; /* Couleur de fond du bouton de recherche */
+    color: #333; /* Couleur du texte du bouton */
+    border: none; /* Retirer la bordure */
+    padding: 10px 30px; /* Espacement intérieur */
+    border-radius: 50px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur de souris sous forme de main */
 }
 
-/* Right Section with Images - NOUVELLE VERSION */
+/* Section droite avec les images */
 .right-section {
-    position: relative;
-    max-width: 600px;
-    height: 600px; /* Hauteur fixe pour le conteneur */
+    position: relative; /* Positionnement relatif pour les éléments internes */
+    max-width: 600px; /* Limite la largeur de la section droite */
+    height: 600px; /* Hauteur fixe pour la section droite */
 }
 
+/* Image du haut dans la section droite */
 .top-image {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 80%;
-    height: 400px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    object-fit: cover;
-    z-index: 1;
+    position: absolute; /* Position absolue pour placer l'image précisément */
+    top: 0; /* Positionner en haut de la section */
+    right: 0; /* Positionner à droite */
+    width: 80%; /* Largeur de l'image */
+    height: 400px; /* Hauteur fixe */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Ombre autour de l'image */
+    object-fit: cover; /* Assure que l'image couvre toute la zone sans déformation */
+    z-index: 1; /* Positionner cette image sous l'image du bas */
 }
 
+/* Image du bas dans la section droite */
 .bottom-image {
-    position: absolute;
+    position: absolute; /* Position absolue pour la deuxième image */
     top: 150px; /* Décalage vers le bas */
-    left: 0;
-    width: 70%;
-    height: 300px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    object-fit: cover;
-    z-index: 2;
+    left: 0; /* Aligné à gauche */
+    width: 70%; /* Largeur de l'image */
+    height: 300px; /* Hauteur fixe */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Ombre autour de l'image */
+    object-fit: cover; /* Assure que l'image couvre toute la zone sans déformation */
+    z-index: 2; /* Positionner cette image au-dessus de la première */
 }
 
-/* Feature Badges - POSITIONNEMENT MIS À JOUR */
+/* Styles pour les badges de fonctionnalités */
 .feature-badge {
-    position: absolute;
-    background-color: white;
-    color: #333;
-    padding: 12px 20px;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    z-index: 3;
+    position: absolute; /* Positionnement absolu pour les badges */
+    background-color: white; /* Fond blanc pour les badges */
+    color: #333; /* Couleur du texte */
+    padding: 12px 20px; /* Espacement intérieur */
+    border-radius: 50px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Texte en gras */
+    display: flex; /* Utilisation de Flexbox pour aligner les éléments */
+    align-items: center; /* Alignement vertical des éléments */
+    gap: 10px; /* Espace entre l'icône et le texte */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Ombre autour des badges */
+    z-index: 3; /* Positionner au-dessus des images */
 }
 
 .feature-badge.quality {
-    top: 20px;
+    top: 20px; /* Positionner en haut à gauche */
     left: 20px;
-    right: auto;
+    right: auto; /* Aligner à gauche */
 }
 
 .feature-badge.secure {
-    bottom: 150px;
+    bottom: 150px; /* Positionner en bas à droite */
     right: 20px;
-    left: auto;
+    left: auto; /* Aligner à droite */
 }
 
 .feature-badge.clients {
-    bottom: 50px;
-    left: 20%;
+    bottom: 50px; /* Positionner un peu plus bas */
+    left: 20%; /* Centrer légèrement */
     right: auto;
 }
 
+/* Styles pour les icônes des badges */
 .badge-icon {
-    width: 24px;
+    width: 24px; /* Taille de l'icône */
     height: 24px;
-    background-color: #e9ecef;
-    border-radius: 50%;
-    display: flex;
+    background-color: #e9ecef; /* Fond gris clair pour l'icône */
+    border-radius: 50%; /* Forme ronde */
+    display: flex; /* Flexbox pour centrer l'icône */
     align-items: center;
     justify-content: center;
 }
 
 .quality-icon {
-    color: #28a745;
+    color: #28a745; /* Couleur verte pour le badge qualité */
 }
 
 .secure-icon {
-    color: #17a2b8;
+    color: #17a2b8; /* Couleur bleue pour le badge sécurisé */
 }
 
 .clients-icon {
-    color: #007bff;
+    color: #007bff; /* Couleur bleue pour le badge clients */
 }
 
 .badge-icon img {
-    width: 16px;
+    width: 16px; /* Taille des images dans les icônes */
     height: 16px;
 }
 

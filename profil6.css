@@ -1,3 +1,4 @@
+/* Appliquer une base cohérente à tous les éléments */
 * {
     margin: 0;
     padding: 0;
@@ -5,29 +6,35 @@
     font-family: Arial, sans-serif;
 }
 
+/* Style général du corps de la page */
 body {
-    background-color: #f5f0e8;
-    color: #333;
-    min-height: 100vh;
+    background-color: #f5f0e8; /* Beige clair */
+    color: #333; /* Texte gris foncé */
+    min-height: 100vh; /* Hauteur minimale pour couvrir tout l'écran */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Permet au footer de rester en bas */
 }
-a{
+
+/* Supprime la décoration des liens et conserve la couleur du texte environnant */
+a {
     text-decoration: none;
     color: inherit;
 }
 
+/* En-tête contenant le logo */
 .header {
     padding: 15px;
-    border-bottom: 1px solid #e0d8cc;
+    border-bottom: 1px solid #e0d8cc; /* Ligne de séparation beige clair */
 }
 
+/* Style du texte du logo */
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #b3937a;
+    color: #b3937a; /* Marron clair */
 }
 
+/* Style du carré contenant la première lettre du logo */
 .logo span {
     display: inline-block;
     background-color: #b3937a;
@@ -39,13 +46,15 @@ a{
     margin-right: 5px;
 }
 
+/* Barre de navigation des étapes */
 .steps-nav {
     display: flex;
     align-items: center;
     padding: 15px;
-    background-color: #e6e0d6;
+    background-color: #e6e0d6; /* Beige */
 }
 
+/* Style général d'une étape */
 .step {
     display: flex;
     align-items: center;
@@ -53,6 +62,7 @@ a{
     color: #9c8975;
 }
 
+/* Cercle contenant le numéro d'étape */
 .step-number {
     display: flex;
     justify-content: center;
@@ -66,29 +76,35 @@ a{
     font-weight: bold;
 }
 
+/* Étape active (en cours) */
 .step.active {
     color: #333;
 }
 
+/* Cercle de l'étape active en foncé */
 .step.active .step-number {
     background-color: #333;
 }
 
+/* Flèche entre les étapes */
 .step-arrow {
     margin: 0 10px;
     color: #9c8975;
 }
 
+/* Section principale */
 .main-content {
     padding: 20px;
-    flex: 1;
+    flex: 1; /* Prend tout l’espace disponible */
 }
 
+/* Titre d'une section */
 .section-title {
     font-size: 28px;
     margin-bottom: 10px;
 }
 
+/* Description sous le titre */
 .section-description {
     font-size: 16px;
     color: #333;
@@ -96,27 +112,32 @@ a{
     line-height: 1.5;
 }
 
+/* Ligne de séparation entre sections */
 .section-divider {
     height: 1px;
     background-color: #e0d8cc;
     margin: 30px 0;
 }
 
+/* Groupe de champs de formulaire */
 .form-group {
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
 }
 
+/* Ligne contenant plusieurs champs côte à côte */
 .form-row {
     display: flex;
     gap: 20px;
 }
 
+/* Un champ dans une ligne prend tout l’espace disponible */
 .form-row .form-input {
     flex: 1;
 }
 
+/* Libellé d’un champ */
 .form-label {
     display: flex;
     align-items: center;
@@ -125,6 +146,7 @@ a{
     margin-bottom: 15px;
 }
 
+/* Texte indiquant que le champ est privé */
 .form-label .private {
     font-size: 14px;
     color: #777;
@@ -132,12 +154,14 @@ a{
     font-weight: normal;
 }
 
+/* Ajout d’un astérisque rouge après les champs requis */
 .required:after {
     content: '*';
     color: #c75146;
     margin-left: 5px;
 }
 
+/* Style général des champs de formulaire */
 .form-input, .form-select, .form-textarea {
     padding: 12px 15px;
     border: 1px solid #ccc;
@@ -146,28 +170,32 @@ a{
     background-color: white;
 }
 
+/* Style spécifique aux zones de texte */
 .form-textarea {
     min-height: 100px;
     resize: vertical;
 }
 
+/* Compteur de caractères */
 .character-count {
     font-size: 14px;
     color: #777;
     margin-top: 5px;
 }
 
+/* Cercle pour la photo de profil */
 .profile-picture {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: #a8d8fa;
+    background-color: #a8d8fa; /* Bleu clair */
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
 }
 
+/* Espace réservé à la photo de profil */
 .profile-placeholder {
     width: 60px;
     height: 60px;
@@ -175,6 +203,7 @@ a{
     background-color: white;
 }
 
+/* Section des langues */
 .language-section {
     display: flex;
     gap: 15px;
@@ -184,10 +213,12 @@ a{
     margin-top: 10px;
 }
 
+/* Sélecteur de langue prend tout l’espace */
 .language-select {
     flex: 1;
 }
 
+/* Bouton pour ajouter une langue */
 .add-btn {
     padding: 12px 25px;
     background-color: #e0e0e0;
@@ -197,14 +228,16 @@ a{
     cursor: pointer;
 }
 
+/* Pied de page avec boutons de navigation */
 .footer {
     background-color: #b49175;
     padding: 15px 20px;
     display: flex;
     justify-content: space-between;
-    margin-top: auto;
+    margin-top: auto; /* Permet de pousser le footer vers le bas */
 }
 
+/* Style général des boutons */
 .btn {
     padding: 12px 40px;
     border-radius: 25px;

@@ -1,66 +1,78 @@
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+/* Applique un style de base à tous les éléments */
+* {
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les espacements internes par défaut */
+    box-sizing: border-box; /* Inclut le padding et border dans la largeur/hauteur */
+    font-family: Arial, sans-serif; /* Définit la police générale */
 }
 
+/* Style général du corps de la page */
 body {
-    background-color: #f2ece0;
-    color: #333;
+    background-color: #f2ece0; /* Couleur de fond douce */
+    color: #333; /* Couleur du texte principale */
 }
-a{
+
+/* Enlève le soulignement et garde la couleur du texte pour les liens */
+a {
     text-decoration: none;
     color: inherit;
 }
+
+/* Barre de navigation en haut de la page */
 .navbar {
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: #f2ece0;
-    border-bottom: 1px solid #e5dcc8;
+    display: flex; /* Mise en ligne horizontale des éléments */
+    align-items: center; /* Aligne verticalement les éléments */
+    padding: 15px 20px; /* Espacement interne */
+    background-color: #f2ece0; /* Même fond que le body */
+    border-bottom: 1px solid #e5dcc8; /* Bordure fine en bas */
 }
 
+/* Texte du "F" dans le logo Frellio */
 .logo-text {
-  color: #fff;
-  background-color: #bb9777;
-  border-radius: 4px;
-  font-weight: 100;
-  padding: 0.25rem;
+    color: #fff; /* Texte blanc */
+    background-color: #bb9777; /* Fond marron clair */
+    border-radius: 4px; /* Coins arrondis */
+    font-weight: 100; /* Police fine */
+    padding: 0.25rem; /* Petit espace intérieur */
 }
 
+/* Style général du logo */
 .logo {
-  color: #bb9777;
-  padding: 5px 10px;
-  font-weight: 1000;
-  margin-right: 2rem;
-  font-size: 1.25rem;
+    color: #bb9777; /* Texte marron clair */
+    padding: 5px 10px;
+    font-weight: 1000; /* Texte bien gras */
+    margin-right: 2rem; /* Espace à droite */
+    font-size: 1.25rem; /* Taille du texte */
 }
 
+/* Élément individuel dans la barre de navigation */
 .nav-item {
-    margin: 0 15px;
+    margin: 0 15px; /* Espacement horizontal */
     font-size: 17px;
     color: #333;
-    cursor: pointer;
+    cursor: pointer; /* Curseur en forme de main */
     display: flex;
     align-items: center;
 }
 
+/* Petit triangle après chaque nav-item sauf un */
 .nav-item::after {
-    content: "▼";
+    content: "▼"; /* Ajoute une flèche */
     font-size: 10px;
     margin-left: 8px;
 }
 
+/* Supprime la flèche sur le 4e nav-item */
 .nav-item:nth-child(4)::after {
     content: "";
 }
 
+/* Conteneur du champ de recherche */
 .search-container {
-    margin-left: auto;
+    margin-left: auto; /* Le pousse complètement à droite */
 }
 
+/* Champ de recherche */
 .search-box {
     padding: 10px 15px;
     border-radius: 20px;
@@ -69,13 +81,15 @@ a{
     background-color: #fff;
 }
 
+/* Conteneur principal de la page */
 .main-content {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 40px auto; /* Centré horizontalement */
     padding: 0 20px;
     position: relative;
 }
 
+/* Texte principal (titre) */
 .header-text {
     font-size: 36px;
     color: #b39684;
@@ -84,6 +98,7 @@ a{
     line-height: 1.2;
 }
 
+/* Texte secondaire (sous-titre) */
 .subheader-text {
     font-size: 18px;
     color: #777;
@@ -91,13 +106,15 @@ a{
     margin-bottom: 30px;
 }
 
+/* Conteneur pour les options (ex : cards) */
 .options-container {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Espace entre les éléments */
     margin-bottom: 30px;
     justify-content: center;
 }
 
+/* Carte de sélection d'une option */
 .option-card {
     flex: 1;
     max-width: 300px;
@@ -110,6 +127,7 @@ a{
     cursor: pointer;
 }
 
+/* Petit cercle indicateur en haut à droite */
 .option-indicator {
     width: 20px;
     height: 20px;
@@ -120,31 +138,37 @@ a{
     border: 1px solid #ccc;
 }
 
+/* Cercle sélectionné */
 .option-indicator.selected {
     background-color: #ccc;
 }
 
+/* Cercle activé/validé */
 .option-indicator.active {
     background-color: #63b574;
     border-color: #63b574;
 }
 
+/* Icône dans la carte */
 .option-icon {
     width: 60px;
     height: 60px;
     margin: 0 auto 20px;
 }
 
+/* Style SVG dans l'icône */
 .option-icon svg {
     width: 100%;
     height: 100%;
 }
 
+/* Titre de l'option */
 .option-title {
     font-size: 22px;
     font-weight: bold;
 }
 
+/* Description de l'option */
 .description {
     font-size: 16px;
     color: #555;
@@ -153,18 +177,21 @@ a{
     line-height: 1.6;
 }
 
+/* Titre de question */
 .question {
     font-size: 22px;
     font-weight: bold;
     margin: 40px 0 10px;
 }
 
+/* Conteneur pour l'entrée de budget */
 .input-container {
     margin: 30px 0;
     display: flex;
     justify-content: flex-start;
 }
 
+/* Champ d'entrée pour le budget */
 .budget-input {
     width: 200px;
     padding: 15px;
@@ -174,12 +201,14 @@ a{
     text-align: center;
 }
 
+/* Conteneur des boutons navigation */
 .navigation {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
 }
 
+/* Style de base pour tous les boutons */
 .nav-button {
     padding: 15px 30px;
     font-size: 18px;
@@ -189,11 +218,13 @@ a{
     min-width: 150px;
 }
 
+/* Bouton "Retour" */
 .back-button {
     background-color: #d8c7b7;
     color: #333;
 }
 
+/* Bouton "Suivant" */
 .next-button {
     background-color: #b39684;
     color: white;

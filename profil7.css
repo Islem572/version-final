@@ -1,3 +1,4 @@
+/* Réinitialisation des marges, paddings, et box-sizing pour tous les éléments */
 * {
     margin: 0;
     padding: 0;
@@ -5,25 +6,29 @@
     font-family: Arial, sans-serif;
 }
 
+/* Style général du corps de la page */
 body {
-    background-color: #f5f0e8;
-    color: #333;
-    min-height: 100vh;
+    background-color: #f5f0e8; /* Couleur de fond beige clair */
+    color: #333; /* Couleur du texte principale */
+    min-height: 100vh; /* Hauteur minimale = hauteur de la fenêtre */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Organisation verticale des éléments */
 }
 
+/* En-tête */
 .header {
     padding: 15px;
-    border-bottom: 1px solid #e0d8cc;
+    border-bottom: 1px solid #e0d8cc; /* Ligne de séparation */
 }
 
+/* Logo */
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #b3937a;
+    color: #b3937a; /* Couleur principale */
 }
 
+/* Première lettre du logo stylisée */
 .logo span {
     display: inline-block;
     background-color: #b3937a;
@@ -35,6 +40,7 @@ body {
     margin-right: 5px;
 }
 
+/* Barre de navigation des étapes */
 .steps-nav {
     display: flex;
     align-items: center;
@@ -42,6 +48,7 @@ body {
     background-color: #e6e0d6;
 }
 
+/* Style d'une étape */
 .step {
     display: flex;
     align-items: center;
@@ -49,6 +56,7 @@ body {
     color: #9c8975;
 }
 
+/* Cercle contenant le numéro de l'étape */
 .step-number {
     display: flex;
     justify-content: center;
@@ -62,6 +70,7 @@ body {
     font-weight: bold;
 }
 
+/* Étape active */
 .step.active {
     color: #333;
 }
@@ -70,21 +79,25 @@ body {
     background-color: #333;
 }
 
+/* Flèche entre les étapes */
 .step-arrow {
     margin: 0 10px;
     color: #9c8975;
 }
 
+/* Contenu principal */
 .main-content {
     padding: 20px;
     flex: 1;
 }
 
+/* Titre de section */
 .section-title {
     font-size: 28px;
     margin-bottom: 10px;
 }
 
+/* Description sous le titre */
 .section-description {
     font-size: 16px;
     color: #333;
@@ -92,16 +105,19 @@ body {
     line-height: 1.5;
 }
 
+/* Ligne séparatrice entre sections */
 .section-divider {
     height: 1px;
     background-color: #e0d8cc;
     margin: 30px 0;
 }
 
+/* Groupe de formulaire */
 .form-group {
     margin-bottom: 30px;
 }
 
+/* Étiquette des champs */
 .form-label {
     display: block;
     font-size: 18px;
@@ -109,11 +125,13 @@ body {
     margin-bottom: 15px;
 }
 
+/* Ajoute un astérisque rouge pour les champs requis */
 .required:after {
     content: '*';
     color: #c75146;
 }
 
+/* Styles communs pour les champs input et select */
 .form-select, .form-input {
     width: 100%;
     padding: 12px 15px;
@@ -122,30 +140,11 @@ body {
     font-size: 16px;
     background-color: white;
 }
-/*.form-select, .year-select{
-    position:right;
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    font-size: 16px;    
-    background-color: white;
-    margin-right: 10px;
-}*/
 
-/*.form-select, .major-select{
-    padding: 5px 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border: #ccc solid 1px;
-    border-radius: 3px;
-    font-size: 16px;
-    
-}*/
+/* Section d'éducation (ex : diplômes) */
 .education-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
     gap: 20px;
     margin-bottom: 20px;
     padding: 20px;
@@ -153,31 +152,28 @@ body {
     background-color: #f5f0e8;
 }
 
+/* Organisation des champs dans la ligne */
 .education-fields {
     display: flex;
     gap: 10px;
 }
 
+/* Largeur fixe pour le champ du titre du diplôme */
 .education-fields .title-select {
     flex: 0 0 100px;
 }
 
+/* Le champ "major" prend le reste de l'espace */
 .education-fields .major-select {
     flex: 1;
 }
-.education-fields .year-select{
+
+/* Largeur fixe pour le champ de l’année */
+.education-fields .year-select {
     flex: 0 0 100px;
 }
 
-/*.footer {
-    background-color: #b49175;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: auto;
-}*/
+/* Pied de page fixé en bas de l’écran */
 .footer {
     background-color: #b49175;
     padding: 5px 8px;
@@ -187,10 +183,10 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    width: 100%;}
+    width: 100%;
+}
 
-
-
+/* Bouton principal */
 .btn {
     padding: 12px 40px;
     border-radius: 25px;
@@ -202,6 +198,8 @@ body {
     background-color: #f5f0e8;
     color: #333;
 }
+
+/* Bouton "ADD" stylisé */
 .add-btn {
     background-color: #007bff;
     color: white;
@@ -213,6 +211,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
+/* Hover du bouton "ADD" */
 .add-btn:hover {
     background-color: #0056b3;
 }

@@ -1,230 +1,260 @@
+/* Style global du corps de la page */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f5f2;
-    color: #333;
+    font-family: Arial, sans-serif; /* Définition de la police de caractère */
+    margin: 0; /* Suppression de la marge par défaut */
+    padding: 0; /* Suppression du padding par défaut */
+    background-color: #f8f5f2; /* Couleur de fond de la page */
+    color: #333; /* Couleur du texte */
 }
 
+/* Style de l'en-tête (header) */
 header {
-    background-color: #fff;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    align-items: center;
+    background-color: #fff; /* Couleur de fond blanche */
+    padding: 10px 20px; /* Espacement interne */
+    border-bottom: 1px solid #ddd; /* Bordure grise en bas */
+    display: flex; /* Flexbox pour aligner les éléments en ligne */
+    align-items: center; /* Centrer les éléments verticalement */
 }
 
+/* Style du logo */
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #d2b8a4;
+    font-size: 24px; /* Taille du texte du logo */
+    font-weight: bold; /* Poids du texte */
+    color: #d2b8a4; /* Couleur du logo */
 }
 
+/* Barre de progression des étapes */
 .progress-steps {
-    padding: 15px 20px;
-    display: flex;
-    background-color: #f8f5f2;
+    padding: 15px 20px; /* Espacement interne */
+    display: flex; /* Utilisation de flexbox */
+    background-color: #f8f5f2; /* Couleur de fond de la barre de progression */
 }
 
+/* Style de chaque étape */
 .step {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
+    display: flex; /* Utilisation de flexbox pour aligner les éléments */
+    align-items: center; /* Alignement des éléments au centre */
+    margin-right: 10px; /* Espacement entre les étapes */
 }
 
+/* Style du numéro de chaque étape */
 .step-number {
-    width: 30px;
-    height: 30px;
-    background-color: #d2b8a4;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
+    width: 30px; /* Largeur du cercle */
+    height: 30px; /* Hauteur du cercle */
+    background-color: #d2b8a4; /* Couleur de fond du cercle */
+    color: white; /* Couleur du texte à l'intérieur du cercle */
+    border-radius: 50%; /* Rendre le cercle rond */
+    display: flex; /* Utilisation de flexbox pour centrer le texte */
+    align-items: center; /* Centrer le texte verticalement */
+    justify-content: center; /* Centrer le texte horizontalement */
+    margin-right: 10px; /* Espacement entre le numéro et le texte */
 }
 
+/* Texte des étapes */
 .step-text {
-    color: #666;
+    color: #666; /* Couleur du texte */
 }
 
+/* Séparateur entre les étapes */
 .separator {
-    margin: 0 10px;
-    color: #666;
+    margin: 0 10px; /* Espacement autour du séparateur */
+    color: #666; /* Couleur du séparateur */
 }
 
+/* Contenu principal de la page */
 .main-content {
-    padding: 20px;
+    padding: 20px; /* Espacement interne */
 }
 
+/* Section de sécurité du compte */
 .account-security {
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Espacement en bas */
 }
 
+/* Style du titre de la section "Account Security" */
 .account-security h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #444;
+    font-size: 28px; /* Taille du texte */
+    margin-bottom: 10px; /* Espacement sous le titre */
+    color: #444; /* Couleur du texte */
 }
 
+/* Style du texte de la section "Account Security" */
 .account-security p {
-    color: #666;
-    margin: 5px 0;
-    font-size: 16px;
+    color: #666; /* Couleur du texte */
+    margin: 5px 0; /* Espacement autour du texte */
+    font-size: 16px; /* Taille du texte */
 }
 
+/* Style des champs du formulaire */
 .form-field {
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
+    margin-bottom: 25px; /* Espacement en bas */
+    display: flex; /* Flexbox pour aligner les éléments */
+    align-items: center; /* Alignement des éléments au centre */
 }
 
+/* Style des labels des champs de formulaire */
 .field-label {
-    width: 150px;
-    font-weight: bold;
-    color: #555;
+    width: 150px; /* Largeur du label */
+    font-weight: bold; /* Poids du texte */
+    color: #555; /* Couleur du texte */
 }
 
+/* Style des valeurs des champs */
 .field-value {
-    color: #777;
-    margin-left: 10px;
+    color: #777; /* Couleur du texte */
+    margin-left: 10px; /* Espacement à gauche */
 }
 
+/* Style des champs de saisie (input) */
 .field-input {
-    flex-grow: 1;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    flex-grow: 1; /* Le champ s'étend pour remplir l'espace */
+    padding: 12px; /* Espacement interne */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 4px; /* Bordures arrondies */
+    font-size: 16px; /* Taille du texte */
 }
 
+/* Style de l'overlay modale */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: fixed; /* Positionnement fixe */
+    top: 0; left: 0; right: 0; bottom: 0; /* Couvre tout l'écran */
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    display: flex; /* Flexbox pour centrer la modale */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
 }
 
+/* Style de la fenêtre modale */
 .modal {
-    background-color: white;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background-color: white; /* Couleur de fond blanche */
+    width: 80%; /* Largeur de la modale */
+    max-width: 600px; /* Largeur maximale */
+    border-radius: 6px; /* Bordures arrondies */
+    overflow: hidden; /* Masquer le contenu qui dépasse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre sous la modale */
 }
 
+/* Contenu de la fenêtre modale */
 .modal-content {
-    padding: 20px;
-    text-align: center;
+    padding: 20px; /* Espacement interne */
+    text-align: center; /* Centrage du texte */
 }
 
+/* Icône de profil dans la modale */
 .profile-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    border: 2px solid #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 80px; /* Largeur de l'icône */
+    height: 80px; /* Hauteur de l'icône */
+    border-radius: 50%; /* Rendre l'icône circulaire */
+    margin: 0 auto 20px; /* Centrage de l'icône et espacement en bas */
+    border: 2px solid #333; /* Bordure autour de l'icône */
+    display: flex; /* Flexbox pour centrer l'icône */
+    align-items: center; /* Centrage vertical */
+    justify-content: center; /* Centrage horizontal */
 }
 
+/* Style des SVG dans l'icône de profil */
 .profile-icon svg {
-    width: 50px;
-    height: 50px;
+    width: 50px; /* Largeur du SVG */
+    height: 50px; /* Hauteur du SVG */
 }
 
+/* Titre de la fenêtre modale */
 .modal-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
+    font-size: 24px; /* Taille du titre */
+    font-weight: bold; /* Poids du texte */
+    margin-bottom: 15px; /* Espacement sous le titre */
 }
 
+/* Texte de la fenêtre modale */
 .modal-text {
-    color: #666;
-    margin-bottom: 20px;
-    line-height: 1.5;
+    color: #666; /* Couleur du texte */
+    margin-bottom: 20px; /* Espacement sous le texte */
+    line-height: 1.5; /* Hauteur de ligne pour espacer les paragraphes */
 }
 
+/* Boîte contenant les étapes */
 .steps-box {
-    background-color: #e8e8e8;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 4px;
+    background-color: #e8e8e8; /* Couleur de fond */
+    padding: 20px; /* Espacement interne */
+    margin: 20px 0; /* Espacement autour de la boîte */
+    border-radius: 4px; /* Bordures arrondies */
 }
 
+/* Liste des étapes */
 .steps-list {
-    text-align: left;
-    padding-left: 20px;
+    text-align: left; /* Alignement à gauche */
+    padding-left: 20px; /* Indentation de la liste */
 }
 
+/* Éléments de la liste des étapes */
 .steps-list li {
-    margin-bottom: 10px;
-    font-weight: bold;
+    margin-bottom: 10px; /* Espacement entre les éléments de la liste */
+    font-weight: bold; /* Texte en gras */
 }
 
+/* Conteneur pour les boutons */
 .button-row {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+    margin-top: 20px; /* Espacement en haut */
+    display: flex; /* Flexbox pour aligner les boutons */
+    justify-content: center; /* Centrer les boutons horizontalement */
 }
 
+/* Style des boutons d'édition */
 .edit-button {
-    background-color: #d2b8a4;
-    color: #333;
-    border: none;
-    padding: 12px 30px;
-    font-size: 16px;
-    border-radius: 30px;
-    cursor: pointer;
+    background-color: #d2b8a4; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    border: none; /* Suppression de la bordure */
+    padding: 12px 30px; /* Espacement interne */
+    font-size: 16px; /* Taille du texte */
+    border-radius: 30px; /* Bordures arrondies */
+    cursor: pointer; /* Curseur pointeur */
 }
 
+/* Style du bouton "Next" */
 .next-button {
-    background-color: #d2b8a4;
-    color: #333;
-    border: none;
-    padding: 15px 40px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+    background-color: #d2b8a4; /* Couleur de fond */
+    color: #333; /* Couleur du texte */
+    border: none; /* Suppression de la bordure */
+    padding: 15px 40px; /* Espacement interne */
+    font-size: 16px; /* Taille du texte */
+    border-radius: 4px; /* Bordures arrondies */
+    cursor: pointer; /* Curseur pointeur */
+    position: absolute; /* Positionnement absolu */
+    bottom: 20px; /* Position en bas */
+    right: 20px; /* Position à droite */
 }
+
+/* Style des notifications */
 .notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 15px 25px;
-    border-radius: 4px;
-    color: white;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: all 0.3s ease;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    position: fixed; /* Positionnement fixe */
+    top: 20px; /* Position en haut */
+    right: 20px; /* Position à droite */
+    padding: 15px 25px; /* Espacement interne */
+    border-radius: 4px; /* Bordures arrondies */
+    color: white; /* Couleur du texte */
+    font-weight: bold; /* Poids du texte */
+    opacity: 0; /* Initialement caché */
+    transform: translateY(-20px); /* Déplacer la notification hors de la vue */
+    transition: all 0.3s ease; /* Transition pour l'animation */
+    z-index: 1000; /* Mettre la notification au-dessus des autres éléments */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Ombre */
 }
 
+/* Apparition de la notification */
 .notification.show {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Rendre la notification visible */
+    transform: translateY(0); /* Remettre la notification en place */
 }
 
+/* Notifications de différents types */
 .notification.info {
-    background-color: #3498db;
+    background-color: #3498db; /* Bleu */
 }
 
 .notification.success {
-    background-color: #2ecc71;
+    background-color: #2ecc71; /* Vert */
 }
 
 .notification.error {
-    background-color: #e74c3c;
+    background-color: #e74c3c; /* Rouge */
 }

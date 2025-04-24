@@ -1,141 +1,162 @@
+/* Réinitialisation des marges, des espacements et du modèle de boîte (box-sizing) */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Définir la police globale */
 }
 
+/* Style de base pour le body */
 body {
-    background-color: #f5f0e8;
-    color: #333;
-    min-height: 100vh;
+    background-color: #f5f0e8; /* Fond beige clair */
+    color: #333; /* Couleur de texte sombre */
+    min-height: 100vh; /* Assurer que la page prend toute la hauteur de l'écran */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Disposition en colonne */
 }
 
+/* Style de l'en-tête (header) */
 .header {
-    padding: 15px;
-    border-bottom: 1px solid #e0d8cc;
+    padding: 15px; /* Espacement autour du contenu */
+    border-bottom: 1px solid #e0d8cc; /* Bordure sous l'en-tête de couleur gris clair */
 }
 
+/* Style du logo */
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #b3937a;
+    font-size: 24px; /* Taille du texte */
+    font-weight: bold; /* Mettre en gras le texte du logo */
+    color: #b3937a; /* Couleur dorée/brun clair */
 }
 
+/* Style de la première lettre du logo (span) */
 .logo span {
-    display: inline-block;
-    background-color: #b3937a;
-    color: white;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    border-radius: 5px;
-    margin-right: 5px;
+    display: inline-block; /* Affichage en bloc pour ajuster les styles */
+    background-color: #b3937a; /* Couleur de fond pour la lettre */
+    color: white; /* Couleur du texte */
+    width: 30px; /* Largeur du cercle */
+    height: 30px; /* Hauteur du cercle */
+    text-align: center; /* Centrer le texte */
+    border-radius: 5px; /* Arrondir les bords du cercle */
+    margin-right: 5px; /* Espacement à droite */
 }
+
+/* Contenu principal de la page */
 .main-content {
-    padding: 20px;
-    flex: 1;
+    padding: 20px; /* Espacement autour du contenu */
+    flex: 1; /* Prendre toute la place disponible */
 }
 
+/* Titre des sections */
 .section-title {
-    font-size: 36px;
-    color: #b49175;
-    margin-bottom: 30px;
-    line-height: 1.2;
+    font-size: 36px; /* Taille de la police */
+    color: #b49175; /* Couleur beige doré */
+    margin-bottom: 30px; /* Espacement sous le titre */
+    line-height: 1.2; /* Espacement entre les lignes */
 }
 
+/* Liste des étapes de vente (étapes sous forme de flex) */
 .selling-steps {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 40px;
+    flex-direction: column; /* Disposition en colonne */
+    gap: 30px; /* Espacement entre chaque étape */
+    margin-top: 40px; /* Espacement au-dessus des étapes */
 }
 
+/* Style des étapes individuelles */
 .step {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+    display: flex; /* Disposition en ligne */
+    align-items: flex-start; /* Aligner les éléments au début */
+    gap: 20px; /* Espacement entre les éléments */
 }
 
+/* Icônes des étapes (dimensions fixes) */
 .step-icon {
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;
+    width: 80px; /* Largeur de l'icône */
+    height: 80px; /* Hauteur de l'icône */
+    flex-shrink: 0; /* Empêcher le rétrécissement de l'icône */
 }
 
+/* Icone spécifique pour le cerveau (étape intellectuelle) */
 .brain-icon {
-    background-color: #fbf8e3;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #fbf8e3; /* Couleur de fond jaune pâle */
+    border-radius: 50%; /* Icône ronde */
+    display: flex; /* Disposition flex */
+    justify-content: center; /* Centrer l'icône */
+    align-items: center; /* Centrer l'icône */
 }
 
+/* Icône de profil (cercle bleu clair) */
 .profile-icon {
-    background-color: #a8d8fa;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #a8d8fa; /* Bleu clair */
+    border-radius: 50%; /* Cercle */
+    display: flex; /* Disposition flex */
+    justify-content: center; /* Centrer l'icône */
+    align-items: center; /* Centrer l'icône */
 }
 
+/* Icône de téléchargement (cercle vert) */
 .upload-icon {
-    background-color: #00a99d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #00a99d; /* Vert */
+    display: flex; /* Disposition flex */
+    justify-content: center; /* Centrer l'icône */
+    align-items: center; /* Centrer l'icône */
 }
 
+/* Contenu des étapes (texte descriptif) */
 .step-content {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    display: flex; /* Disposition flex */
+    flex-direction: column; /* Disposition en colonne */
+    gap: 5px; /* Espacement entre les éléments */
 }
 
+/* Titre de chaque étape */
 .step-heading {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 24px; /* Taille du titre */
+    font-weight: bold; /* Gras pour le titre */
 }
 
+/* Description détaillée des étapes */
 .step-description {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.4;
+    font-size: 18px; /* Taille de la description */
+    color: #333; /* Couleur du texte */
+    line-height: 1.4; /* Espacement entre les lignes */
 }
 
+/* Pied de page (footer) */
 .footer {
-    background-color: #b49175;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
+    background-color: #b49175; /* Couleur de fond beige doré */
+    padding: 15px 20px; /* Espacement autour du contenu */
+    display: flex; /* Disposition en ligne */
+    justify-content: space-between; /* Espacement égal entre les éléments */
+    margin-top: auto; /* Pousser le footer au bas de la page */
 }
 
+/* Bouton avec des styles généraux */
 .btn {
-    padding: 12px 40px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background-color: #f5f0e8;
-    color: #333;
+    padding: 12px 40px; /* Espacement interne du bouton */
+    border-radius: 25px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Gras pour le texte */
+    cursor: pointer; /* Curseur de souris en forme de main */
+    border: none; /* Pas de bordure */
+    outline: none; /* Pas de contour sur focus */
+    background-color: #f5f0e8; /* Couleur de fond beige clair */
+    color: #333; /* Couleur du texte */
 }
 
+/* Icône de l'espace réservé pour le profil */
 .profile-placeholder {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: white;
+    width: 60px; /* Largeur du cercle */
+    height: 60px; /* Hauteur du cercle */
+    border-radius: 50%; /* Cercle */
+    background-color: white; /* Couleur de fond blanche */
 }
 
+/* Flèche pointant vers le haut pour un effet visuel (triangle vert) */
 .arrow-up {
     width: 0;
     height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-bottom: 25px solid #00a99d;
+    border-left: 15px solid transparent; /* Triangle avec des bords transparents */
+    border-right: 15px solid transparent; /* Triangle avec des bords transparents */
+    border-bottom: 25px solid #00a99d; /* Bordure inférieure colorée pour former une flèche */
 }

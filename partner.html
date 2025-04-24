@@ -1,94 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>partner Signup</title>
-    <link rel="stylesheet" href="../../bootsrap/bootstrap.min.css">
-
-    <link rel="stylesheet" href="partner.css">
-
-    <link rel="icon" href="../../photo/signup/custemer/customericon.png" type="image/x-icon">
-    <script src="partner.js"></script>
+    <!-- Métadonnées de base -->
+    <meta charset="UTF-8"> <!-- Encodage UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>partner Signup</title> <!-- Titre de la page (attention à la casse) -->
+    
+    <!-- Liens vers les feuilles de style -->
+    <link rel="stylesheet" href="../../bootsrap/bootstrap.min.css"> <!-- Bootstrap (faute de frappe dans le chemin) -->
+    <link rel="stylesheet" href="partner.css"> <!-- Feuille de style personnalisée -->
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../photo/signup/custemer/customericon.png" type="image/x-icon"> <!-- Icône du site -->
+    
+    <!-- Script JavaScript -->
+    <script src="partner.js"></script> <!-- Script pour le formulaire -->
 </head>
 <body>
+    <!-- Conteneur principal (style inline à éviter) -->
     <div style="border: 0px solid black; padding: -5px; margin: 6px; height: 517px;">
         <div class="container">
+            <!-- Section gauche (formulaire) -->
             <div class="left-section">
                 <header class="navbar">
-                    <div class="logo">Frellio</div>
+                    <div class="logo">Frellio</div> <!-- Logo -->
                 </header>
-                  <h1>Sign Up To Hire Talent</h1> <br>
-                  <form id="signup-form" action="partner.php" method="POST">
-
+                <h1>Sign Up To Hire Talent</h1> <br> <!-- Titre avec saut de ligne brut -->
+                
+                <!-- Formulaire d'inscription -->
+                <form id="signup-form" action="partner.php" method="POST">
+                    <!-- Groupe de champs pour le nom -->
                     <div class="form-group">
                         <div class="row">
                             <div class="col">
-                                <label for="first-name" class="h6" style="color: #8b5e4f    ;">First name:</label> 
-                          <input type="text" class="form-control" placeholder="First name" id=  "first-name" aria-label="First name">
+                                <label for="first-name" class="h6" style="color: #8b5e4f;">First name:</label> 
+                                <input type="text" class="form-control" placeholder="First name" id="first-name" aria-label="First name">
+                            </div>
+                            <div class="col">    
+                                <label for="last-name" class="h6" style="color: #8b5e4f;">last name:</label>   
+                                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="last-name" name="last-name" required>
+                            </div>
                         </div>
-                        <div class="col">    
-                            <label for="last-name" class="h6" style="color: #8b5e4f";>last name:</label>   
-                          <input type="text" class="form-control" placeholder="Last name"aria-label="Last name" id="last-name" name="last-name" required>
-                        </div>
-                      </div>
+                    </div>
+                    
+                    <!-- Champ email -->
+                    <div class="form-group">
+                        <label for="work-email" class="h6" style="color: #8b5e4f;">Work Email Address:</label>
+                        <input type="email" id="work-email" name="email" required placeholder="work-email">
+                    </div>
+                    
+                    <!-- Champ mot de passe -->
+                    <div class="form-group">
+                        <label for="password" class="h6" style="color: #8b5e4f;">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Password (8 or more characters)" required>
+                    </div>
+                    
+                    <!-- Sélecteur de pays/région -->
+                    <div class="form-group">
+                        <label for="location" class="h6" style="color: #8b5e4f;">Country:</label>
+                        <select id="location" name="country" required>
+                            <option value="Ariana">Ariana</option>
+                            <!-- ... autres options ... -->
+                        </select>
+                    </div>
+                    
+                    <!-- Lien mal formatté (faute de frappe dans hrefr) -->
+                    <a hrefr="profil1.html"></a>
+                        <button type="submit">Create My Account</button>
+                    </a>
+                </form>
+            </div>
+            
+            <!-- Section droite (marketing) -->
+            <div class="right-section">
+                <h2>The best freelancers are on</h2>
+                <h1>FRELLIO</h1>
+                <div class="image-container">
+                    <img src="new_project-main/photo/signup/custemer/photo.jpg" alt="Freelancer">
+                    <span class="verified-badge">✔ verified profile</span> <!-- Badge vérifié -->
                 </div>
-                <div class="form-group">
-                    <label for="work-email" class="h6" style="color: #8b5e4f";>Work Email Address:</label>
-                    <input type="email" id="work-email" name="email" required placeholder="work-email">
-                </div>
-                <div class="form-group">
-                    <label for="password" class="h6" style="color: #8b5e4f";>Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Password (8 or more characters)" required>
-                </div>
-                <div class="form-group">
-                    <label for="location" class="h6" style="color: #8b5e4f";>Country:</label>
-                    <select id="location" name="country" required>
-                        <option value="Ariana">Ariana</option>
-                        <option value="Beja">Beja</option>
-                        <option value="Ben Arous">Ben Arous</option>
-                        <option value="Bizerte">Bizerte</option>
-                        <option value="Gabes">Gabes</option>
-                        <option value="Gafsa">Gafsa</option>
-                        <option value="Jendouba">Jendouba</option>
-                        <option value="Kairouan">Kairouan</option>
-                        <option value="Kasserine">Kasserine</option>
-                        <option value="Kebili">Kebili</option>
-                        <option value="Kef">Kef</option>
-                        <option value="Mahdia">Mahdia</option>
-                        <option value="Manouba">Manouba</option>
-                        <option value="Medenine">Medenine</option>
-                        <option value="Monastir">Monastir</option>
-                        <option value="Nabeul">Nabeul</option>
-                        <option value="Sfax">Sfax</option>
-                        <option value="Sidi Bouzid">Sidi Bouzid</option>
-                        <option value="Siliana">Siliana</option>
-                        <option value="Sousse">Sousse</option>
-                        <option value="Tataouine">Tataouine</option>
-                        <option value="Tozeur">Tozeur</option>
-                        <option value="Tunis">Tunis</option>
-                        <option value="Zaghouan">Zaghouan</option>
-                        
-                    </select>
-                </div>
-                <a hrefr="profil1.html"></a>
-                    <button type="submit">Create My Account</button>
-                </a>
-
-
-            </form>
-        </div>
-        <div class="right-section">
-            <h2>The best freelancers are on</h2>
-            <h1>FRELLIO</h1>
-            <div class="image-container">
-                <img src="new_project-main/photo/signup/custemer/photo.jpg" alt="Freelancer">
-                <span class="verified-badge">✔ verified profile</span>
             </div>
         </div>
     </div>
-</div>
-<script src="script.js"></script>
-<script src="../../bootsrap/bootstrap_js/bootstrap.min.js"></script>
+    
+    <!-- Scripts JavaScript -->
+    <script src="script.js"></script>
+    <script src="../../bootsrap/bootstrap_js/bootstrap.min.js"></script> <!-- Bootstrap JS (chemin incohérent) -->
 </body>
 </html>

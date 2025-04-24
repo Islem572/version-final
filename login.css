@@ -1,189 +1,195 @@
+/* Définition des variables globales pour la palette de couleurs */
 :root {
-    --primary-color: #B69B8B;
-    --background-color: #F7F3EF;
-    --text-color: #7A6557;
-    --input-bg: #E8E8E8;
+    --primary-color: #B69B8B;      /* Couleur principale utilisée dans tout le site (par exemple pour les boutons et les titres) */
+    --background-color: #F7F3EF;   /* Couleur de fond de la page */
+    --text-color: #7A6557;         /* Couleur du texte principale */
+    --input-bg: #E8E8E8;           /* Couleur de fond des champs de saisie (inputs) */
 }
 
+/* Réinitialisation des styles par défaut pour tous les éléments */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    margin: 0;                     /* Supprime les marges par défaut */
+    padding: 0;                    /* Supprime les espacements internes par défaut */
+    box-sizing: border-box;        /* Assure que le padding et la bordure ne dépassent pas la taille de l'élément */
+    font-family: 'Arial', sans-serif; /* Définit la police de base du site */
 }
 
+/* Style global du body */
 body {
-    display: flex;
-    height: 100vh;
-    background-color: var(--background-color);
+    display: flex;                 /* Utilisation de flexbox pour un design réactif */
+    height: 100vh;                 /* L'élément occupe toute la hauteur de la fenêtre du navigateur */
+    background-color: var(--background-color); /* Applique la couleur de fond définie précédemment */
 }
 
+/* Conteneur principal pour la page de connexion */
 .login-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
+    flex: 1;                       /* Permet à ce conteneur de prendre tout l'espace disponible */
+    display: flex;                 /* Utilisation de flexbox pour centrer le contenu */
+    flex-direction: column;        /* Aligne les éléments de manière verticale */
+    align-items: center;           /* Centre les éléments horizontalement */
+    justify-content: center;       /* Centre les éléments verticalement */
+    padding: 2rem;                 /* Ajoute de l'espace autour du contenu */
 }
 
+/* Style pour le logo */
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 5rem;
-    align-self: flex-start;
-    padding-left: 2rem;
+    font-size: 1.8rem;              /* Taille du texte du logo */
+    font-weight: bold;              /* Texte en gras pour le logo */
+    color: var(--primary-color);    /* Applique la couleur primaire définie précédemment */
+    margin-bottom: 5rem;            /* Espacement en bas du logo */
+    align-self: flex-start;         /* Aligne le logo à gauche */
+    padding-left: 2rem;             /* Ajoute un peu d'espace à gauche du logo */
 }
 
+/* Style pour le formulaire de connexion */
 .login-form {
-    width: 100%;
-    max-width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    width: 100%;                    /* Largeur totale */
+    max-width: 500px;               /* Largeur maximale de 500px */
+    display: flex;                  /* Utilisation de flexbox */
+    flex-direction: column;         /* Aligne les éléments du formulaire verticalement */
+    gap: 1rem;                      /* Espace entre les champs du formulaire */
 }
 
+/* Style pour le titre du formulaire */
 .login-title {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    margin-bottom: 2rem;
-    font-weight: normal;
+    font-size: 2.5rem;              /* Taille du texte du titre */
+    color: var(--text-color);       /* Applique la couleur de texte définie précédemment */
+    margin-bottom: 2rem;            /* Espacement sous le titre */
+    font-weight: normal;            /* Police normale pour le titre */
 }
 
+/* Style pour les champs de saisie */
 .input-field {
-    width: 100%;
-    padding: 0.8rem;
-    border-radius: 0.5rem;
-    border: none;
-    background-color: var(--input-bg);
-    font-size: 1rem;
+    width: 100%;                    /* Largeur totale */
+    padding: 0.8rem;                /* Espacement interne dans le champ de saisie */
+    border-radius: 0.5rem;          /* Coins arrondis pour le champ */
+    border: none;                   /* Aucune bordure par défaut */
+    background-color: var(--input-bg); /* Applique la couleur de fond des champs de saisie */
+    font-size: 1rem;                /* Taille de la police dans le champ */
 }
 
+/* Espacement entre les icônes et le texte dans les champs de saisie */
 .icon {
-    margin-right: 0.5rem;
+    margin-right: 0.5rem;           /* Espace à droite de l'icône */
 }
 
+/* Séparateur entre les sections (ex. entre le formulaire et les boutons) */
 .divider {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: var(--text-color);
-    margin: 1.5rem 0;
+    display: flex;                  /* Utilisation de flexbox pour l'alignement des éléments */
+    align-items: center;            /* Centrer les éléments verticalement */
+    text-align: center;             /* Centrer le texte */
+    color: var(--text-color);       /* Applique la couleur de texte définie précédemment */
+    margin: 1.5rem 0;               /* Espacement autour du séparateur */
 }
 
+/* Ajoute les lignes avant et après le texte dans le séparateur */
 .divider::before,
 .divider::after {
-    content: '';
-    flex: 1;
-    border-bottom: 1px solid #ccc;
+    content: '';                    /* Contenu vide pour les lignes */
+    flex: 1;                         /* Prend toute la largeur disponible */
+    border-bottom: 1px solid #ccc;  /* Lignes fines grises */
 }
 
+/* Espacement spécifique avant et après le texte dans le séparateur */
 .divider::before {
-    margin-right: 1rem;
+    margin-right: 1rem;             /* Espacement à droite de la ligne avant le texte */
 }
 
 .divider::after {
-    margin-left: 1rem;
+    margin-left: 1rem;              /* Espacement à gauche de la ligne après le texte */
 }
 
+/* Style pour le bouton Google */
 .google-btn {
-    width: 100%;
-    padding: 0.8rem;
-    border-radius: 0.5rem;
-    border: none;
-    background-color: var(--input-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+    width: 100%;                    /* Largeur totale */
+    padding: 0.8rem;                /* Espacement interne dans le bouton */
+    border-radius: 0.5rem;          /* Coins arrondis */
+    border: none;                   /* Aucune bordure */
+    background-color: var(--input-bg); /* Applique la couleur de fond des champs de saisie */
+    display: flex;                  /* Utilisation de flexbox pour centrer le contenu */
+    align-items: center;            /* Centrer les éléments verticalement */
+    justify-content: center;        /* Centrer le contenu horizontalement */
+    cursor: pointer;               /* Curseur pointer pour indiquer que c'est cliquable */
 }
 
+/* Texte "Upwork" sous le formulaire */
 .upwork-text {
-    margin: 2rem 0;
-    color: var(--text-color);
-    text-align: center;
+    margin: 2rem 0;                 /* Espacement vertical autour du texte */
+    color: var(--text-color);       /* Applique la couleur du texte */
+    text-align: center;             /* Centrage du texte */
 }
 
+/* Style pour le bouton d'inscription */
 .signup-btn {
-    width: 100%;
-    padding: 0.8rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--text-color);
-    background-color: transparent;
-    color: var(--text-color);
-    cursor: pointer;
+    width: 100%;                    /* Largeur totale */
+    padding: 0.8rem;                /* Espacement interne dans le bouton */
+    border-radius: 0.5rem;          /* Coins arrondis */
+    border: 1px solid var(--text-color); /* Bordure avec la couleur du texte */
+    background-color: transparent;  /* Fond transparent */
+    color: var(--text-color);       /* Couleur du texte du bouton */
+    cursor: pointer;               /* Curseur pointer pour indiquer que c'est cliquable */
 }
 
+/* Bannière de droite avec un fond coloré */
 .right-banner {
-    flex: 1;
-    background-color: var(--primary-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    padding: 2rem;
-    text-align: center;
+    flex: 1;                        /* Permet à la bannière de prendre tout l'espace disponible */
+    background-color: var(--primary-color); /* Applique la couleur primaire comme fond */
+    display: flex;                  /* Utilisation de flexbox pour l'alignement */
+    flex-direction: column;         /* Alignement vertical des éléments */
+    justify-content: center;        /* Centre les éléments verticalement */
+    align-items: center;            /* Centre les éléments horizontalement */
+    color: white;                   /* Texte en blanc */
+    padding: 2rem;                  /* Espacement interne autour du contenu */
+    text-align: center;             /* Centrage du texte */
 }
 
+/* Style pour le titre dans la bannière */
 .banner-title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;              /* Taille du texte du titre */
+    margin-bottom: 1rem;            /* Espacement sous le titre */
 }
 
+/* Style pour le logo dans la bannière */
 .banner-logo {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
+    font-size: 3rem;                /* Taille du texte du logo */
+    font-weight: bold;              /* Texte en gras */
+    margin-bottom: 2rem;            /* Espacement sous le logo */
 }
 
-/*.profile-card {
-    background-color: #F0F8F0;
-    border-radius: 1rem;
-    overflow: hidden;
-    position: relative;
-    width: 80%;
-    max-width: 400px;
-    margin-top: 2rem;
-}*/
+/* Badge de vérification */
 .verified-badge {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background-color: white;
-    border-radius: 2rem;
-    padding: 0.5rem 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
+    position: absolute;             /* Position absolue pour positionner précisément le badge */
+    top: 1rem;                      /* Positionné à 1rem du haut */
+    right: 1rem;                    /* Positionné à 1rem de la droite */
+    background-color: white;        /* Fond blanc pour le badge */
+    border-radius: 2rem;            /* Bords arrondis pour un badge circulaire */
+    padding: 0.5rem 1rem;           /* Espacement interne pour rendre le badge plus large */
+    display: flex;                  /* Utilisation de flexbox pour l'alignement */
+    align-items: center;            /* Alignement vertical centré */
+    gap: 0.3rem;                    /* Espace entre l'icône et le texte */
 }
 
+/* Icône de vérification */
 .check-icon {
-    color: #4CAF50;
-    font-weight: bold;
+    color: #4CAF50;                 /* Couleur verte pour l'icône */
+    font-weight: bold;              /* Texte en gras */
 }
 
-/*.profile-image {
-    width: 100%;
-    height: auto;
-}*/
+/* Carte de profil */
 .profile-card {
-    background-color: #F0F8F0;
-    border-radius: 1rem;
-    overflow: hidden;      /* important pour masquer les débordements */
-    position: relative;
-    width: 80%;
-    max-width: 400px;
-    margin-top: 2rem;
-  }
-  
-  /* Image en haut de la carte, recadrée et arrondie */
-  .profile-image {
-    width: 100%;
-    height: 300px;         /* ajustez à la hauteur souhaitée */
-    object-fit: cover;     /* recadre sans déformer */
-    display: block;        /* supprime l’espace sous l’image */
-    /* on n’a pas besoin de border-radius ici car overflow:hidden sur .profile-card le gère */
-  }
-  
+    background-color: #F0F8F0;      /* Fond doux pour la carte de profil */
+    border-radius: 1rem;            /* Coins arrondis pour la carte */
+    overflow: hidden;               /* Masque les débordements (image et autres éléments) */
+    position: relative;             /* Position relative pour positionner les éléments enfants */
+    width: 80%;                     /* Largeur de 80% */
+    max-width: 400px;               /* Largeur maximale de 400px */
+    margin-top: 2rem;               /* Espacement au-dessus de la carte */
+}
+
+/* Image de profil */
+.profile-image {
+    width: 100%;                    /* Prend toute la largeur de la carte */
+    height: 300px;                  /* Hauteur de l'image */
+    object-fit: cover;              /* Recadre l'image pour qu'elle occupe toute la surface sans se déformer */
+    display: block;                 /* Supprime l'espace sous l'image */
+}

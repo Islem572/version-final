@@ -4,40 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frellio - Informations Personnelles</title>
+    <!-- Lien vers le fichier CSS pour le style -->
     <link rel="stylesheet" href="profil7.css">
+    <!-- Lien vers le fichier JavaScript pour ajouter des fonctionnalités interactives -->
     <script src="profil7.js"></script>
 </head>
 <body>
+    <!-- En-tête de la page -->
     <div class="header">
         <div class="logo"><span>F</span>rellio</div>
     </div>
 
+    <!-- Barre de navigation des étapes -->
     <div class="steps-nav">
+        <!-- Étape 1 : Informations personnelles -->
         <div class="step">
             <span class="step-number">1</span>
             <a>Personal info</a>
         </div>
         <span class="step-arrow">></span>
+        <!-- Étape 2 : Informations personnelles (active) -->
         <div class="step active">
             <span class="step-number">2</span>
             <a>Personal info</a>
         </div>
         <span class="step-arrow">></span>
+        <!-- Étape 3 : Sécurité du compte -->
         <div class="step">
             <span class="step-number">3</span>
             <a>Account Security</a>
         </div>
     </div>
 
+    <!-- Contenu principal de la page -->
     <div class="main-content">
+        <!-- Titre de la section -->
         <h1 class="section-title">Personal Info</h1>
+        <!-- Description de la section -->
         <p class="section-description">This Is Your Time To Shine. Let Potential Buyers Know What<br>You Do Best And How You Gained Your Skills, Certifications And Experience.</p>
 
+        <!-- Diviseur de section -->
         <div class="section-divider"></div>
 
+        <!-- Formulaire d'informations personnelles -->
         <form action="save_profile_step2.php" method="POST">
+            <!-- Groupe de champ pour la profession -->
             <div class="form-group">
                 <label class="form-label required">Your Occupation</label>
+                <!-- Liste déroulante pour choisir la profession -->
                 <select name="occupation" class="form-select">
                     <option>Select Occupation</option>
                     <option>Web Developer</option>
@@ -52,9 +66,12 @@
                 </select>
             </div>
 
+            <!-- Groupe de champ pour l'éducation -->
             <div class="form-group">
                 <label class="form-label required">Education</label>
+                <!-- Section pour les informations éducatives -->
                 <div class="education-section">
+                    <!-- Liste déroulante pour le pays de l'université -->
                     <select name="university_country" class="form-select">
                         <option>Country Of College / University</option>
                         <option>Sfax</option>
@@ -66,6 +83,7 @@
                         <option>Jendouba</option>
                         <option>Kasserine</option>
                     </select>
+                    <!-- Liste déroulante pour le nom de l'université -->
                     <select name="university_name" class="form-select">
                         <option>Country Of College / University Name</option>
                         <option>Université de Sfax</option>
@@ -77,6 +95,7 @@
                         <option>Université de Jendouba</option>
                         <option>Université de Kasserine</option>
                     </select>
+                    <!-- Sélection des titres et années d'études -->
                     <div class="education-fields">
                         <select name="education_title" class="form-select title-select">
                             <option>Title</option>
@@ -115,17 +134,23 @@
                 </div>
             </div>
 
+            <!-- Groupe de champ pour le site web personnel -->
             <div class="form-group">
                 <label class="form-label">Personal Website</label>
+                <!-- Champ de texte pour entrer un lien vers le site web personnel -->
                 <input type="text" name="personal_website" class="form-input" placeholder="Provide A Link To Your Own Professional Website">
             </div>
 
+            <!-- Pied de page avec les boutons -->
             <div class="footer">
+                <!-- Bouton retour -->
                 <a href="profil6.html">
                     <button type="button" class="btn" onclick="history.back()">Back</button>
                 </a>
              
+                <!-- Bouton pour vérifier les champs -->
                 <button type="button" class="btn" onclick="verifyFields()">Verify</button>
+                <!-- Bouton suivant (soumet le formulaire) -->
                 <a href="profile8.html">
                     <button type="submit" class="btn">Next</button>
                 </a>

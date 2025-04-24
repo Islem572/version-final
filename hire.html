@@ -1,54 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Déclaration de l'encodage des caractères (UTF-8) pour garantir une compatibilité avec tous les caractères spéciaux -->
     <meta charset="UTF-8">
+
+    <!-- Déclaration pour rendre la page responsive, s'adapte à la taille de l'écran du dispositif -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre de la page affiché dans l'onglet du navigateur -->
     <title>Embaucher un Client</title>
+
+    <!-- Lien vers la feuille de style externe pour la mise en page -->
     <link rel="stylesheet" href="hire.css">
+
+    <!-- Lien vers un fichier JavaScript externe pour les fonctionnalités dynamiques -->
     <script src="script1-5.js"></script>
 </head>
 <body>
+    <!-- Section de l'en-tête de la page -->
     <header>
         <div class="container">
             <div class="header-content">
+                <!-- Logo de l'entreprise, "Frellio", avec un élément span pour des styles éventuels -->
                 <div class="logo">Frellio<span></span></div>
-                
             </div>
         </div>
     </header>
 
+    <!-- Section principale (hero) qui présente un message d'accroche -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+                <!-- Titre principal de la section -->
                 <h1>Trouvez les meilleurs talents pour votre projet</h1>
+                <!-- Paragraphe de présentation de la plateforme -->
                 <p>Notre plateforme vous met en relation avec des professionnels qualifiés et vérifiés dans divers domaines. Embauchez en toute confiance.</p>
+                <!-- Bouton d'appel à l'action pour commencer le processus -->
                 <a href="#contact" class="btn">Commencer maintenant</a>
             </div>
         </div>
     </section>
 
+    <!-- Section présentant les clients disponibles à l'embauche -->
     <section class="clients-section">
         <div class="container">
             <div class="section-title">
+                <!-- Titre de la section des clients -->
                 <h2>Nos clients disponibles</h2>
+                <!-- Paragraphe explicatif sur la section -->
                 <p>Découvrez notre sélection de talents de haute qualité prêts à travailler sur vos projets</p>
             </div>
+
+            <!-- Grille des cartes clients -->
             <div class="clients-grid">
+                <!-- Carte d'un client avec image, description et boutons d'action -->
                 <div class="client-card">
                     <div class="client-img">
+                        <!-- Image du client -->
                         <img src="client1.jpg" alt="Client 1">
                     </div>
                     <div class="client-info">
                         <h3>Sophie Martin</h3>
                         <p>Designer UX/UI expérimentée avec une expertise en interfaces mobiles</p>
+                        <!-- Tags associés au client (compétences) -->
                         <div class="client-tags">
                             <span class="tag">UI Design</span>
                             <span class="tag">Figma</span>
                             <span class="tag">Mobile App</span>
                         </div>
+                        <!-- Bouton pour embaucher ce client -->
                         <a href="#" class="hire-btn">Embaucher</a>
                     </div>
                 </div>
+                <!-- Carte d'un autre client -->
                 <div class="client-card">
                     <div class="client-img">
                         <img src="/api/placeholder/300/200" alt="Client 2">
@@ -64,6 +88,7 @@
                         <a href="#" class="hire-btn">Embaucher</a>
                     </div>
                 </div>
+                <!-- Carte d'un autre client -->
                 <div class="client-card">
                     <div class="client-img">
                         <img src="/api/placeholder/300/200" alt="Client 3">
@@ -83,12 +108,14 @@
         </div>
     </section>
 
+    <!-- Section expliquant le processus d'embauche -->
     <section class="process-section">
         <div class="container">
             <div class="section-title">
                 <h2>Notre processus d'embauche</h2>
                 <p>Simple, transparent et efficace - voici comment nous facilitons votre collaboration avec nos talents</p>
             </div>
+            <!-- Étapes du processus d'embauche -->
             <div class="steps">
                 <div class="step">
                     <div class="step-icon">1</div>
@@ -109,42 +136,47 @@
         </div>
     </section>
 
+    <!-- Section de contact -->
     <section class="contact-section" id="contact">
         <div class="container">
             <div class="section-title">
                 <h2>Contactez-nous</h2>
                 <p>Besoin d'aide pour trouver le talent parfait? Notre équipe est là pour vous aider.</p>
             </div>
+            <!-- Formulaire de contact -->
             <div class="contact-form">
+                <!-- Formulaire avec action vers un script PHP -->
                 <form action="contact1.php" method="post">
                     <div class="form-group">
                         <label for="name">Nom complet</label>
-                        <input type="text" id="name" name="name"class="form-control" required>
+                        <input type="text" id="name" name="name" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" id="email"name="email" class="form-control" required>
+                        <input type="email" id="email" name="email" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="subject">Sujet</label>
-                        <input type="text" id="subject"name="subject" class="form-control" required>
+                        <input type="text" id="subject" name="subject" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" class="form-control" name="message"required></textarea>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
                     </div>
+                    <!-- Bouton d'envoi du message -->
                     <button type="submit" class="submit-btn">Envoyer le message</button>
                 </form>
             </div>
         </div>
     </section>
 
+    <!-- Pied de page de la page -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo"><span>Frellio</span></div>
-                
             </div>
+            <!-- Informations de copyright -->
             <div class="copyright">
                 &copy; 2025 Frellio. Tous droits réservés.
             </div>

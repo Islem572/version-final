@@ -1,3 +1,4 @@
+/* Réinitialisation des marges et paddings, et définition de la police par défaut */
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +6,13 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Style général du corps : mise en page en flex et hauteur pleine page */
 body {
     display: flex;
     height: 100vh;
 }
 
+/* Panneau gauche : couleur de fond claire, padding et disposition en colonne */
 .left-panel {
     flex: 1;
     background-color: #f9f5f2;
@@ -18,6 +21,7 @@ body {
     flex-direction: column;
 }
 
+/* Panneau droit : couleur plus foncée, alignement centré */
 .right-panel {
     flex: 1;
     background-color: #c4a894;
@@ -29,23 +33,25 @@ body {
     text-align: center;
 }
 
+/* Texte du logo sur fond coloré */
 .logo-text {
     color: #fff;
     background-color: #bb9777;
     border-radius: 4px;
     font-weight: 100;
     padding: 0.25rem;
-  }
-  
-  .logo {
+}
+
+/* Style du mot "logo" lui-même */
+.logo {
     color: #bb9777;
     padding: 5px 10px;
     font-weight: 1000;
     margin-right: 2rem;
     font-size: 1.25rem;
-  }
-  
+}
 
+/* Section de bienvenue (texte d'intro à gauche) */
 .welcome {
     margin-bottom: 100px;
 }
@@ -62,6 +68,7 @@ body {
     font-size: 24px;
 }
 
+/* Bloc pour chaque étape (liste avec icône et texte) */
 .step {
     display: flex;
     align-items: center;
@@ -81,6 +88,8 @@ body {
     font-size: 18px;
     color: #333;
 }
+
+/* Ligne du bas de la section gauche : disclaimer et bouton */
 .bottom-line {
     display: flex;
     justify-content: space-between;
@@ -100,10 +109,9 @@ body {
 
 .bottom-line .get-started {
     margin-top: 0;
-
 }
 
-
+/* Titres dans le panneau de droite */
 .right-panel h2 {
     font-size: 42px;
     font-weight: normal;
@@ -116,6 +124,7 @@ body {
     margin-bottom: 60px;
 }
 
+/* Carte de profil freelance */
 .freelancer-card {
     background-color: white;
     width: 80%;
@@ -126,6 +135,7 @@ body {
     position: relative;
 }
 
+/* Badge de vérification (petit label en haut à droite) */
 .verified-badge {
     position: absolute;
     top: 40px;
@@ -146,15 +156,17 @@ body {
     fill: #26c944;
 }
 
+/* Image du freelance dans la carte */
 .freelancer-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.get-started{
+
+/* Bouton "Get Started" */
+.get-started {
     background-color: #B19079;
     border-radius: 2px;
     padding: 10px 20px;
     color: white;
-
 }

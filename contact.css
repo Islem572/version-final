@@ -1,127 +1,143 @@
+/* Appliquer une réinitialisation des marges et du padding pour tous les éléments */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    overflow-x: hidden;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: system-ui, -apple-system, sans-serif;
-    background: linear-gradient(135deg, #B19079, #b89b86, #d0b6a3);
-    color: white;
-    padding: 2rem 1rem;
-  }
-  .home-btn {
-   position: absolute;
-    top: 20px;
-    left: 20px;
-   background: rgba(255, 255, 255, 0.9);
-   color: #B19079;
-   padding: 0.75rem 1.5rem;
-   border-radius: 50px;
-   text-decoration: none;
-   font-weight: 600;
-   display: flex;
-   align-items: center;
-   gap: 0.5rem;
-   transition: all 0.3s ease;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .home-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-   }
-  
-  .container {
-    max-width: 64rem;
-    margin: 0 auto;
-  }
-  
-  .contact-section {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 3rem;
-    border-radius: 1.5rem;
-    max-width: 40rem;
-    margin: 0 auto;
-  }
-  
-  .contact-section h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    letter-spacing: -0.025em;
-  }
-  
-  .intro-text {
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2.5rem;
-    opacity: 0.9;
-    color: black;
-  }
-  
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0.75rem;
-    background: rgba(255, 255, 255, 0.05);
-    color: white;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-  }
-  
-  .form-group input::placeholder,
-  .form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: rgba(255, 255, 255, 0.5);
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  .submit-btn {
-    background: #B19079;
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 0.75rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 1rem;
-  }
-  
-  .submit-btn:hover {
-    background: #B19079;
-    transform: translateY(-2px);
-  }
-  
-  .submit-btn:active {
-    transform: translateY(0);
-  }
-      
+  margin: 0;  /* Annule la marge par défaut */
+  padding: 0;  /* Annule le padding par défaut */
+  box-sizing: border-box;  /* Utilise la méthode de calcul des dimensions incluant les bordures et le padding */
+}
+
+/* Style du body */
+body {
+  overflow-x: hidden;  /* Empêche le défilement horizontal */
+  min-height: 100vh;  /* La hauteur minimale est de 100% de la hauteur de la fenêtre */
+  display: flex;  /* Utilise flexbox pour centrer le contenu */
+  align-items: center;  /* Centre le contenu verticalement */
+  justify-content: center;  /* Centre le contenu horizontalement */
+  font-family: system-ui, -apple-system, sans-serif;  /* Utilise la police de caractères système par défaut */
+  background: linear-gradient(135deg, #B19079, #b89b86, #d0b6a3);  /* Dégradé de couleur comme fond */
+  color: white;  /* Texte de couleur blanche */
+  padding: 2rem 1rem;  /* Padding intérieur du body */
+}
+
+/* Style du bouton "home-btn" */
+.home-btn {
+  position: absolute;  /* Positionnement absolu */
+  top: 20px;  /* Positionne à 20px du haut */
+  left: 20px;  /* Positionne à 20px de la gauche */
+  background: rgba(255, 255, 255, 0.9);  /* Fond semi-transparent blanc */
+  color: #B19079;  /* Texte de couleur brun clair */
+  padding: 0.75rem 1.5rem;  /* Padding autour du texte */
+  border-radius: 50px;  /* Bords arrondis */
+  text-decoration: none;  /* Supprime la décoration de lien */
+  font-weight: 600;  /* Met le texte en gras */
+  display: flex;  /* Utilise flexbox pour aligner les éléments enfants */
+  align-items: center;  /* Aligne les éléments verticalement */
+  gap: 0.5rem;  /* Espacement entre les éléments enfants */
+  transition: all 0.3s ease;  /* Animation fluide lors du survol */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Ombre légère autour du bouton */
+}
+
+/* Effet au survol du bouton "home-btn" */
+.home-btn:hover {
+  transform: translateY(-2px);  /* Déplace le bouton de 2px vers le haut */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Ombre plus forte au survol */
+}
+
+/* Conteneur principal avec une largeur maximale */
+.container {
+  max-width: 64rem;  /* Largeur maximale du conteneur */
+  margin: 0 auto;  /* Centre le conteneur horizontalement */
+}
+
+/* Section de contact avec arrière-plan flou */
+.contact-section {
+  background: rgba(255, 255, 255, 0.1);  /* Fond semi-transparent blanc */
+  backdrop-filter: blur(10px);  /* Applique un flou à l'arrière-plan */
+  padding: 3rem;  /* Padding intérieur */
+  border-radius: 1.5rem;  /* Bords arrondis */
+  max-width: 40rem;  /* Largeur maximale */
+  margin: 0 auto;  /* Centre horizontalement */
+}
+
+/* Style du titre de la section de contact */
+.contact-section h2 {
+  font-size: 2.5rem;  /* Taille du texte */
+  font-weight: bold;  /* Gras */
+  margin-bottom: 1.5rem;  /* Marge sous le titre */
+  text-align: center;  /* Centre le texte */
+  letter-spacing: -0.025em;  /* Espace entre les lettres */
+}
+
+/* Texte d'introduction avec alignement central */
+.intro-text {
+  text-align: center;  /* Centre le texte */
+  font-size: 1.1rem;  /* Taille de police plus petite */
+  line-height: 1.6;  /* Hauteur de ligne pour un meilleur espacement */
+  margin-bottom: 2.5rem;  /* Marge sous le texte */
+  opacity: 0.9;  /* Légère transparence */
+  color: black;  /* Couleur du texte noire */
+}
+
+/* Formulaire de contact avec flexbox */
+.contact-form {
+  display: flex;  /* Utilise flexbox */
+  flex-direction: column;  /* Aligne les éléments en colonne */
+  gap: 1.5rem;  /* Espacement entre les éléments */
+}
+
+/* Groupes de champs de formulaire */
+.form-group {
+  display: flex;  /* Utilise flexbox pour l'alignement */
+  flex-direction: column;  /* Aligne les éléments du formulaire en colonne */
+}
+
+/* Style des champs de saisie et textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;  /* Largeur à 100% du parent */
+  padding: 1rem;  /* Padding interne */
+  border: 2px solid rgba(255, 255, 255, 0.1);  /* Bordure légère */
+  border-radius: 0.75rem;  /* Bords arrondis */
+  background: rgba(255, 255, 255, 0.05);  /* Fond semi-transparent */
+  color: white;  /* Texte blanc */
+  font-size: 1rem;  /* Taille du texte */
+  transition: all 0.3s ease;  /* Transition fluide pour les changements d'état */
+}
+
+/* Style des placeholders dans les champs de saisie */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);  /* Couleur plus claire pour les placeholders */
+}
+
+/* Effet de focus sur les champs de saisie */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;  /* Supprime le contour par défaut */
+  border-color: rgba(255, 255, 255, 0.5);  /* Change la couleur de la bordure */
+  background: rgba(255, 255, 255, 0.1);  /* Change le fond lors du focus */
+}
+
+/* Style du bouton de soumission */
+.submit-btn {
+  background: #B19079;  /* Fond couleur brun clair */
+  color: white;  /* Texte blanc */
+  padding: 1rem 2rem;  /* Padding autour du texte */
+  border: none;  /* Pas de bordure */
+  border-radius: 0.75rem;  /* Bords arrondis */
+  font-size: 1.1rem;  /* Taille de la police */
+  font-weight: 600;  /* Texte en gras */
+  cursor: pointer;  /* Change le curseur en pointeur lors du survol */
+  transition: all 0.3s ease;  /* Transition fluide */
+  margin-top: 1rem;  /* Marge au-dessus du bouton */
+}
+
+/* Effet au survol du bouton de soumission */
+.submit-btn:hover {
+  background: #B19079;  /* Reste la même couleur de fond au survol */
+  transform: translateY(-2px);  /* Déplace légèrement le bouton vers le haut */
+}
+
+/* Effet lors du clic sur le bouton de soumission */
+.submit-btn:active {
+  transform: translateY(0);  /* Annule le déplacement lors du clic */
+}

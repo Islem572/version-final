@@ -7,12 +7,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #EFEBE0;
-
-    background-color:  #B19079;
+    background-color: #EFEBE0; /* Arrière-plan de base de la page */
+    background-color: #B19079; /* Couleur de fond secondaire, pour un contraste chaleureux */
     box-sizing: border-box;
 }
 
+/* Conteneur principal qui contient les deux sections */
 .container {
     display: flex;
     width: 80%;
@@ -20,16 +20,17 @@ body {
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère pour l'effet de profondeur */
 }
 
-/* Left Section */
+/* Left Section - La section de gauche */
 .left-section {
-    flex: 1;
+    flex: 1; /* Prend toute la largeur disponible */
     padding: 30px;
-    background-color: #f5efe6;
+    background-color: #f5efe6; /* Couleur de fond douce et claire */
 }
 
+/* Logo dans la barre de navigation */
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -37,12 +38,14 @@ body {
     margin-bottom: 20px;
 }
 
+/* Titre de la section gauche */
 .left-section h1 {
     font-size: 2rem;
     color: #a67c68;
     margin-bottom: 20px;
 }
 
+/* Style général des formulaires */
 form {
     display: flex;
     flex-direction: column;
@@ -52,14 +55,19 @@ form {
     margin-bottom: 15px;
 }
 
+/* Style des labels des champs de formulaire */
 label {
     font-size: 0.9rem;
     color: #6b4f4f;
     margin-bottom: 5px;
-    display: block}
-    label {
-        color: #8b5e4f; /* Updated color */
-    }
+    display: block;
+}
+
+label {
+    color: #8b5e4f; /* Couleur plus chaleureuse pour les labels */
+}
+
+/* Style des champs de formulaire */
 input, select {
     width: 100%;
     padding: 10px;
@@ -69,6 +77,7 @@ input, select {
     background-color: #f9f9f9;
 }
 
+/* Bouton de soumission du formulaire */
 button {
     padding: 10px 20px;
     background-color: #a67c68;
@@ -79,14 +88,15 @@ button {
     font-size: 1rem;
 }
 
+/* Effet au survol du bouton */
 button:hover {
-    background-color: #8b5e4f;
+    background-color: #8b5e4f; /* Couleur plus foncée au survol */
 }
 
-/* Right Section */
+/* Right Section - La section droite */
 .right-section {
     flex: 1;
-    background-color: #a67c68;
+    background-color: #a67c68; /* Arrière-plan de la section droite */
     color: white;
     text-align: center;
     padding: 30px;
@@ -96,6 +106,7 @@ button:hover {
     align-items: center;
 }
 
+/* Titre de la section droite */
 .right-section h1 {
     font-size: 2.5rem;
     margin: 10px 0;
@@ -106,63 +117,63 @@ button:hover {
     margin-bottom: 20px;
 }
 
+/* Conteneur de l'image */
 .image-container {
     position: relative;
     margin-top: 20px;
 }
 
+/* Style de l'image */
 .image-container img {
     width: 80%;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre autour de l'image pour un effet 3D */
 }
 
+/* Badge de vérification dans le coin supérieur droit de l'image */
 .verified-badge {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: #00c853;
+    background-color: #00c853; /* Vert vif pour signifier la vérification */
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.8rem;
     font-weight: bold;
 }
+
 /* Amélioration des champs de formulaire */
 input, select {
-    width: 100%;
-    padding: 12px; /* Augmenté pour plus de confort */
-    border: 1px solid #b8a398; /* Couleur plus douce */
-    border-radius: 8px; /* Coins plus arrondis */
-    font-size: 1rem;
-    background-color: #fdfcfb; /* Couleur légèrement différente */
-    transition: border-color 0.3s ease;
+    padding: 12px; /* Augmenté pour plus de confort visuel */
+    border: 1px solid #b8a398; /* Couleur plus douce et subtile pour les bordures */
+    border-radius: 8px; /* Coins arrondis plus prononcés */
+    background-color: #fdfcfb; /* Fond légèrement plus lumineux */
+    transition: border-color 0.3s ease; /* Animation de transition pour l'effet de focus */
 }
 
+/* Effet de focus sur les champs de formulaire */
 input:focus, select:focus {
-    border-color: #a67c68; /* Couleur de focus */
+    border-color: #a67c68; /* Couleur de bordure au focus */
     outline: none;
-    box-shadow: 0 0 5px rgba(166, 124, 104, 0.5); /* Effet lumineux */
+    box-shadow: 0 0 5px rgba(166, 124, 104, 0.5); /* Ombre lumineuse au focus */
 }
 
-/* Amélioration du bouton */
+/* Amélioration du bouton de soumission */
 button {
-    padding: 12px 25px; /* Taille augmentée */
-    background-color: #a67c68;
-    color: white;
-    border: none;
-    border-radius: 8px; /* Coins plus arrondis */
-    cursor: pointer;
-    font-size: 1.1rem; /* Texte légèrement plus grand */
+    padding: 12px 25px; /* Taille augmentée pour un meilleur confort */
+    font-size: 1.1rem; /* Taille de texte légèrement augmentée */
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Effet de transformation et couleur */
 }
 
+/* Effet au survol du bouton */
 button:hover {
-    background-color: #8b5e4f; /* Couleur plus foncée au survol */
-    transform: scale(1.05); /* Légère mise en avant */
+    background-color: #8b5e4f; /* Couleur plus foncée */
+    transform: scale(1.05); /* Effet de mise en avant */
 }
+
+/* Bordure rouge pour les champs incorrects */
 .error-border {
-    border-color: red !important;
+    border-color: red !important; /* Mise en évidence des champs invalides */
 }
- 

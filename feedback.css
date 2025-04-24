@@ -1,108 +1,109 @@
-  /* Styles de base */
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f0e8;
-    color: #333;
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif; /* Utilise Arial comme police principale */
+    line-height: 1.6; /* Espacement entre les lignes pour une meilleure lisibilité */
+    margin: 0; /* Supprime la marge par défaut */
+    padding: 0; /* Supprime le padding par défaut */
+    background-color: #f5f0e8; /* Couleur de fond claire et chaude */
+    color: #333; /* Couleur du texte principale (gris foncé pour une bonne lisibilité) */
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 800px; /* Définit une largeur maximale de 800px pour la conteneur */
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding: 20px; /* Ajoute de l'espace autour du contenu du conteneur */
 }
 
 /* Header */
 header {
-    background-color: #b3937a;
-    color: white;
-    padding: 15px 0;
-    text-align: center;
+    background-color: #b3937a; /* Couleur de fond du header (un ton chaud et naturel) */
+    color: white; /* Texte blanc pour le header */
+    padding: 15px 0; /* Padding vertical de 15px pour un espacement agréable */
+    text-align: center; /* Centre le texte dans le header */
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 24px; /* Taille du texte du logo */
+    font-weight: bold; /* Gras pour rendre le logo plus visible */
 }
 
 /* Contenu principal */
 h1 {
-    color: #b3937a;
-    text-align: center;
-    margin: 30px 0;
+    color: #b3937a; /* Couleur de titre principale, assortie au header */
+    text-align: center; /* Centre le titre */
+    margin: 30px 0; /* Ajoute un espace autour du titre */
 }
 
 .feedback-item {
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: white; /* Fond blanc pour chaque élément de feedback */
+    border-radius: 8px; /* Coins arrondis pour un effet plus doux */
+    padding: 20px; /* Espacement interne de 20px pour aérer le contenu */
+    margin-bottom: 20px; /* Espacement entre chaque feedback */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre douce pour un effet de profondeur */
 }
 
 .client-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+    display: flex; /* Utilise Flexbox pour aligner les éléments sur une ligne */
+    align-items: center; /* Centre les éléments verticalement */
+    margin-bottom: 10px; /* Espacement entre les informations du client */
 }
 
 .client-avatar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #e0d8c9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-    color: #b3937a;
-    font-weight: bold;
+    width: 50px; /* Taille de l'avatar */
+    height: 50px; /* Taille de l'avatar */
+    border-radius: 50%; /* Rend l'avatar circulaire */
+    background-color: #e0d8c9; /* Fond de l'avatar (couleur claire et neutre) */
+    display: flex; /* Utilise Flexbox pour centrer le texte dans l'avatar */
+    align-items: center; /* Centre verticalement */
+    justify-content: center; /* Centre horizontalement */
+    margin-right: 15px; /* Espacement entre l'avatar et le nom du client */
+    color: #b3937a; /* Couleur du texte dans l'avatar */
+    font-weight: bold; /* Texte en gras dans l'avatar */
 }
 
 .client-name {
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: bold; /* Nom du client en gras */
+    font-size: 18px; /* Taille de la police du nom */
 }
 
 .project-title {
-    color: #666;
-    font-style: italic;
+    color: #666; /* Couleur de texte pour le titre du projet (gris foncé mais doux) */
+    font-style: italic; /* Titre du projet en italique */
 }
 
 .rating {
-    color: #ffc107;
-    margin: 10px 0;
-    font-size: 20px;
+    color: #ffc107; /* Couleur d'or pour la notation */
+    margin: 10px 0; /* Espacement autour de la notation */
+    font-size: 20px; /* Taille de la police pour rendre la notation plus visible */
 }
 
 .feedback-text {
-    margin-top: 10px;
+    margin-top: 10px; /* Ajoute un espace au-dessus du texte de feedback */
 }
 
 /* Pied de page */
 footer {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-    color: #666;
-    font-size: 14px;
+    text-align: center; /* Centre le texte dans le pied de page */
+    margin-top: 40px; /* Espacement entre le contenu principal et le pied de page */
+    padding: 20px; /* Espacement interne pour le pied de page */
+    color: #666; /* Couleur du texte dans le pied de page (gris moyen) */
+    font-size: 14px; /* Taille du texte réduite pour le pied de page */
 }
+
 .back-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #b3937a;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: background-color 0.3s;
+    position: fixed; /* Position fixe pour maintenir le bouton à un endroit spécifique */
+    bottom: 20px; /* 20px du bas de la page */
+    right: 20px; /* 20px du côté droit de la page */
+    background-color: #b3937a; /* Couleur de fond du bouton assortie au thème */
+    color: white; /* Texte en blanc */
+    border: none; /* Supprime les bordures par défaut du bouton */
+    padding: 10px 20px; /* Espacement interne du bouton pour le rendre plus cliquable */
+    border-radius: 20px; /* Coins arrondis pour le bouton */
+    cursor: pointer; /* Change le curseur pour pointer sur le bouton */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Ombre douce pour un effet de profondeur */
+    transition: background-color 0.3s; /* Transition fluide pour le changement de couleur */
 }
 
 .back-button:hover {
-    background-color: #9a7d64;
+    background-color: #9a7d64; /* Changement de couleur au survol pour un effet visuel */
 }

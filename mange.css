@@ -1,53 +1,58 @@
+/* Reset global et règles de base */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    box-sizing: border-box; /* Modèle de boîte plus intuitif */
+    font-family: 'Poppins', 'Segoe UI', sans-serif; /* Police par défaut avec fallback */
 }
 
+/* Variables CSS pour une gestion centralisée des styles */
 :root {
-    --primary-color: #B19079;
-    --primary-light: #e9efff;
-    --secondary-color: #f0a773;
-    --text-color: #B19079;
-    --light-gray: #f5f7fb;
-    --dark-gray: #B19079;
-    --white: #ffffff;
-    --shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    --primary-color: #B19079; /* Couleur principale marron clair */
+    --primary-light: #e9efff; /* Variante claire du primaire */
+    --secondary-color: #f0a773; /* Couleur secondaire orange clair */
+    --text-color: #B19079; /* Couleur du texte */
+    --light-gray: #f5f7fb; /* Fond gris clair */
+    --dark-gray: #B19079; /* Texte gris foncé (identique au primary?) */
+    --white: #ffffff; /* Blanc */
+    --shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Ombre douce */
 }
 
+/* Styles de base pour le body */
 body {
     background-color: var(--light-gray);
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.6; /* Espacement des lignes amélioré */
 }
 
 /* Navigation */
 header {
     background-color: var(--white);
-    box-shadow: var(--shadow);
-    position: fixed;
+    box-shadow: var(--shadow); /* Ombre portée pour le header */
+    position: fixed; /* Fixe en haut de page */
     width: 100%;
     top: 0;
-    z-index: 100;
+    z-index: 100; /* S'assure que le header reste au-dessus */
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    max-width: 1200px; /* Largeur max du contenu */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 0 2rem; /* Marge interne */
 }
 
+/* Styles pour la barre de navigation */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espacement entre logo et liens */
     align-items: center;
     padding: 1.5rem 0;
 }
 
+/* Styles spécifiques pour le logo */
 .logo-text {
     color: #fff;
-    background-color: #bb9777;
+    background-color: #bb9777; /* Couleur différente de var(--primary-color)? */
     border-radius: 4px;
     font-weight: 100;
     padding: 0.25rem;
@@ -63,57 +68,45 @@ nav {
     align-items: center;
 }
 
-
+/* Styles pour les liens de navigation */
 .nav-links {
     display: flex;
     list-style-type: none;
 }
 
 .nav-links li {
-    margin-left: 2rem;
+    margin-left: 2rem; /* Espacement entre les liens */
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-color);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Transition fluide */
     font-weight: 500;
 }
 
 .nav-links a:hover {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Effet hover */
 }
 
+/* Menu mobile (masqué par défaut) */
 .mobile-menu {
     display: none;
     cursor: pointer;
 }
 
-/* Hero Section */
+/* Section Hero */
 .hero {
-    background: linear-gradient(135deg, var(--primary-color), #f7d6be);
+    background: linear-gradient(135deg, var(--primary-color), #f7d6be); /* Dégradé */
     color: var(--white);
-    padding: 8rem 0 6rem;
+    padding: 8rem 0 6rem; /* Grand espacement vertical */
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 4rem; /* Compensation pour le header fixe */
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    opacity: 0.9;
-}
-
-/* Process Section */
+/* Styles génériques pour les sections */
 .section {
-    padding: 5rem 0;
+    padding: 5rem 0; /* Grand espacement vertical */
 }
 
 .section-title {
@@ -129,6 +122,7 @@ nav {
     padding-bottom: 1rem;
 }
 
+/* Barre décorative sous les titres de section */
 .section-title h2::after {
     content: "";
     position: absolute;
@@ -140,9 +134,10 @@ nav {
     background-color: var(--primary-color);
 }
 
+/* Process Section - Étapes en grille */
 .process-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grille responsive */
     gap: 2rem;
 }
 
@@ -151,15 +146,17 @@ nav {
     border-radius: 8px;
     box-shadow: var(--shadow);
     padding: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation hover */
     position: relative;
 }
 
+/* Effet hover pour les étapes */
 .process-step:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px); /* Légère élévation */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* Ombre plus prononcée */
 }
 
+/* Numéro d'étape circulaire */
 .step-number {
     position: absolute;
     top: -20px;
@@ -176,18 +173,7 @@ nav {
     font-weight: 700;
 }
 
-.process-step h3 {
-    margin: 1.5rem 0 1rem;
-    text-align: center;
-    color: var(--secondary-color);
-}
-
-.process-step p {
-    color: var(--dark-gray);
-    text-align: center;
-}
-
-/* Timeline Section */
+/* Timeline Section - Design vertical */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -195,6 +181,7 @@ nav {
     padding-top: 2rem;
 }
 
+/* Ligne verticale centrale */
 .timeline::before {
     content: '';
     position: absolute;
@@ -206,52 +193,7 @@ nav {
     transform: translateX(-50%);
 }
 
-.timeline-item {
-    position: relative;
-    margin-bottom: 3rem;
-}
-
-.timeline-content {
-    position: relative;
-    width: calc(50% - 40px);
-    padding: 1.5rem;
-    background-color: var(--white);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-}
-
-.timeline-item:nth-child(odd) .timeline-content {
-    margin-right: auto;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-    margin-left: auto;
-}
-
-.timeline-item:nth-child(odd) .timeline-content::after {
-    content: '';
-    position: absolute;
-    right: -10px;
-    top: 20px;
-    width: 20px;
-    height: 20px;
-    background-color: var(--white);
-    transform: rotate(45deg);
-    box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.05);
-}
-
-.timeline-item:nth-child(even) .timeline-content::after {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: 20px;
-    width: 20px;
-    height: 20px;
-    background-color: var(--white);
-    transform: rotate(45deg);
-    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.05);
-}
-
+/* Points sur la timeline */
 .timeline-dot {
     position: absolute;
     top: 20px;
@@ -264,202 +206,64 @@ nav {
     z-index: 1;
 }
 
-.timeline-content h3 {
-    margin-bottom: 1rem;
-    color: var(--secondary-color);
-}
-
-.timeline-content p {
-    color: var(--dark-gray);
-}
-
-/* Tools Section */
-.tools-section {
-    background-color: var(--white);
-}
-
+/* Tools Section - Grille d'outils */
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grille responsive */
     gap: 2rem;
 }
 
-.tool-card {
-    text-align: center;
-    padding: 2rem;
-    background-color: var(--primary-light);
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-.tool-card:hover {
-    transform: translateY(-8px);
-}
-
-.tool-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.tool-card h3 {
-    margin-bottom: 0.5rem;
-    color: var(--secondary-color);
-}
-
-.tool-card p {
-    color: var(--dark-gray);
-    font-size: 0.9rem;
-}
-
-/* FAQ Section */
-.faq-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-item {
-    margin-bottom: 1.5rem;
-    background-color: var(--white);
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-    overflow: hidden;
-}
-
+/* FAQ Section - Accordéon */
 .faq-question {
-    padding: 1.5rem;
     cursor: pointer;
     position: relative;
-    font-weight: 600;
-    color: var(--secondary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.faq-question::after {
-    content: '+';
-    font-size: 1.5rem;
-    color: var(--primary-color);
-}
-
+/* Animation pour l'accordéon */
 .faq-answer {
-    padding: 0 1.5rem;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
-.faq-item.active .faq-question::after {
-    content: '-';
-}
-
 .faq-item.active .faq-answer {
-    padding: 0 1.5rem 1.5rem;
-    max-height: 500px;
+    max-height: 500px; /* Hauteur suffisante pour le contenu */
 }
 
-/* CTA Section */
+/* CTA Section - Call to Action */
 .cta-section {
-    background: linear-gradient(135deg, var(--primary-color), #f1c5a6);
+    background: linear-gradient(135deg, var(--primary-color), #f1c5a6); /* Dégradé */
     color: var(--white);
-    text-align: center;
-    padding: 5rem 0;
 }
 
-.cta-content {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.cta-content h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-}
-
-.cta-content p {
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
+/* Bouton avec effets */
 .btn {
-    display: inline-block;
-    background-color: var(--white);
-    color: var(--primary-color);
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px); /* Effet 3D */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer */
-footer {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 3rem 0;
-    text-align: center;
-}
-
-.social-links {
-    margin-bottom: 2rem;
-}
-
-.social-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--white);
-    margin: 0 0.5rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.social-links a:hover {
-    background-color: var(--primary-color);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
+        display: none; /* Masque la nav sur mobile */
     }
 
     .mobile-menu {
-        display: block;
+        display: block; /* Affiche le menu mobile */
     }
 
-    .hero h1 {
-        font-size: 2rem;
-    }
-
+    /* Adaptation de la timeline pour mobile */
     .timeline::before {
-        left: 20px;
+        left: 20px; /* Déplace la ligne à gauche */
     }
 
     .timeline-content {
         width: calc(100% - 50px);
-        margin-left: 50px !important;
-    }
-
-    .timeline-dot {
-        left: 20px;
-    }
-
-    .timeline-item:nth-child(odd) .timeline-content::after,
-    .timeline-item:nth-child(even) .timeline-content::after {
-        left: -10px;
-        right: auto;
-        box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.05);
+        margin-left: 50px !important; /* Force l'alignement à gauche */
     }
 }

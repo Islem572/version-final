@@ -1,79 +1,90 @@
+/* Reset CSS de base pour éliminer les marges et paddings par défaut */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box; /* Utilisation du box-sizing moderne pour un calcul plus prévisible des dimensions */
+    font-family: Arial, sans-serif; /* Police sans alternative de secours complète (manque des polices génériques) */
 }
 
+/* Définition du fond et de la couleur de texte de base pour tout le site */
 body {
-    background-color: #f5f0e8;
-    color: #333;
+    background-color: #f5f0e8; /* Couleur beige clair pour le fond */
+    color: #333; /* Gris foncé pour le texte - bon contraste */
 }
 
+/* Barre d'en-tête avec disposition flexible */
 header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #f5f0e8;
-    border-bottom: 1px solid #e0d8c9;
+    justify-content: space-between; /* Distribution des éléments aux extrémités */
+    align-items: center; /* Alignement vertical au centre */
+    padding: 15px 30px; /* Padding horizontal plus grand que vertical */
+    background-color: #f5f0e8; /* Même couleur que le fond body - peu de distinction visuelle */
+    border-bottom: 1px solid #e0d8c9; /* Séparation subtile avec une bordure claire */
 }
 
+/* Style du logo avec mise en évidence de la première lettre */
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #b3937a;
+    color: #b3937a; /* Couleur marron - thème cohérent */
 }
 
+/* Conteneur pour la première lettre du logo avec style distinct */
 .logo span {
     display: inline-block;
-    background-color: #b3937a;
-    color: white;
+    background-color: #b3937a; /* Fond marron */
+    color: white; /* Texte blanc pour contraste */
     width: 30px;
     height: 30px;
     text-align: center;
-    line-height: 30px;
-    border-radius: 5px;
+    line-height: 30px; /* Centrage vertical du texte via line-height égal à height */
+    border-radius: 5px; /* Coins légèrement arrondis */
     margin-right: 5px;
 }
 
+/* Groupe d'icônes de navigation */
 .nav-icons {
     display: flex;
-    gap: 25px;
+    gap: 25px; /* Utilisation moderne de gap pour l'espacement uniforme */
     align-items: center;
 }
 
+/* Style commun pour les icônes */
 .icon {
     width: 24px;
     height: 24px;
 }
 
+/* Bouton "Post Project" avec style distinctif */
 .post-project-btn {
-    background-color: #d7c3b5;
-    color: #000;
+    background-color: #d7c3b5; /* Couleur plus claire que le thème principal */
+    color: #000; /* Texte noir pour contraste */
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 25px; /* Coins très arrondis - style "pill" */
     border: none;
-    font-weight: 500;
+    font-weight: 500; /* Semi-gras */
     font-size: 16px;
-    cursor: pointer;
-    margin: 0 15px;
+    cursor: pointer; /* Indication visuelle que c'est cliquable */
+    margin: 0 15px; /* Espacement horizontal uniquement */
 }
 
+/* Style pour l'icône de profil utilisateur */
 .profile-icon {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    background-color: white;
+    border-radius: 50%; /* Forme parfaitement circulaire */
+    border: 1px solid #ccc; /* Bordure grise subtile */
+    background-color: white; /* Fond blanc pour contraste */
 }
 
+/* Conteneur principal du contenu avec largeur maximale et centrage */
 .main-content {
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 20px;
+    max-width: 1200px; /* Limite la largeur sur grands écrans */
+    margin: 30px auto; /* Centrage horizontal avec espace vertical */
+    padding: 0 20px; /* Espacement horizontal uniquement */
 }
 
+/* En-tête de la section des projets */
 .projects-header {
     display: flex;
     justify-content: space-between;
@@ -81,152 +92,174 @@ header {
     margin-bottom: 30px;
 }
 
+/* Style du titre principal */
 .projects-title {
     font-size: 28px;
     color: #333;
-    font-weight: 600;
+    font-weight: 600; /* Entre semi-gras et gras */
 }
 
+/* Badge de nombre de projets */
 .projects-count {
-    background-color: #b3937a;
+    background-color: #b3937a; /* Couleur thème principal */
     color: white;
     padding: 5px 15px;
-    border-radius: 20px;
+    border-radius: 20px; /* Style "pill" */
     font-weight: bold;
 }
 
+/* Barre de filtres horizontale */
 .filters {
     display: flex;
     gap: 15px;
     margin-bottom: 25px;
 }
 
+/* Boutons de filtre individuels */
 .filter-btn {
     padding: 10px 20px;
     background-color: white;
-    border: 1px solid #d7c3b5;
-    border-radius: 20px;
+    border: 1px solid #d7c3b5; /* Bordure de la couleur thème secondaire */
+    border-radius: 20px; /* Style "pill" */
     font-size: 14px;
     cursor: pointer;
 }
 
+/* Style spécifique pour le filtre actif/sélectionné */
 .filter-btn.active {
-    background-color: #d7c3b5;
-    font-weight: bold;
+    background-color: #d7c3b5; /* Fond coloré pour l'état actif */
+    font-weight: bold; /* Texte en gras pour renforcer l'état actif */
 }
 
+/* Wrapper pour la barre de recherche avec positionnement relatif pour l'icône */
 .search-container {
     position: relative;
     margin-bottom: 30px;
 }
 
+/* Barre de recherche */
 .search-bar {
     width: 100%;
     padding: 12px 20px;
-    border-radius: 30px;
+    border-radius: 30px; /* Coins très arrondis */
     border: none;
     font-size: 16px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Ombre légère pour effet d'élévation */
 }
 
+/* Icône de recherche positionnée absolument dans le conteneur */
 .search-icon {
     position: absolute;
     right: 15px;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); /* Centrage vertical précis */
     width: 20px;
     height: 20px;
 }
 
+/* Grille responsive pour les cartes de projet */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Colonnes responsives */
     gap: 25px;
 }
 
+/* Carte individuelle de projet */
 .project-card {
     background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px; /* Coins arrondis modérés */
+    overflow: hidden; /* Empêche le contenu de déborder des coins arrondis */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Ombre subtile */
 }
 
+/* En-tête de la carte de projet */
 .project-header {
     padding: 15px;
-    border-bottom: 1px solid #e0d8c9;
+    border-bottom: 1px solid #e0d8c9; /* Séparation visuelle */
 }
 
+/* Titre du projet */
 .project-title {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 5px;
 }
 
+/* Informations sur le client */
 .project-client {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #666;
+    color: #666; /* Gris moyen pour texte secondaire */
     font-size: 14px;
 }
 
+/* Avatar du client */
 .client-avatar {
     width: 25px;
     height: 25px;
-    border-radius: 50%;
-    background-color: #f0f0f0;
+    border-radius: 50%; /* Cercle parfait */
+    background-color: #f0f0f0; /* Gris très clair */
 }
 
+/* Corps de la carte de projet */
 .project-body {
     padding: 15px;
 }
 
+/* Description du projet */
 .project-description {
-    color: #555;
+    color: #555; /* Gris moyen-foncé */
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.5; /* Hauteur de ligne pour lisibilité */
     margin-bottom: 15px;
 }
 
+/* Conteneur des tags/étiquettes */
 .project-tags {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permet aux tags de passer à la ligne */
     gap: 8px;
     margin-bottom: 15px;
 }
 
+/* Tag/étiquette individuel */
 .tag {
-    background-color: #f5f0e8;
+    background-color: #f5f0e8; /* Fond beige clair comme le body */
     padding: 5px 10px;
-    border-radius: 15px;
+    border-radius: 15px; /* Style "pill" */
     font-size: 12px;
     color: #666;
 }
 
+/* Pied de la carte de projet */
 .project-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    border-top: 1px solid #e0d8c9;
-    background-color: #fcfaf6;
+    border-top: 1px solid #e0d8c9; /* Séparation visuelle */
+    background-color: #fcfaf6; /* Légèrement plus clair que le fond principal */
 }
 
+/* Prix du projet */
 .project-price {
     font-weight: bold;
     font-size: 16px;
 }
 
+/* Bouton d'enchère */
 .bid-btn {
-    background-color: #b3937a;
+    background-color: #b3937a; /* Couleur thème principal */
     color: white;
     padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 5px; /* Coins légèrement arrondis */
     border: none;
     font-weight: 500;
     cursor: pointer;
 }
 
+/* Navigation par pages */
 .pagination {
     display: flex;
     justify-content: center;
@@ -234,26 +267,29 @@ header {
     gap: 10px;
 }
 
+/* Bouton de pagination individuel */
 .page-btn {
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
+    border-radius: 50%; /* Cercle parfait */
     background-color: white;
     border: 1px solid #d7c3b5;
     cursor: pointer;
 }
 
+/* Style pour la page active */
 .page-btn.active {
     background-color: #b3937a;
     color: white;
     border: none;
 }
- /* Ajout du style pour le bouton de retour */
- .back-button {
-    position: fixed;
+
+/* Bouton de retour fixé en bas à droite */
+.back-button {
+    position: fixed; /* Position fixe par rapport à la fenêtre */
     bottom: 20px;
     right: 20px;
     background-color: #b3937a;
@@ -262,11 +298,12 @@ header {
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: background-color 0.3s;
-    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Ombre plus prononcée */
+    transition: background-color 0.3s; /* Animation douce au survol */
+    z-index: 1000; /* S'assure qu'il reste au-dessus des autres éléments */
 }
 
+/* Effet de survol pour le bouton de retour */
 .back-button:hover {
-    background-color: #9a7d64;
+    background-color: #9a7d64; /* Version plus foncée de la couleur thème */
 }

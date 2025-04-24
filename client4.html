@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Définition du charset et de la vue responsive -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de la page dans l'onglet du navigateur -->
     <title>Frellio - Définir votre budget</title>
+    <!-- Lien vers le fichier CSS de la page -->
     <link rel="stylesheet" href="client4.css">
+    <!-- Lien vers le fichier JavaScript de la page -->
     <script src="client4.js"></script>
 </head>
 <body>
+    <!-- Navigation principale du site -->
     <nav class="navbar">
+        <!-- Logo avec un texte "F" stylisé -->
         <div class="logo"><span class="logo-text">F</span>rellio</div>
+        <!-- Liens de navigation vers différentes pages -->
         <div class="nav-item"><a href="hire.html">Hire client</a> </div>
         <div class="nav-item"><a href="mange.html" >Manage work</div></a>
         <div class="nav-item"><a href="reports.html">Reports</div></a>
         <div class="nav-item" style="margin-right: auto;"><a href="message.html">Messages</div></a>
+        <!-- Barre de recherche -->
         <div class="search-container">
             <input type="text" class="search-box">
         </div>
     </nav>
 
-    <!-- FORMULAIRE POUR ENVOYER LES DONNÉES -->
+    <!-- Formulaire pour envoyer les données du budget -->
     <form action="budget1.php" method="POST">
         <div class="main-content">
+            <!-- Titre principal -->
             <h1 class="header-text">Tell us your budget<br>or your best guess</h1>
+            <!-- Sous-titre explicatif -->
             <p class="subheader-text">This will help us match you to talent<br>within your range.</p>
 
+            <!-- Conteneur pour les options de type de budget -->
             <div class="options-container">
+                <!-- Option "Taux horaire" -->
                 <label class="option-card selected">
                     <input type="radio" name="rate_type" value="hourly_rate" checked hidden>
                     <div class="option-indicator selected"></div>
                     <div class="option-icon">
+                        <!-- Icône représentant un taux horaire -->
                         <svg viewBox="0 0 24 24">
                             <circle cx="12" cy="12" r="10" stroke="black" stroke-width="1" fill="none" />
                             <line x1="12" y1="6" x2="12" y2="12" stroke="black" stroke-width="2" />
@@ -39,10 +52,12 @@
                     <div class="option-title">Hourly rate</div>
                 </label>
 
+                <!-- Option "Prix fixe" -->
                 <label class="option-card">
                     <input type="radio" name="rate_type" value="fixed_price" hidden>
                     <div class="option-indicator active"></div>
                     <div class="option-icon">
+                        <!-- Icône représentant un prix fixe -->
                         <svg viewBox="0 0 24 24">
                             <rect x="4" y="6" width="16" height="12" stroke="black" stroke-width="1" fill="none" rx="2" />
                             <circle cx="8" cy="12" r="2" stroke="black" stroke-width="1" fill="none" />
@@ -54,23 +69,29 @@
                 </label>
             </div>
 
+            <!-- Description des options -->
             <div class="description">
                 Set a price for the project and pay at the end, or you can divide the project into milestones and pay as each milestone is completed.
             </div>
 
+            <!-- Question sur le coût estimé -->
             <div class="question">What is the best cost estimate for your project?</div>
             <div class="description">
                 You can negotiate this cost and create milestones when you chat with your freelancer.
             </div>
 
+            <!-- Champ de saisie pour entrer le budget -->
             <div class="input-container">
                 <input type="text" class="budget-input" name="budget" value="0" required>
             </div>
 
-            <!-- BOUTONS -->
+            <!-- Conteneur des boutons de navigation -->
             <div class="navigation">
+                <!-- Bouton retour -->
                 <button type="button" class="nav-button back-button">Back</button>
+                <!-- Bouton suivant -->
                 <button type="button" class="nav-button next-button">Next</button>
+                <!-- Bouton pour envoyer le formulaire -->
                 <button type="submit" class="nav-button submit-button">Envoyer</button>
             </div>
         </div>

@@ -1,591 +1,216 @@
-/* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #f5f5f5;
-    padding: 20px;
-}
-
-.messagerie-container {
-    display: flex;
-    height: 80vh;
-    max-width: 1000px;
-    margin: 0 auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.liste-contacts {
-    width: 30%;
-    background-color: #fff;
-    border-right: 1px solid #eaeaea;
-    overflow-y: auto;
-}
-
-.entete-contacts {
-    padding: 15px;
-    background-color: #4e73df;
-    color: #fff;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.recherche {
-    padding: 10px 15px;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #eaeaea;
-}
-
-.recherche input {
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    outline: none;
-}
-
-.contact {
-    padding: 15px;
-    border-bottom: 1px solid #eaeaea;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.contact:hover {
-    background-color: #f5f5f5;
-}
-
-.contact.active {
-    background-color: #eef1ff;
-    border-left: 4px solid #4e73df;
-}
-
-.nom-contact {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.dernier-message {
-    font-size: 0.85em;
-    color: #777;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.fenetre-messages {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    background-color: #f8f9fc;
-}
-
-.entete-conversation {
-    padding: 15px;
-    background-color: #fff;
-    border-bottom: 1px solid #eaeaea;
-    display: flex;
-    align-items: center;
-}
-
-.info-contact {
-    margin-left: 10px;
-}
-
-.status {
-    font-size: 0.8em;
-    color: #2ecc71;
-}
-
-.corps-messages {
-    flex: 1;
-    padding: 15px;
-    overflow-y: auto;
-}
-
-.message {
-    margin-bottom: 15px;
-    display: flex;
-}
-
-.message.recu {
-    justify-content: flex-start;
-}
-
-.message.envoye {
-    justify-content: flex-end;
-}
-
-.contenu-message {
-    max-width: 70%;
-    padding: 10px 15px;
-    border-radius: 15px;
-    background-color: #e5e5ea;
-    position: relative;
-}
-
-.message.envoye .contenu-message {
-    background-color: #4e73df;
-    color: white;
-}
-
-.heure-message {
-    font-size: 0.7em;
-    color: #999;
-    margin-top: 5px;
-    text-align: right;
-}
-
-.message.envoye .heure-message {
-    color: #ccc;
-}
-
-.zone-saisie {
-    padding: 15px;
-    background-color: #fff;
-    border-top: 1px solid #eaeaea;
-    display: flex;
-    align-items: center;
-}
-
-.zone-saisie input {
-    flex: 1;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    outline: none;
-    margin-right: 10px;
-}
-
-.btn-envoyer {
-    background-color: #4e73df;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.btn-envoyer:hover {
-    background-color: #3a5dca;
-}
-
-
-@media (max-width: 768px) {
-    .messagerie-container {
-        flex-direction: column;
-        height: 95vh;
-    }
-    
-    .liste-contacts {
-        width: 100%;
-        height: 30%;
-    }
-    
-    .fenetre-messages {
-        width: 100%;
-        height: 70%;
-    }
-}*/
-/* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #f5f5f5;
-    padding: 20px;
-}
-
-.messagerie-container {
-    display: flex;
-    height: 80vh;
-    max-width: 1000px;
-    margin: 0 auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-.liste-contacts {
-    width: 30%;
-    background-color: #fff;
-    border-right: 1px solid #eaeaea;
-    overflow-y: auto;
-}
-
-.entete-contacts {
-    padding: 15px;
-    background-color: #4e73df;
-    color: #fff;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.recherche {
-    padding: 10px 15px;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #eaeaea;
-}
-
-.recherche input {
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    outline: none;
-}
-
-.contact {
-    padding: 15px;
-    border-bottom: 1px solid #eaeaea;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.contact:hover {
-    background-color: #f5f5f5;
-}
-
-.contact.active {
-    background-color: #eef1ff;
-    border-left: 4px solid #4e73df;
-}
-
-.nom-contact {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.dernier-message {
-    font-size: 0.85em;
-    color: #777;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.fenetre-messages {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    background-color: #f8f9fc;
-}
-
-.entete-conversation {
-    padding: 15px;
-    background-color: #fff;
-    border-bottom: 1px solid #eaeaea;
-    display: flex;
-    align-items: center;
-}
-
-.info-contact {
-    margin-left: 10px;
-}
-
-.status {
-    font-size: 0.8em;
-    color: #2ecc71;
-}
-
-.corps-messages {
-    flex: 1;
-    padding: 15px;
-    overflow-y: auto;
-}
-
-.message {
-    margin-bottom: 15px;
-    display: flex;
-}
-
-.message.recu {
-    justify-content: flex-start;
-}
-
-.message.envoye {
-    justify-content: flex-end;
-}
-
-.contenu-message {
-    max-width: 70%;
-    padding: 10px 15px;
-    border-radius: 15px;
-    background-color: #e5e5ea;
-    position: relative;
-}
-
-.message.envoye .contenu-message {
-    background-color: #4e73df;
-    color: white;
-}
-
-.heure-message {
-    font-size: 0.7em;
-    color: #999;
-    margin-top: 5px;
-    text-align: right;
-}
-
-.message.envoye .heure-message {
-    color: #ccc;
-}
-
-.zone-saisie {
-    padding: 15px;
-    background-color: #fff;
-    border-top: 1px solid #eaeaea;
-    display: flex;
-    align-items: center;
-}
-
-.zone-saisie input {
-    flex: 1;
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    outline: none;
-    margin-right: 10px;
-}
-
-.btn-envoyer {
-    background-color: #4e73df;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.btn-envoyer:hover {
-    background-color: #3a5dca;
-}
-
-
-@media (max-width: 768px) {
-    .messagerie-container {
-        flex-direction: column;
-        height: 95vh;
-    }
-    
-    .liste-contacts {
-        width: 100%;
-        height: 30%;
-    }
-    
-    .fenetre-messages {
-        width: 100%;
-        height: 70%;
-    }
-}*/
+/* Reset global et règles de base */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box; /* Modèle de boîte plus intuitif */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police par défaut avec fallback */
 }
 
+/* Styles de base pour le body */
 body {
-    background-color: #f5f5f5;
-    padding: 20px;
+    background-color: #f5f5f5; /* Couleur de fond gris clair */
+    padding: 20px; /* Marge interne autour du contenu */
 }
 
+/* Conteneur principal de la messagerie */
 .messagerie-container {
     display: flex;
-    height: 80vh;
-    max-width: 1000px;
-    margin: 0 auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    height: 80vh; /* Hauteur relative à la fenêtre */
+    max-width: 1000px; /* Largeur maximale */
+    margin: 0 auto; /* Centrage horizontal */
+    border-radius: 10px; /* Coins arrondis */
+    overflow: hidden; /* Cache les débordements */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombre portée subtile */
 }
 
+/* Panneau de liste des contacts */
 .liste-contacts {
-    width: 30%;
-    background-color: #fff;
-    border-right: 1px solid #eaeaea;
-    overflow-y: auto;
+    width: 30%; /* Largeur relative */
+    background-color: #fff; /* Fond blanc */
+    border-right: 1px solid #eaeaea; /* Séparateur */
+    overflow-y: auto; /* Défilement vertical si nécessaire */
 }
 
+/* En-tête du panneau contacts */
 .entete-contacts {
     padding: 15px;
-    background-color: #B19079;
-    color: #fff;
+    background-color: #B19079; /* Couleur primaire marron clair */
+    color: #fff; /* Texte blanc */
     font-weight: bold;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Alignement des éléments */
     align-items: center;
 }
 
+/* Zone de recherche */
 .recherche {
     padding: 10px 15px;
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #eaeaea;
+    background-color: #f9f9f9; /* Fond légèrement grisé */
+    border-bottom: 1px solid #eaeaea; /* Séparateur */
 }
 
 .recherche input {
     width: 100%;
     padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    outline: none;
+    border: 1px solid #ddd; /* Bordure subtile */
+    border-radius: 20px; /* Coins très arrondis */
+    outline: none; /* Supprime le contour au focus */
 }
 
+/* Style pour chaque contact */
 .contact {
     padding: 15px;
-    border-bottom: 1px solid #eaeaea;
-    cursor: pointer;
-    transition: all 0.2s;
+    border-bottom: 1px solid #eaeaea; /* Séparateur */
+    cursor: pointer; /* Curseur main au survol */
+    transition: all 0.2s; /* Animation douce */
 }
 
 .contact:hover {
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; /* Effet de survol */
 }
 
 .contact.active {
-    background-color: #eef1ff;
-    border-left: 4px solid #B19079;
+    background-color: #eef1ff; /* Couleur de sélection */
+    border-left: 4px solid #B19079; /* Indicateur visuel */
 }
 
+/* Éléments textuels des contacts */
 .nom-contact {
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 .dernier-message {
-    font-size: 0.85em;
-    color: #777;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 0.85em; /* Texte plus petit */
+    color: #777; /* Couleur secondaire */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    overflow: hidden; /* Cache le débordement */
+    text-overflow: ellipsis; /* Points de suspension si trop long */
 }
 
+/* Panneau de conversation */
 .fenetre-messages {
-    width: 70%;
+    width: 70%; /* Largeur relative */
     display: flex;
-    flex-direction: column;
-    background-color: #f8f9fc;
+    flex-direction: column; /* Organisation verticale */
+    background-color: #f8f9fc; /* Fond légèrement coloré */
 }
 
+/* En-tête de conversation */
 .entete-conversation {
     padding: 15px;
-    background-color: #fff;
-    border-bottom: 1px solid #eaeaea;
+    background-color: #fff; /* Fond blanc */
+    border-bottom: 1px solid #eaeaea; /* Séparateur */
     display: flex;
     align-items: center;
 }
 
 .info-contact {
-    margin-left: 10px;
+    margin-left: 10px; /* Espacement depuis l'avatar */
 }
 
 .status {
-    font-size: 0.8em;
-    color: #2ecc71;
+    font-size: 0.8em; /* Texte petit */
+    color: #2ecc71; /* Vert pour indiquer "en ligne" */
 }
 
+/* Zone des messages */
 .corps-messages {
-    flex: 1;
+    flex: 1; /* Prend tout l'espace disponible */
     padding: 15px;
-    overflow-y: auto;
+    overflow-y: auto; /* Défilement vertical si nécessaire */
 }
 
+/* Style de base des messages */
 .message {
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Espace entre les messages */
     display: flex;
 }
 
+/* Messages reçus (alignés à gauche) */
 .message.recu {
     justify-content: flex-start;
 }
 
+/* Messages envoyés (alignés à droite) */
 .message.envoye {
     justify-content: flex-end;
 }
 
+/* Contenu des messages */
 .contenu-message {
-    max-width: 70%;
+    max-width: 70%; /* Largeur maximale */
     padding: 10px 15px;
-    border-radius: 15px;
-    background-color: #e5e5ea;
+    border-radius: 15px; /* Bulles arrondies */
+    background-color: #e5e5ea; /* Couleur par défaut */
     position: relative;
 }
 
+/* Style spécifique pour les messages envoyés */
 .message.envoye .contenu-message {
-    background-color: #B19079;
-    color: white;
+    background-color: #B19079; /* Couleur primaire */
+    color: white; /* Texte blanc */
 }
 
+/* Heure des messages */
 .heure-message {
-    font-size: 0.7em;
-    color: #999;
-    margin-top: 5px;
-    text-align: right;
+    font-size: 0.7em; /* Très petit */
+    color: #999; /* Gris clair */
+    margin-top: 5px; /* Espace depuis le texte */
+    text-align: right; /* Alignement à droite */
 }
 
 .message.envoye .heure-message {
-    color: #ccc;
+    color: #ccc; /* Gris très clair pour les messages envoyés */
 }
 
+/* Zone de saisie */
 .zone-saisie {
     padding: 15px;
-    background-color: #fff;
-    border-top: 1px solid #eaeaea;
+    background-color: #fff; /* Fond blanc */
+    border-top: 1px solid #eaeaea; /* Séparateur */
     display: flex;
     align-items: center;
 }
 
 .zone-saisie input {
-    flex: 1;
+    flex: 1; /* Prend tout l'espace disponible */
     padding: 12px 15px;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    outline: none;
-    margin-right: 10px;
+    border: 1px solid #ddd; /* Bordure subtile */
+    border-radius: 25px; /* Coins très arrondis */
+    outline: none; /* Supprime le contour au focus */
+    margin-right: 10px; /* Espace avant le bouton */
 }
 
+/* Bouton d'envoi */
 .btn-envoyer {
-    background-color: #B19079;
+    background-color: #B19079; /* Couleur primaire */
     color: white;
     border: none;
     padding: 12px 20px;
-    border-radius: 25px;
-    cursor: pointer;
+    border-radius: 25px; /* Coins très arrondis */
+    cursor: pointer; /* Curseur main */
     font-weight: bold;
 }
 
 .btn-envoyer:hover {
-    background-color: #B19079;
+    background-color: #B19079; /* Même couleur au survol (manque une variante) */
 }
 
-/* Pour les écrans mobiles */
+/* Responsive design pour mobiles */
 @media (max-width: 768px) {
     .messagerie-container {
-        flex-direction: column;
-        height: 95vh;
+        flex-direction: column; /* Empilement vertical */
+        height: 95vh; /* Hauteur augmentée */
     }
     
     .liste-contacts {
-        width: 100%;
-        height: 30%;
+        width: 100%; /* Pleine largeur */
+        height: 30%; /* Hauteur relative */
     }
     
     .fenetre-messages {
-        width: 100%;
-        height: 70%;
+        width: 100%; /* Pleine largeur */
+        height: 70%; /* Hauteur relative */
     }
 }

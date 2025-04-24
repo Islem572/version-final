@@ -1,101 +1,100 @@
-
+/* Réinitialisation des marges et des paddings pour tous les éléments */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Définir une police standard pour tous les éléments */
 }
 
 body {
-    background-color: #f5f0e8;
-    color: #333;
-    min-height: 100vh;
+    background-color: #f5f0e8; /* Couleur de fond beige clair */
+    color: #333; /* Couleur du texte en gris foncé */
+    min-height: 100vh; /* Assure que le body prend toute la hauteur de la fenêtre */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Aligne les éléments en colonne */
 }
 
 .logo-container {
-    padding: 20px 0 0 40px;
+    padding: 20px 0 0 40px; /* Espacement autour du logo */
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #b3937a;
+    font-size: 24px; /* Taille de police du logo */
+    font-weight: bold; /* Texte en gras */
+    color: #b3937a; /* Couleur du logo */
 }
 
 .logo span {
     display: inline-block;
-    background-color: #b3937a;
+    background-color: #b3937a; /* Fond pour le span avec la première lettre */
     color: white;
-    width: 30px;
-    height: 30px;
+    width: 30px; /* Largeur du fond */
+    height: 30px; /* Hauteur du fond */
     text-align: center;
-    border-radius: 5px;
-    margin-right: 5px;
+    border-radius: 5px; /* Coins arrondis */
+    margin-right: 5px; /* Espacement entre le span et le texte suivant */
 }
 
 .content {
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 40px 80px;
+    padding: 40px 80px; /* Espacement intérieur de la section content */
 }
 
 .content-header h1 {
-    font-size: 42px;
-    color: #b49175;
-    margin-bottom: 70px;
-    font-weight: normal;
-    max-width: 720px;
-    line-height: 1.2;
+    font-size: 42px; /* Taille de police du titre */
+    color: #b49175; /* Couleur de texte dorée */
+    margin-bottom: 70px; /* Espacement sous le titre */
+    font-weight: normal; /* Ne pas mettre en gras */
+    max-width: 720px; /* Largeur maximale du titre */
+    line-height: 1.2; /* Hauteur de ligne pour un espacement agréable */
 }
 
 .steps-list {
-    list-style-position: outside;
-    margin-left: 30px;
-    font-size: 24px;
+    list-style-position: outside; /* Positionner les puces à l'extérieur de la liste */
+    margin-left: 30px; /* Décalage de la liste vers la droite */
+    font-size: 24px; /* Taille de police de la liste */
 }
 
 .steps-list li {
-    margin-bottom: 20px;
-    color: #333;
-    padding-left: 10px;
+    margin-bottom: 20px; /* Espacement entre les éléments de la liste */
+    color: #333; /* Couleur du texte */
+    padding-left: 10px; /* Décalage du texte à l'intérieur de l'élément de la liste */
 }
 
 .steps-list li::marker {
-    color: #b49175;
-    font-weight: 300;
+    color: #b49175; /* Couleur des puces */
+    font-weight: 300; /* Poids léger pour les puces */
 }
 
 .footer {
-    background-color: #b49175;
-    padding: 20px 40px;
+    background-color: #b49175; /* Fond doré pour le footer */
+    padding: 20px 40px; /* Espacement intérieur */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: auto;
+    justify-content: space-between; /* Distribution des éléments de façon espacée */
+    align-items: center; /* Alignement vertical centré */
+    width: 100%; /* Largeur de 100% pour le footer */
+    margin-top: auto; /* Positionner le footer en bas de la page */
     bottom: unset;
     left: unset;
     right: unset;
-
 }
 
 .btn {
-    padding: 15px 25px;
-    border-radius: 25px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    background-color: #f5f0e8;
-    color: #333;
-    min-width: 250px;
-    text-align: center;
-    transition: all 0.3s ease;
+    padding: 15px 25px; /* Espacement à l'intérieur du bouton */
+    border-radius: 25px; /* Coins arrondis du bouton */
+    font-size: 16px; /* Taille de la police dans le bouton */
+    cursor: pointer; /* Curseur en forme de main pour indiquer que c'est cliquable */
+    border: none; /* Supprime la bordure par défaut */
+    outline: none; /* Supprime le contour lors du focus */
+    background-color: #f5f0e8; /* Fond du bouton */
+    color: #333; /* Couleur du texte du bouton */
+    min-width: 250px; /* Largeur minimale du bouton */
+    text-align: center; /* Centrer le texte dans le bouton */
+    transition: all 0.3s ease; /* Transition douce sur les interactions */
 }
 
 .btn:hover {
-    background-color: #e0d5c0;
+    background-color: #e0d5c0; /* Changer la couleur de fond au survol */
 }

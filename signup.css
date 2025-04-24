@@ -4,11 +4,11 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
+/* Style global du corps de la page */
 body {
     background-color: #B69B8B;
 }
-
+/* En-tête contenant le logo */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -16,50 +16,50 @@ body {
     padding: 20px 50px;
     background-color: transparent;
 }
-
+/* Logo */
 .logo a {
     text-decoration: none;
     color: white;
     font-size: 24px;
     font-weight: bold;
 }
-
+/* Première lettre du logo stylisée */
 .logo span {
     background-color: white;
     color: #B69B8B;
     padding: 2px 6px;
     border-radius: 4px;
 }
-
+/* Barre de navigation */
 nav ul {
     display: flex;
     list-style: none;
 }
-
+/* Liens de navigation */
 nav ul li {
     margin-left: 30px;
 }
-
+/* Liens de navigation */
 nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
 }
-
+/* Barre de progression */
 .signup {
     background-color: white;
     color: #333;
     padding: 8px 20px;
     border-radius: 20px;
 }
-
+/* Barre de progression */
 .signup-options {
     display: flex;
     justify-content: center;
     gap: 50px;
     margin-top: 100px;
 }
-
+/* Options de connexion */
 .option-card {
     background-color: white;
     border-radius: 20px;
@@ -70,24 +70,24 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
 }
-
+/* Image de l'option */
 .option-card img {
     width: 100px;
     height: auto;
     margin-bottom: 20px;
 }
-
+/* Titre de l'option */
 .option-card h2 {
     font-size: 28px;
     margin-bottom: 15px;
 }
-
+/* Description de l'option */
 .option-card p {
     font-size: 18px;
     color: #333;
     margin-bottom: 30px;
 }
-
+/* Bouton de l'option */
 .option-card button {
     background-color: rgba(182, 155, 139, 0.2);
     border: 1px solid #B69B8B;
@@ -98,11 +98,11 @@ nav ul li a {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
+/* Effet de survol du bouton */
 .option-card button:hover {
     background-color: rgba(182, 155, 139, 0.4);
 }
-
+/* Pied de page */
 body::after {
     content: "Already have an account? Log In";
     display: block;
